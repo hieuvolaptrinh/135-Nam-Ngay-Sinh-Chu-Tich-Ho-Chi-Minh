@@ -10,7 +10,9 @@ import Footer from "./components/Footer";
 import EventPage from "./pages/EventPage";
 import BackToTopButton from "./components/BackToTop";
 import Navbar from "./components/Navbar";
+
 import Box from "@mui/material/Box";
+import RightSidebarComponent from "./components/RightSidebar";
 
 const theme = createTheme({
   palette: {
