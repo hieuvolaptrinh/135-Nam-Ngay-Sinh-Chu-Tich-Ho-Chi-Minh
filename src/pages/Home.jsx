@@ -7,12 +7,12 @@ import HoChiMinhTimeline from "../components/Home/HoChiMinhTimeLine";
 import Events from "../components/Event/Events";
 const Home = () => {
   return (
-    <div>
-      <Banner />
+    <>
+     
       <Events />
       <HoChiMinhTimeline />
       <FeaturedEvents />
-    </div>
+    </>
   );
 };
 

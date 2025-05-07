@@ -38,7 +38,7 @@ const Navbar = () => {
         textAlign: "center",
         background: `linear-gradient(to right,
     
-          rgb(152, 215, 236)      0%,
+          rgb(152, 215, 236) 0%,
    rgba(29, 130, 224, 1) 100%
         )`,
         height: "100%",

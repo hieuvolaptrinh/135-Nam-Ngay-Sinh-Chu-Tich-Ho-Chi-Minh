@@ -1,11 +1,10 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect, useRef } from "react";
-import { Container, Row, Col, Card, Modal, Button } from "react-bootstrap";
+import { Row, Col, Card, Modal, Button } from "react-bootstrap";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import ReactPlayer from "react-player";
 import { FaQuoteLeft, FaChevronUp, FaCalendarAlt } from "react-icons/fa";
-import { Typography } from "@mui/material";
+import { Typography, Container } from "@mui/material";
 import { historicalEvents } from "../data/Historys";
 const History = () => {
   const [selectedYear, setSelectedYear] = useState(null);
@@ -38,7 +37,6 @@ const History = () => {
 
   return (
     <>
-      {" "}
       <Container className="py-5">
         {/* Header Section */}
         <motion.div
@@ -66,7 +64,7 @@ const History = () => {
             DẤU ẤN LỊCH SỬ
           </Typography>
           <Typography
-            variant="h5"
+            variant="body1"
             align="justify"
             sx={{
               fontWeight: "bold",

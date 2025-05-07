@@ -3,6 +3,7 @@ import React from "react";
 import { Row, Col, Card } from "react-bootstrap";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { Paper } from "@mui/material";
 
 const HistoricalMessage = () => {
   const [ref, inView] = useInView({
@@ -20,17 +21,6 @@ const HistoricalMessage = () => {
         repeat: Infinity,
         ease: "linear",
       },
-    },
-  };
-
-  // Hiệu ứng cho Card khi hover
-  const cardVariants = {
-    initial: { scale: 1, boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.1)" },
-    hover: {
-      scale: 1.05,
-      boxShadow: "0px 8px 24px rgba(0, 0, 0, 0.2)",
-      backgroundColor: "#f8f9fa",
-      transition: { duration: 0.3, ease: "easeInOut" },
     },
   };
 
@@ -89,9 +79,13 @@ const HistoricalMessage = () => {
         <Row className="g-4">
           <Col md={6}>
             <motion.div
-              variants={cardVariants}
-              initial="initial"
-              whileHover="hover"
+              initial={{ boxShadow: "0px 8px 24px rgba(0, 0, 0, 0.2)" }}
+              whileHover={{
+                scale: 1.05,
+                boxShadow: "0px 8px 24px rgba(0, 0, 0, 0.4)",
+                backgroundColor: "#f8f9fa",
+                transition: { duration: 0.3, ease: "easeInOut" },
+              }}
             >
               <Card
                 className="h-100 border-0"
@@ -101,7 +95,7 @@ const HistoricalMessage = () => {
                   backgroundColor: "#fff",
                 }}
               >
-                <Card.Body className="p-4">
+                <Paper elevation={3} sx={{ padding: 2 }} className="p-4">
                   <motion.div variants={cardTitleVariants}>
                     <Card.Title
                       style={{
@@ -113,21 +107,28 @@ const HistoricalMessage = () => {
                     </Card.Title>
                   </motion.div>
                   <motion.div variants={cardTextVariants}>
-                    <Card.Text style={{ fontSize: "1rem", lineHeight: 1.6 }}>
+                    <Card.Text
+                      elevation={3}
+                      style={{ fontSize: "1rem", lineHeight: 1.6 }}
+                    >
                       Chủ tịch Hồ Chí Minh - vị lãnh tụ vĩ đại của dân tộc Việt
                       Nam, người đã dẫn dắt nhân dân ta đi từ thắng lợi này đến
                       thắng lợi khác, giành lại độc lập, tự do cho Tổ quốc.
                     </Card.Text>
                   </motion.div>
-                </Card.Body>
+                </Paper>
               </Card>
             </motion.div>
           </Col>
           <Col md={6}>
             <motion.div
-              variants={cardVariants}
-              initial="initial"
-              whileHover="hover"
+              initial={{ boxShadow: "0px 8px 24px rgba(0, 0, 0, 0.2)" }}
+              whileHover={{
+                scale: 1.05,
+                boxShadow: "0px 8px 24px rgba(0, 0, 0, 0.4)",
+                backgroundColor: "#f8f9fa",
+                transition: { duration: 0.3, ease: "easeInOut" },
+              }}
             >
               <Card
                 className="h-100 border-0"
