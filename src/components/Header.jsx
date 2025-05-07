@@ -1,132 +1,82 @@
-import { useState } from "react";
-import { NavLink } from "react-router-dom";
-import {
-  AppBar,
-  Toolbar,
-  Typography,
-  IconButton,
-  Drawer,
-  List,
-  ListItem,
-  ListItemText,
-  useMediaQuery,
-  useTheme,
-  Box,
-} from "@mui/material";
-import MenuIcon from "@mui/icons-material/Menu";
-import MusicNoteIcon from "@mui/icons-material/MusicNote";
+import { Box, Typography, InputBase, Paper } from "@mui/material";
+import SearchIcon from "@mui/icons-material/Search";
+import Clock from "./Clock";
 
-const Header = ({ children }) => {
-  const [mobileOpen, setMobileOpen] = useState(false);
-
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
-
-  const handleDrawerToggle = () => {
-    setMobileOpen(!mobileOpen);
-  };
-
-  const menuItems = [
-    { text: "Trang Chủ", path: "/" },
-    { text: "Giới Thiệu", path: "/about" },
-    { text: "Dấu Ấn Lịch Sử", path: "/history" },
-    { text: "Sự Kiện", path: "/events" },
-  ];
-
-  const drawer = (
-    <List>
-      {menuItems.map((item) => (
-        <ListItem key={item.text} onClick={handleDrawerToggle}>
-          <NavLink
-            to={item.path}
-            style={({ isActive }) => ({
-              textDecoration: "none",
-              color: isActive ? "#fff" : "inherit",
-              backgroundColor: isActive ? "rgba(1, 0, 0, 0.2)" : "transparent",
-              padding: "8px 16px",
-              borderRadius: "4px",
-              width: "100%",
-              fontSize: "1rem",
-              fontWeight: 700,
-            })}
-          >
-            <ListItemText primary={item.text} />
-          </NavLink>
-        </ListItem>
-      ))}
-    </List>
-  );
-
+const Header = () => {
   return (
-    <>
-      <AppBar position="fixed" color="primary">
-        <Toolbar sx={{ minHeight: { xs: 80, sm: 100 } }}>
-          {isMobile && (
-            <IconButton
-              color="inherit"
-              aria-label="open drawer"
-              edge="start"
-              onClick={handleDrawerToggle}
-              sx={{ mr: 2 }}
-            >
-              <MenuIcon />
-            </IconButton>
-          )}
-
-          <Typography
-            variant="h5"
-            component={NavLink}
-            to="/"
-            sx={{
-              flexGrow: 1,
-              textDecoration: "none",
-              color: "rgb(138, 24, 24)",
-        
-              fontWeight: "bold",
-              whiteSpace: "pre-line",
-              lineHeight: 1.2,
-              textShadow: "1px 1px 0px rgb(110 102 102)",
-            }}
-          >
-            Dấu Ấn 50 Năm Thống Nhất{"\n"}135 Năm Ngày Sinh Chủ Tịch Hồ Chí Minh
-          </Typography>
-          {!isMobile && (
-            <>
-              {menuItems.map((item) => (
-                <NavLink
-                  key={item.text}
-                  to={item.path}
-                  style={({ isActive }) => ({
-                    textDecoration: "none",
-                    color: isActive ? "rgb(254, 254, 255)" : "rgb(28, 29, 22)",
-                    padding: "8px 16px",
-                    borderRadius: "4px",
-                    fontSize: "1rem",
-                    fontWeight: 700,
-                  })}
-                >
-                  {item.text}
-                </NavLink>
-              ))}
-            </>
-          )}
-        </Toolbar>
-      </AppBar>
-      <Drawer
-        variant="temporary"
-        anchor="left"
-        open={mobileOpen}
-        onClose={handleDrawerToggle}
-        ModalProps={{
-          keepMounted: true,
+    <Box
+      sx={{
+        width: "100%",
+        bgcolor: "#fff",
+        px: { xs: 2, md: 6 },
+        py: 2.5,
+        boxShadow: "0 2px 8px rgba(0,0,0,0.04)",
+        display: "flex",
+        alignItems: { xs: "flex-start", md: "center" },
+        flexDirection: { xs: "column", md: "row" },
+        justifyContent: "space-between",
+        gap: 2,
+      }}
+    >
+      <Box>
+        <Typography
+          variant="h4"
+          sx={{
+            fontWeight: 700,
+            color: "#C41E3A",
+            textShadow: "1px 1px 0 #FFD700, 0 2px 8px rgba(0,0,0,0.08)",
+            mb: 0.5,
+            lineHeight: 1.2,
+          }}
+        >
+          CUỘC THI THIẾT KẾ WEBSITE
+        </Typography>
+        <Typography
+          variant="h5"
+          sx={{
+            fontWeight: 700,
+            color: "#C41E3A",
+            textShadow: "1px 1px 0 #FFD700, 0 2px 8px rgba(0,0,0,0.08)",
+            mb: 0.5,
+            lineHeight: 1.2,
+          }}
+        >
+          "DẤU ẤN LỄ KỶ NIỆM 50 NĂM THỐNG NHẤT ĐẤT NƯỚC"
+        </Typography>
+        <Typography
+          variant="subtitle1"
+          sx={{ color: "#666", fontStyle: "italic", fontWeight: 400 }}
+        >
+          Nhân kỷ niệm 135 năm ngày sinh Chủ tịch Hồ Chí Minh – Chào mừng 50 năm
+          thống nhất đất nước
+        </Typography>
+      </Box>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "flex-end",
+          gap: 1,
         }}
       >
-        {drawer}
-      </Drawer>
-      <Toolbar sx={{ minHeight: { xs: 80, sm: 100 } }} />{" "}
-      {/* Placeholder với chiều cao khớp với Toolbar trong AppBar */}
-      <Box component="main">{children}</Box>
-    </>
+        <Paper
+          component="form"
+          sx={{
+            p: "2px 8px",
+            display: "flex",
+            alignItems: "center",
+            width: { xs: 220, md: 300 },
+            mb: 1,
+            background: "#FFF8E1",
+            boxShadow: "0 1px 4px rgba(0,0,0,0.06)",
+          }}
+        >
+          <InputBase sx={{ ml: 1, flex: 1 }} placeholder="Tìm kiếm..." />
+          <SearchIcon sx={{ color: "#C41E3A" }} />
+        </Paper>
+        <Clock />
+      </Box>
+    </Box>
   );
 };
 
