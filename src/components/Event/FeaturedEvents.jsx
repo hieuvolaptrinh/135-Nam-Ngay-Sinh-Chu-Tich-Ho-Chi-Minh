@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+
 import { Card, CardContent, CardMedia, Typography } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
@@ -35,18 +35,15 @@ const featuredEvents = [
 
 // Component FeaturedEvents
 const FeaturedEvents = () => {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.2,
-  });
-
   return (
     <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 15px" }}>
-      <div style={{ padding: "3rem 0" }} ref={ref}>
+      <div style={{ padding: "3rem 0" }}>
         <motion.h2
           className="text-center mb-5"
-          initial="initial"
-          animate="animate"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: false, amount: 0.5 }}
           style={{
             position: "relative",
             backgroundSize: "200% 200%",
@@ -89,7 +86,7 @@ const FeaturedEvents = () => {
             >
               <motion.div
                 initial={{ opacity: 0, y: 50 }}
-                animate={inView ? { opacity: 1, y: 0 } : {}}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
               >
                 <Card

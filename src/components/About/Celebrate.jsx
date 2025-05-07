@@ -1,15 +1,10 @@
 /* eslint-disable no-unused-vars */
-import React from "react";
-import { Container, Row, Col, Accordion, Card, Image } from "react-bootstrap";
-import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import { Container, Row, Col, Card } from "react-bootstrap";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 import { Box, Typography, Stepper, Step, StepLabel } from "@mui/material";
 
 const Celebrate = () => {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
   const timelineSteps = [
     {
       year: "2020",
@@ -28,6 +23,7 @@ const Celebrate = () => {
       event: "Kỷ niệm 115 năm ngày sinh Chủ tịch Hồ Chí Minh",
     },
   ];
+
   const galleryImages = [
     "./images/HATB1.jpg",
     "./images/HATB3.jpg",
@@ -36,17 +32,21 @@ const Celebrate = () => {
     "./images/HATB5.jpg",
     "./images/HATB6.jpg",
   ];
+
   return (
-    <>
-      <div className="row">
-        <div className="col-md-5 mb-8">
+    <Container>
+      <Row>
+        {/* Timeline Section */}
+        <Col md={5} className="mb-8">
           <motion.h2
             className="text-center mb-5"
-            initial="initial"
-            animate="animate"
+            initial={{ opacity: 0, y: -50 }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: { duration: 0.8, ease: "easeOut" },
+            }}
             style={{
-              position: "relative",
-              backgroundSize: "200% 200%",
               color: "rgb(237, 62, 50)",
               fontWeight: "bold",
               fontSize: "1.5rem",
@@ -59,27 +59,68 @@ const Celebrate = () => {
               {timelineSteps.map((step, index) => (
                 <Step key={index} active={true}>
                   <StepLabel>
-                    <Typography variant="h6">{step.year}</Typography>
-                    <Typography>{step.event}</Typography>
+                    <motion.div
+                      initial={{ opacity: 0, x: -50 }}
+                      whileInView={{
+                        opacity: 1,
+                        x: 0,
+                        transition: {
+                          duration: 0.6,
+                          delay: index * 0.2,
+                          ease: "easeOut",
+                        },
+                      }}
+                    >
+                      <motion.div
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{
+                          opacity: 1,
+                          x: 0,
+                          transition: {
+                            duration: 0.5,
+                            delay: index * 0.3 + 0.1, // Trễ hơn số năm một chút
+                            ease: "easeOut",
+                          },
+                        }}
+                      >
+                        <Typography variant="h6">{step.year}</Typography>
+                      </motion.div>
+                      <motion.div
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{
+                          opacity: 1,
+                          x: 0,
+                          transition: {
+                            duration: 0.5,
+                            delay: index * 0.3 + 0.2, // Trễ hơn số năm và sự kiện trước
+                            ease: "easeOut",
+                          },
+                        }}
+                      >
+                        <Typography>{step.event}</Typography>
+                      </motion.div>
+                    </motion.div>
                   </StepLabel>
                 </Step>
               ))}
             </Stepper>
           </Box>
+        </Col>
 
-          {/* Gallery Section */}
-        </div>
-        <div className="col-md-7 mb-8">
+        {/* Gallery Section */}
+        <Col md={7} className="mb-8">
           <motion.h2
             className="text-center mb-5"
-            initial="initial"
-            animate="animate"
+            initial={{ opacity: 0, y: -50 }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: { duration: 0.8, ease: "easeOut" },
+            }}
             style={{
-              position: "relative",
-              backgroundSize: "200% 200%",
               color: "rgb(237, 62, 50)",
               fontWeight: "bold",
-              fontSize: "rem",
+              fontSize: "1.5rem",
             }}
           >
             HÌNH ẢNH TIÊU BIỂU
@@ -87,26 +128,36 @@ const Celebrate = () => {
           <Row className="g-4">
             {galleryImages.map((image, index) => (
               <Col key={index} xs={12} sm={6} md={6}>
-                <div
-                initial={{ opacity: 0, scale: 0.9 }}
-                  animate={inView ? { opacity: 1, scale: 1 } : {}}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.8, y: 20 }}
+                  whileInView={{
+                    opacity: 1,
+                    scale: 1,
+                    y: 0,
+                    transition: {
+                      duration: 0.5,
+                      delay: index * 0.1,
+                      ease: "easeOut",
+                    },
+                  }}
+                  whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
                 >
                   <Card className="h-100">
-                    <img
+                    <Card.Img
                       variant="top"
                       src={image}
                       className="img-fluid"
                       style={{ height: "150px", objectFit: "cover" }}
                     />
                   </Card>
-                </div>
+                </motion.div>
               </Col>
             ))}
           </Row>
-        </div>
-      </div>
-    </>
+        </Col>
+      </Row>
+    </Container>
   );
 };
+
 export default Celebrate;

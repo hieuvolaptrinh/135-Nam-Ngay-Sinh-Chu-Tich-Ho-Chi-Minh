@@ -20,7 +20,7 @@ const BackToTopButton = () => {
   return (
     <Zoom in={visible}>
       <Fab
-        color="primary"
+        color="warning"
         size="small"
         onClick={scrollToTop}
         sx={{
