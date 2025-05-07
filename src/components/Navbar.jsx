@@ -59,18 +59,19 @@ const Navbar = () => {
                 fontSize: "1rem",
                 fontWeight: 600,
                 transition: "all 0.3s ease",
+                "&:hover": {
+                  color: "rgb(241, 227, 32)",
+                  "& .MuiListItemIcon-root": {
+                    color: "rgb(241, 227, 32)",
+                  },
+                },
               })}
             >
               <ListItemIcon
                 sx={{
                   minWidth: 40,
-                  color: ({ isActive }) =>
-                    isActive ? "rgb(241, 227, 32)" : "rgb(50, 9, 9)",
-                  transition: "transform 0.3s ease, color 0.3s ease",
-                  "&:hover": {
-                    transform: "scale(1.2)",
-                    color: "rgb(241, 227, 32)",
-                  },
+                  color: "inherit",
+                  transition: "all 0.3s ease",
                 }}
               >
                 {item.icon}
@@ -137,19 +138,20 @@ const Navbar = () => {
                 display: "flex",
                 alignItems: "center",
                 gap: "8px",
+                "&:hover": {
+                  color: "rgb(241, 227, 32)",
+                  "& .MuiSvgIcon-root": {
+                    color: "rgb(241, 227, 32)",
+                  },
+                },
               })}
             >
               <Box
                 sx={{
                   display: "flex",
                   alignItems: "center",
-                  color: ({ isActive }) =>
-                    isActive ? "rgb(241, 227, 32)" : "rgb(50, 9, 9)",
-                  transition: "transform 0.3s ease, color 0.3s ease",
-                  "&:hover": {
-                    transform: "scale(1.2)",
-                    color: "rgb(241, 227, 32)",
-                  },
+                  color: "inherit",
+                  transition: "all 0.3s ease",
                 }}
               >
                 {item.icon}
