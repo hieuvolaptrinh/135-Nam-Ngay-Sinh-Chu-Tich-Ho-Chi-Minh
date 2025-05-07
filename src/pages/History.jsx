@@ -51,8 +51,14 @@ const History = () => {
             variant="h3"
             align="center"
             sx={{
-              position: "relative",
-              color: "rgb(241, 76, 64)",
+              mb: 6,
+              fontSize: {
+                color: "rgb(241, 76, 64)",
+                xs: "1rem",
+                sm: "1.5rem",
+                md: "1.7rem",
+                lg: "2.25rem",
+              },
               fontWeight: "bold",
               textShadow: "2px 2px 2px rgba(0, 0, 0, 0.63)",
             }}
