@@ -168,13 +168,18 @@ const Events = () => {
           align="center"
           sx={{
             mb: 6,
-
-            color: "rgb(241, 76, 64)",
+            fontSize: {
+              color: "rgb(241, 76, 64)",
+              xs: "1rem",
+              sm: "1.5rem",
+              md: "1.7rem",
+              lg: "2.25rem",
+            },
             fontWeight: "bold",
             textShadow: "2px 2px 2px rgba(0, 0, 0, 0.63)",
           }}
         >
-          DẤU ẤN LỄ KỶ NIỆM 50 NĂM THỐNG NHẤT ĐẤT NƯỚC{" "}
+          CÁC KỶ NIỆM 50 NĂM THỐNG NHẤT ĐẤT NƯỚC{" "}
         </Typography>
       </motion.div>
 

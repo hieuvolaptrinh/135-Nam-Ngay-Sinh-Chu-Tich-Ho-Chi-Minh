@@ -14,13 +14,18 @@ const HoChiMinhTimeline = () => {
         viewport={{ once: false, amount: 0.5 }}
       >
         <Typography
-          variant="h2"
           align="center"
           sx={{
             mb: 6,
-            color: "rgb(241, 76, 64)",
+            fontSize: {
+              color: "rgb(241, 76, 64)",
+              xs: "1rem",
+              sm: "1.5rem",
+              md: "1.7rem",
+              lg: "2.25rem",
+            },
             fontWeight: "bold",
-            textShadow: "2px 2px 3px rgba(0, 0, 0, 0.63)",
+            textShadow: "2px 2px 2px rgba(0, 0, 0, 0.63)",
           }}
         >
           Con Đường Giải Phóng Dân Tộc Của Chủ Tịch Hồ Chí Minh

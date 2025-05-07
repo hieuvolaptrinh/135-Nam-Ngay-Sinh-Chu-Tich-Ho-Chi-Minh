@@ -32,11 +32,12 @@ const Clock = () => {
 
   return (
     <Box sx={{ textAlign: "right" }}>
-      <Typography variant="body2" sx={{ color: "#C41E3A", fontWeight: 500 }}>
-        {formatDate(date)}
-      </Typography>
-      <Typography variant="body2" sx={{ color: " #C41E3A ", fontWeight: 500 }}>
-        {formatTime(date)}
+      <Typography
+        variant="h5"
+        sx={{ color: "rgb(4, 4, 4)" }}
+        fontSize= "0.7rem"
+      >
+        {formatDate(date)}, {formatTime(date)}
       </Typography>
     </Box>
   );

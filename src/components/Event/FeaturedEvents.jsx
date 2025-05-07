@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Card, CardContent, CardMedia, Typography } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
+import { Container } from "react-bootstrap";
 
 // Data
 const featuredEvents = [
@@ -36,38 +37,32 @@ const featuredEvents = [
 // Component FeaturedEvents
 const FeaturedEvents = () => {
   return (
-    <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 15px" }}>
+    <Container>
       <div style={{ padding: "3rem 0" }}>
-        <motion.h2
-          className="text-center mb-5"
+        <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 1 }}
           viewport={{ once: false, amount: 0.5 }}
-          style={{
-            position: "relative",
-            backgroundSize: "200% 200%",
-            color: "rgb(237, 62, 50)",
-            fontWeight: "bold",
-            fontSize: "2.5rem",
-          }}
         >
-          SỰ KIỆN NỔI BẬT
-          <span
-            style={{
-              content: '""',
-              position: "absolute",
-              bottom: "-10px",
-              left: "50%",
-              transform: "translateX(-50%)",
-              width: "100px",
-              height: "4px",
-              backgroundColor: "#007bff",
-              borderRadius: "2px",
+          <Typography
+            align="center"
+            sx={{
+              mb: 6,
+              fontSize: {
+                color: "rgb(241, 76, 64)",
+                xs: "1rem",
+                sm: "1.5rem",
+                md: "1.7rem",
+                lg: "2.25rem",
+              },
+              fontWeight: "bold",
+              textShadow: "2px 2px 2px rgba(0, 0, 0, 0.63)",
             }}
-          />
-        </motion.h2>
-
+          >
+            SỰ KIỆN NỔI BẬT
+          </Typography>
+        </motion.div>
         <div
           style={{
             display: "flex",
@@ -167,7 +162,7 @@ const FeaturedEvents = () => {
           ))}
         </div>
       </div>
-    </div>
+    </Container>
   );
 };
 

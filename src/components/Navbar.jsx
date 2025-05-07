@@ -4,7 +4,7 @@ import { Box } from "@mui/material";
 const menuItems = [
   { text: "Trang Chủ", path: "/" },
   { text: "Dấu ấn lịch sử", path: "/history" },
-  { text: "Cuộc Đời Chủ Tịch Hồ Chí Minh", path: "/about" },
+  { text: "Góc tự hào", path: "/about" },
   { text: "Hoạt Động Kỷ Niệm", path: "/events" },
 ];
 

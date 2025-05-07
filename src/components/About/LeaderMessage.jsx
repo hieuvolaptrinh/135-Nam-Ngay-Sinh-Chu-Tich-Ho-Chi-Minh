@@ -31,7 +31,7 @@ const LeaderMessage = () => {
     <>
       {/* Messages Section */}
       <section className="mb-5">
-        <motion.h2
+        <h2
           className="text-center mb-5"
           initial="initial"
           animate="animate"
@@ -40,10 +40,10 @@ const LeaderMessage = () => {
             backgroundSize: "200% 200%",
             color: "rgb(237, 62, 50)",
             fontWeight: "bold",
-            fontSize: "2.5rem",
+            fontSize: "2rem",
           }}
         >
-          THÔNG ĐIỆP TỪ NHÀ LÃNH ĐẠO
+          THÔNG ĐIỆP
           <span
             style={{
               content: '""',
@@ -57,7 +57,7 @@ const LeaderMessage = () => {
               borderRadius: "2px",
             }}
           />
-        </motion.h2>
+        </h2>
         <Accordion activeKey={activeKey} onSelect={(e) => setActiveKey(e)}>
           {messages.map((message, index) => (
             <Accordion.Item key={index} eventKey={index.toString()}>
@@ -70,11 +70,22 @@ const LeaderMessage = () => {
                     height="50"
                     className="me-3"
                   />
+
                   {message.title}
                 </div>
               </Accordion.Header>
               <Accordion.Body>
-                <h5>{message.content}</h5>
+                <p
+                  className=" mb-5"
+                  style={{
+                    textAlign: "justify",
+                    display: "block",
+                    fontSize: "1rem",
+                  }}
+                >
+                  {" "}
+                  {message.content}
+                </p>
               </Accordion.Body>
             </Accordion.Item>
           ))}
