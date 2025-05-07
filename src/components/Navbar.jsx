@@ -37,9 +37,9 @@ const Navbar = () => {
       sx={{
         textAlign: "center",
         background: `linear-gradient(to right,
-          rgb(152, 215, 236) 0%,
-          rgba(29, 130, 224, 1) 50%,
-          rgb(152, 215, 236) 100%
+    
+          rgb(152, 215, 236)      0%,
+   rgba(29, 130, 224, 1) 100%
         )`,
         height: "100%",
       }}
@@ -56,7 +56,7 @@ const Navbar = () => {
                 padding: "12px 24px",
                 display: "flex",
                 alignItems: "center",
-                fontSize: "1rem",
+
                 fontWeight: 600,
                 transition: "all 0.3s ease",
                 "&:hover": {
@@ -76,7 +76,7 @@ const Navbar = () => {
               >
                 {item.icon}
               </ListItemIcon>
-              <ListItemText primary={item.text} />
+              <ListItemText sx={{ fontSize: "2rem" }} primary={item.text} />
             </NavLink>
           </ListItem>
         ))}
@@ -175,12 +175,7 @@ const Navbar = () => {
           display: { xs: "block", md: "none" },
           "& .MuiDrawer-paper": {
             boxSizing: "border-box",
-            width: 240,
-            background: `linear-gradient(to right,
-              rgb(152, 215, 236) 0%,
-              rgba(29, 130, 224, 1) 50%,
-              rgb(152, 215, 236) 100%
-            )`,
+            width: 220,
           },
         }}
       >
