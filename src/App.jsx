@@ -9,6 +9,8 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import EventPage from "./pages/EventPage";
 import BackToTopButton from "./components/BackToTop";
+import Navbar from "./components/Navbar";
+import Box from "@mui/material/Box";
 
 const theme = createTheme({
   palette: {
@@ -28,12 +30,15 @@ function App() {
 
       <Router>
         <Header />
+        <Navbar />
+
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/history" element={<History />} />
           <Route path="/events" element={<EventPage />} />
         </Routes>
+
         <Footer />
       </Router>
       <BackToTopButton />
