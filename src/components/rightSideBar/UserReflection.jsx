@@ -53,12 +53,12 @@ const UserReflection = () => {
           display: "flex",
           alignItems: "center",
           gap: 1,
-          color: theme.palette.primary.main,
+
           fontWeight: "bold",
         }}
       >
         <FavoriteIcon sx={{ color: theme.palette.secondary.main }} />
-        Góc cảm nhận
+        Lời tri ân
       </Typography>
 
       <form onSubmit={handleSubmit}>
@@ -103,7 +103,7 @@ const UserReflection = () => {
           fullWidth
           sx={{
             mt: 2,
-            background: `linear-gradient(45deg, ${theme.palette.primary.main} 30%, ${theme.palette.primary.light} 90%)`,
+            background: `linear-gradient(135deg,rgb(213, 92, 92),rgb(251, 209, 0))`,
             "&:hover": {
               background: `linear-gradient(45deg, ${theme.palette.primary.dark} 30%, ${theme.palette.primary.main} 90%)`,
             },

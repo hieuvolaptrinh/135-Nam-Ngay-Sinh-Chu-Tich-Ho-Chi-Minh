@@ -11,18 +11,8 @@ const HistoricalMessage = () => {
     threshold: 0.1,
   });
 
-  // Hiệu ứng cho tiêu đề
-  const titleVariants = {
-    initial: { backgroundPosition: "0% 50%" },
-    animate: {
-      backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
-      transition: {
-        duration: 5,
-        repeat: Infinity,
-        ease: "linear",
-      },
-    },
-  };
+
+
 
   // Hiệu ứng cho tiêu đề Card khi hover
   const cardTitleVariants = {

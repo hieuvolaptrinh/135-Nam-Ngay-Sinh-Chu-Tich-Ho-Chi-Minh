@@ -1,18 +1,15 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
-import History from "./pages/History";
+import Historys from "./pages/Historys";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import EventPage from "./pages/EventPage";
-import BackToTopButton from "./components/BackToTop";
+import BackToTopButton from "./components/rightSideBar/BackToTop";
 import Navbar from "./components/Navbar";
-import BacHoQuote from "./components/BacHoQuote";
-import UserReflection from "./components/UserReflection";
-import Box from "@mui/material/Box";
-import { Col, Row } from "react-bootstrap";
+
 import MainLayout from "./pages/MainLayout";
 import Banner from "./components/Home/Banner";
 
@@ -58,7 +55,7 @@ function App() {
             path="/history"
             element={
               <MainLayout>
-                <History />
+                <Historys />
               </MainLayout>
             }
           />

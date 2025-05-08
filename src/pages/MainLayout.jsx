@@ -1,6 +1,6 @@
 import { Col, Row, Container } from "react-bootstrap";
-import BacHoQuote from "../components/BacHoQuote";
-import UserReflection from "../components/UserReflection";
+import BacHoQuote from "../components/rightSideBar/BacHoQuote";
+import UserReflection from "../components/rightSideBar/UserReflection";
 import { Box } from "@mui/material";
 
 const MainLayout = ({ children }) => {

@@ -11,7 +11,8 @@ import {
 import RefreshIcon from "@mui/icons-material/Refresh";
 import FormatQuoteIcon from "@mui/icons-material/FormatQuote";
 import { motion, AnimatePresence } from "framer-motion";
-import { quotes } from "../data/Quotes";
+import { quotes } from "../../data/Quotes";
+import { FaQuoteLeft } from "react-icons/fa";
 
 const BacHoQuote = () => {
   const [currentQuote, setCurrentQuote] = useState(null);
@@ -31,10 +32,12 @@ const BacHoQuote = () => {
     <Paper
       elevation={3}
       sx={{
+        color: "black",
         m: 2,
         p: 3,
-        background: "linear-gradient(135deg, #1976d2 0%, #42a5f5 100%)",
-        color: "white",
+        background: "linear-gradient(to right,rgb(170, 142, 218), #F8BBD0)",
+        // "linear-gradient(135deg,rgb(213, 92, 92),rgb(248, 220, 78))",
+
         borderRadius: 2,
         position: "relative",
         overflow: "hidden",
@@ -62,8 +65,8 @@ const BacHoQuote = () => {
             fontWeight: "bold",
           }}
         >
-          <FormatQuoteIcon sx={{ fontSize: 28 }} />
-          Trích dẫn hay của Bác Hồ
+          <FaQuoteLeft sx={{ fontSize: 28 }} />
+          Lời dạy của Bác
         </Typography>
 
         <AnimatePresence mode="wait">
@@ -78,7 +81,7 @@ const BacHoQuote = () => {
               <Typography
                 variant="body1"
                 sx={{
-                  mb: 2,
+                  mb: 1,
                   fontStyle: "italic",
                   fontSize: isMobile ? "1rem" : "1.2rem",
                   lineHeight: 1.6,
@@ -87,7 +90,7 @@ const BacHoQuote = () => {
                 "{currentQuote.text}"
               </Typography>
               <Typography
-                variant="caption"
+                variant=""
                 sx={{
                   display: "block",
                   opacity: 0.8,
@@ -100,13 +103,13 @@ const BacHoQuote = () => {
           )}
         </AnimatePresence>
 
-        <Box sx={{ mt: 2, display: "flex", justifyContent: "flex-end" }}>
+        <Box sx={{ mt: 1, display: "flex", justifyContent: "flex-end" }}>
           <IconButton
             onClick={getRandomQuote}
             sx={{
               color: "white",
               "&:hover": {
-                backgroundColor: "rgba(255, 255, 255, 0.1)",
+                backgroundColor: "rgba(0, 0, 0, 0.1)",
               },
             }}
             aria-label="next quote"
