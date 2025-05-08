@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { FaQuoteLeft, FaCalendarAlt, FaRegCalendarAlt } from "react-icons/fa";
-import { Box, Typography, Button } from "@mui/material";
+import { Box, Typography, Button, CardMedia } from "@mui/material";
 
 import { historicalEvents } from "../data/HistorysEvent";
 import HistoryDetail from "../components/History/HistoryDetail";
@@ -69,31 +69,43 @@ const History = () => {
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
-              className="timeline-item"
             >
-              <div>
-                <div>
-                  <p className="h2 text-danger">{event.year}</p>
-                </div>
+              <Box sx={{ mb: 4 }}>
+                <Typography
+                  variant="h2"
+                  sx={{
+                    color: "rgb(241, 76, 64)",
+                  }}
+                >
+                  {event.year}
+                </Typography>
+
                 <Card className="shadow-sm">
                   <Card.Body className="p-3">
                     <Row className="g-2">
                       {event.events.map((subEvent, subIndex) => (
                         <Col
                           key={subIndex}
-                          xs={event.events.length === 1 ? 12 : 6}
+                          md={12}
+                          lg={event.events.length === 1 ? 12 : 6}
                         >
                           <Box>
                             <div className="mb-2">
-                              <img
-                                src={subEvent.images[0]}
+                              <CardMedia
+                                component="img"
+                                image={subEvent.images[0]}
                                 alt={subEvent.title}
-                                className="img-fluid rounded"
-                                style={{
+                                sx={{
                                   width: "100%",
-                                  height: "350px",
+                                  height: {
+                                    xs: 400,
+                                    sm: 300,
+                                    md: 200,
+                                    lg: 400,
+                                  },
                                   objectFit: "cover",
                                   objectPosition: "center",
+                                  borderRadius: 2,
                                 }}
                               />
                             </div>
@@ -119,7 +131,6 @@ const History = () => {
                               <FaQuoteLeft className="text-primary" />
                               <p className="mb-0">{subEvent.quote}</p>
                             </blockquote>
-
                             <Button
                               variant="contained"
                               onClick={() => handleMarkerClick(subEvent)}
@@ -132,7 +143,7 @@ const History = () => {
                     </Row>
                   </Card.Body>
                 </Card>
-              </div>
+              </Box>
             </motion.div>
           ))}
         </div>
