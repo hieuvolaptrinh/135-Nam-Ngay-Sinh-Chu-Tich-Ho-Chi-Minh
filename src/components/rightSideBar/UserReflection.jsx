@@ -105,7 +105,8 @@ const UserReflection = () => {
             mt: 2,
             background: `linear-gradient(135deg,rgb(213, 92, 92),rgb(251, 209, 0))`,
             "&:hover": {
-              background: `linear-gradient(45deg, ${theme.palette.primary.dark} 30%, ${theme.palette.primary.main} 90%)`,
+              background: `linear-gradient(135deg,rgb(255, 163, 163),rgb(255, 247, 210))`,
+              color: "black",
             },
           }}
         >

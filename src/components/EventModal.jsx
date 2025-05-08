@@ -29,8 +29,8 @@ const EventModal = ({ open, onClose, event }) => {
     >
       <DialogTitle
         sx={{
-          backgroundColor: "#1a237e",
-          color: "white",
+          background:
+            "linear-gradient(135deg,rgb(235, 116, 116),rgb(248, 220, 78))",
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
@@ -67,14 +67,14 @@ const EventModal = ({ open, onClose, event }) => {
 
         <Box sx={{ p: 3 }}>
           <Box sx={{ display: "flex", alignItems: "center", mb: 2 }}>
-            <CalendarTodayIcon sx={{ mr: 1, color: "#1a237e" }} />
+            <CalendarTodayIcon sx={{ mr: 1 }} />
             <Typography variant="body1" sx={{ fontWeight: "medium" }}>
               {event.date}
             </Typography>
           </Box>
 
           <Box sx={{ display: "flex", alignItems: "center", mb: 3 }}>
-            <LocationOnIcon sx={{ mr: 1, color: "#1a237e" }} />
+            <LocationOnIcon sx={{ mr: 1 }} />
             <Typography variant="body1" sx={{ fontWeight: "medium" }}>
               {event.location}
             </Typography>

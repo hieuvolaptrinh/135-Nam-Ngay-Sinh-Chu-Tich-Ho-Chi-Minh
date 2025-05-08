@@ -10,7 +10,7 @@ import {
   CardActions,
   Button,
 } from "@mui/material";
-import { motion } from "framer-motion";
+import { motion, px } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
@@ -23,31 +23,28 @@ import { events } from "../../data/Events";
 const Events = () => {
   const [selectedEvent, setSelectedEvent] = useState(null);
   const [modalOpen, setModalOpen] = useState(false);
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
 
+  // slider + responsive nè
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 3, // Mặc định hiển thị 3 card
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 5000,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1024, // Khi chiều rộng màn hình <= 1024px
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 2, // Hiển thị 2 card
           slidesToScroll: 1,
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 600, // Khi chiều rộng màn hình <= 600px
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 1, // Hiển thị 1 card
           slidesToScroll: 1,
         },
       },
@@ -64,104 +61,13 @@ const Events = () => {
     setSelectedEvent(null);
   };
 
-  const cardStyles = {
-    container: {
-      height: "100%",
-      display: "flex",
-      flexDirection: "column",
-      borderRadius: "12px",
-      boxShadow: "0 4px 20px rgba(0,0,0,0.1)",
-      transition: "all 0.3s ease-in-out",
-      "&:hover": {
-        transform: "translateY(-5px)",
-        boxShadow: "0 8px 30px rgba(0,0,0,0.2)",
-      },
-    },
-    media: {
-      height: "200px",
-      objectFit: "cover",
-      borderTopLeftRadius: "12px",
-      borderTopRightRadius: "12px",
-    },
-    content: {
-      flexGrow: 1,
-      display: "flex",
-      flexDirection: "column",
-      p: 3,
-    },
-    title: {
-      fontWeight: "bold",
-      color: "#1a237e",
-      mb: 2,
-      minHeight: "64px",
-      display: "-webkit-box",
-      WebkitLineClamp: 2,
-      WebkitBoxOrient: "vertical",
-      overflow: "hidden",
-      textOverflow: "ellipsis",
-    },
-
-    local: {
-      fontWeight: "bold",
-      color: "#1a237e",
-      mb: 2,
-      minHeight: "64px",
-      display: "-webkit-box",
-      WebkitLineClamp: 2,
-      WebkitBoxOrient: "vertical",
-      overflow: "hidden",
-      textOverflow: "ellipsis",
-    },
-    infoContainer: {
-      display: "flex",
-      alignItems: "center",
-      mb: 1.5,
-    },
-    icon: {
-      mr: 1,
-      color: "#1a237e",
-      flexShrink: 0,
-    },
-    infoText: {
-      color: "#333",
-      flex: 1,
-    },
-    description: {
-      color: "#666",
-      lineHeight: 1.6,
-      mb: 2,
-      flex: 1,
-      display: "-webkit-box",
-      WebkitLineClamp: 3,
-      WebkitBoxOrient: "vertical",
-      overflow: "hidden",
-      textOverflow: "ellipsis",
-    },
-    actions: {
-      p: 3,
-      pt: 0,
-      mt: "auto",
-    },
-    button: {
-      backgroundColor: "#1a237e",
-      color: "white",
-      borderRadius: "8px",
-      px: 3,
-      py: 1,
-      width: "100%",
-      "&:hover": {
-        backgroundColor: "#0d1b6b",
-      },
-    },
-  };
-
   return (
     <Container sx={{ py: 8 }}>
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        viewport={{ once: false, amount: 0.5 }} // 1 lần, vào 20% viewport
+        viewport={{ once: false, amount: 0.5 }}
       >
         <Typography
           variant="h3"
@@ -179,39 +85,80 @@ const Events = () => {
             textShadow: "2px 2px 2px rgba(0, 0, 0, 0.63)",
           }}
         >
-          CÁC KỶ NIỆM 50 NĂM THỐNG NHẤT ĐẤT NƯỚC{" "}
+          CÁC KỶ NIỆM 50 NĂM THỐNG NHẤT ĐẤT NƯỚC
         </Typography>
       </motion.div>
 
-      <Box ref={ref} sx={{ px: { xs: 0, md: 4 } }}>
+      <Box sx={{ px: { xs: 0, md: 4 } }}>
         <Slider {...settings}>
           {events.map((event, index) => (
-            <Box key={event.id} sx={{ px: 2, height: "100%" }}>
+            <Box key={event.id} sx={{ px: 2, py: 2, height: "100%" }}>
               <motion.div
                 initial={{ opacity: 0, y: 50 }}
-                animate={inView ? { opacity: 1, y: 0 } : {}}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
               >
-                <Card sx={cardStyles.container}>
+                <Card
+                  sx={{
+                    height: "100%",
+                    display: "flex",
+                    flexDirection: "column",
+                    borderRadius: "12px",
+                    boxShadow: "0 4px 20px rgba(0,0,0,0.1)",
+                    transition: "all 0.3s ease-in-out",
+                  }}
+                >
                   <CardMedia
                     component="img"
                     image={event.image}
                     alt={event.title}
-                    sx={cardStyles.media}
+                    sx={{
+                      height: "200px",
+                      objectFit: "cover",
+                      borderTopLeftRadius: "12px",
+                      borderTopRightRadius: "12px",
+                    }}
                   />
-                  <CardContent sx={cardStyles.content}>
+                  <CardContent
+                    sx={{
+                      flexGrow: 1,
+                      display: "flex",
+                      flexDirection: "column",
+                      padding: "24px",
+                    }}
+                  >
                     <Typography
                       variant="h5"
                       component="h2"
-                      sx={cardStyles.title}
+                      sx={{
+                        fontWeight: "bold",
+                        mb: 2,
+                        minHeight: "64px",
+                        display: "-webkit-box",
+                        WebkitLineClamp: 2,
+                        WebkitBoxOrient: "vertical",
+                        overflow: "hidden",
+                        textOverflow: "ellipsis",
+                      }}
                     >
                       {event.title}
                     </Typography>
-                    <Box sx={cardStyles.infoContainer}>
-                      <CalendarTodayIcon sx={cardStyles.icon} />
-                      <Typography
-                        sx={cardStyles.infoText}
+                    <Box
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        marginBottom: "12px",
+                      }}
+                    >
+                      <CalendarTodayIcon
                         style={{
+                          mr: 1,
+                          flexShrink: 0,
+                        }}
+                      />
+                      <Typography
+                        sx={{
+                          flex: 1,
                           display: "-webkit-box",
                           WebkitBoxOrient: "vertical",
                           overflow: "hidden",
@@ -222,11 +169,23 @@ const Events = () => {
                         {event.date}
                       </Typography>
                     </Box>
-                    <Box sx={cardStyles.infoContainer}>
-                      <LocationOnIcon sx={cardStyles.icon} />
-                      <Typography
-                        sx={cardStyles.infoText}
+                    <Box
+                      sx={{
+                        display: "flex",
+                        alignItems: "center",
+                        mb: 2,
+                      }}
+                    >
+                      <LocationOnIcon
                         style={{
+                          marginRight: "8px",
+                          color: "rgb(164, 118, 0)",
+                          flexShrink: 0,
+                        }}
+                      />
+                      <Typography
+                        style={{
+                          flex: 1,
                           display: "-webkit-box",
                           WebkitBoxOrient: "vertical",
                           overflow: "hidden",
@@ -239,8 +198,10 @@ const Events = () => {
                     </Box>
                     <Typography
                       variant="body2"
-                      sx={cardStyles.description}
-                      style={{
+                      sx={{
+                        lineHeight: 1.6,
+                        marginBottom: "16px",
+                        flex: 1,
                         display: "-webkit-box",
                         WebkitBoxOrient: "vertical",
                         overflow: "hidden",
@@ -251,11 +212,24 @@ const Events = () => {
                       {event.description}
                     </Typography>
                   </CardContent>
-                  <CardActions sx={cardStyles.actions}>
+                  <CardActions
+                    sx={{
+                      p: 4,
+                      paddingTop: "0",
+                      marginTop: "auto",
+                    }}
+                  >
                     <Button
                       variant="contained"
                       onClick={() => handleViewDetails(event)}
-                      sx={cardStyles.button}
+                      sx={{
+                        borderRadius: "8px",
+                        p: {
+                          xs: 1,
+                          sm: 1,
+                        },
+                        width: "100%",
+                      }}
                     >
                       Xem chi tiết
                     </Button>
