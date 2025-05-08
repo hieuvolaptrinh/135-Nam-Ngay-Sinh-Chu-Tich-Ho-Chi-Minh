@@ -9,7 +9,7 @@ import {
   Box,
 } from "@mui/material";
 import ReactPlayer from "react-player";
-import { FaQuoteLeft, FaCalendarAlt, FaTimes } from "react-icons/fa";
+import { FaQuoteLeft, FaCalendarAlt } from "react-icons/fa";
 
 const HistoryDetail = ({ show, onHide, selectedEvent }) => {
   return (
@@ -26,8 +26,18 @@ const HistoryDetail = ({ show, onHide, selectedEvent }) => {
         },
       }}
     >
-      <DialogTitle sx={{ display: "flex", alignItems: "center" }}>
-        <Typography variant="h5" sx={{ flexGrow: 1 }}>
+      <DialogTitle
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          background:
+            "linear-gradient(135deg,rgb(235, 116, 116),rgb(248, 220, 78))",
+        }}
+      >
+        <Typography
+          variant="h5"
+          sx={{ flexGrow: 1, textAlign: "justify", fontWeight: "bold" }}
+        >
           {selectedEvent?.title}
         </Typography>
       </DialogTitle>
@@ -67,7 +77,10 @@ const HistoryDetail = ({ show, onHide, selectedEvent }) => {
             alignItems: "center",
           }}
         >
-          <Typography variant="h5" sx={{ fontStyle: "italic" }}>
+          <Typography
+            variant="h5"
+            sx={{ fontStyle: "italic", textAlign: "justify" }}
+          >
             <FaQuoteLeft style={{ color: "primary.main", marginRight: 8 }} />
             {selectedEvent?.quote}
           </Typography>

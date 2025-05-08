@@ -3,10 +3,11 @@ import React, { useState } from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { FaQuoteLeft, FaCalendarAlt } from "react-icons/fa";
-import { Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 
 import { historicalEvents } from "../data/HistorysEvent";
 import HistoryDetail from "../components/History/HistoryDetail";
+import AboutHCM from "../components/About/AboutHCM";
 
 const History = () => {
   const [selectedYear, setSelectedYear] = useState(null);
@@ -43,6 +44,7 @@ const History = () => {
       >
         <Typography
           variant="h3"
+          mb={2}
           align="center"
           sx={{
             position: "relative",
@@ -53,27 +55,9 @@ const History = () => {
         >
           DẤU ẤN LỊCH SỬ
         </Typography>
-        <Typography
-          variant="h5"
-          align="justify"
-          sx={{
-            fontWeight: "bold",
-            lineHeight: 1.8,
-            textAlign: "justify",
-            textJustify: "inter-word",
-          }}
-        >
-          Từ làng Sen năm 1890, Chủ tịch Hồ Chí Minh ra đời, mở đầu cho hành
-          trình vĩ đại của dân tộc Việt Nam đi tìm con đường độc lập. Năm 1945,
-          cách mạng Tháng Tám và Tuyên ngôn Độc lập ngày 2/9 đã khai sinh nước
-          Việt Nam Dân chủ Cộng hòa. Giai đoạn 1954 đánh dấu chiến thắng Điện
-          Biên Phủ “lừng lẫy năm châu”, mở ra kỳ nguyên mới cho hòa bình và
-          thống nhất. Sau Hiệp định Genève, đất nước tạm chia cắt, nhưng tinh
-          thần đoàn kết vẫn bền chặt. Và rồi ngày 30/4/1975, đại thắng mùa Xuân
-          đưa dân tộc bước vào kỷ nguyên độc lập, thống nhất và phát triển. Từng
-          mốc son là một bản hùng ca, thấm đẫm máu, nước mắt và niềm tự hào của
-          cả dân tộc Việt Nam.
-        </Typography>
+        <Box>
+          <AboutHCM />
+        </Box>
       </motion.div>
 
       {/* Timeline */}
@@ -113,7 +97,12 @@ const History = () => {
                                 }}
                               />
                             </div>
-                            <h3 className="mb-1">{subEvent.title}</h3>
+                            <Typography
+                              variant="h4"
+                              sx={{ fontWeight: "bold" }}
+                            >
+                              {subEvent.title}
+                            </Typography>
                             <p className="text-muted small mb-1">
                               <FaCalendarAlt className="me-1" />
                               {subEvent.date}

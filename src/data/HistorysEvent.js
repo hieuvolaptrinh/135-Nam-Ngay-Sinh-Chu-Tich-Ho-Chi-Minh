@@ -6,7 +6,7 @@ export const historicalEvents = [
     events: [
       {
         title:
-          "Ngày 19 tháng 5 năm 1890, tại làng Sen, xã Kim Liên, huyện Nam Đàn, tỉnh Nghệ An, một con người vĩ đại đã ra đời – Chủ tịch Hồ Chí Minh",
+          "Ngày 19 tháng 5 năm 1890 một con người vĩ đại đã ra đời – Chủ tịch Hồ Chí Minh",
         date: "19/5/1890",
         description:
           "Chủ tịch Hồ Chí Minh sinh ra tại làng Sen, xã Kim Liên, huyện Nam Đàn, tỉnh Nghệ An",

@@ -35,8 +35,9 @@ const BacHoQuote = () => {
         color: "black",
         m: 2,
         p: 3,
-        background: "linear-gradient(to right,rgb(170, 142, 218), #F8BBD0)",
-        // "linear-gradient(135deg,rgb(213, 92, 92),rgb(248, 220, 78))",
+        background:
+        //  "linear-gradient(to right,rgb(170, 142, 218), #F8BBD0)",
+        "linear-gradient(135deg,rgb(227, 149, 149),rgb(248, 220, 78))",
 
         borderRadius: 2,
         position: "relative",
