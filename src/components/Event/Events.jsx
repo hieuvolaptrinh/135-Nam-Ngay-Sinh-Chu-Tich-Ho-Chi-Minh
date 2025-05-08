@@ -11,7 +11,6 @@ import {
   Button,
 } from "@mui/material";
 import { motion, px } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import Slider from "react-slick";
@@ -153,6 +152,7 @@ const Events = () => {
                       <CalendarTodayIcon
                         style={{
                           mr: 1,
+                          color: "rgb(164, 118, 0)",
                           flexShrink: 0,
                         }}
                       />

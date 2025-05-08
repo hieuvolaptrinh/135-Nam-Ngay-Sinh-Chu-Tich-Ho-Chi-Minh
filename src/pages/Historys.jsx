@@ -1,9 +1,9 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
-import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import { Container, Row, Col, Card } from "react-bootstrap";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { FaQuoteLeft, FaCalendarAlt } from "react-icons/fa";
-import { Box, Typography } from "@mui/material";
+import { FaQuoteLeft, FaCalendarAlt, FaRegCalendarAlt } from "react-icons/fa";
+import { Box, Typography, Button } from "@mui/material";
 
 import { historicalEvents } from "../data/HistorysEvent";
 import HistoryDetail from "../components/History/HistoryDetail";
@@ -71,8 +71,8 @@ const History = () => {
               transition={{ duration: 0.8, delay: index * 0.2 }}
               className="timeline-item"
             >
-              <div className="timeline-content">
-                <div className="timeline-year">
+              <div>
+                <div>
                   <p className="h2 text-danger">{event.year}</p>
                 </div>
                 <Card className="shadow-sm">
@@ -83,8 +83,8 @@ const History = () => {
                           key={subIndex}
                           xs={event.events.length === 1 ? 12 : 6}
                         >
-                          <div className="event-item">
-                            <div className="event-image mb-2">
+                          <Box>
+                            <div className="mb-2">
                               <img
                                 src={subEvent.images[0]}
                                 alt={subEvent.title}
@@ -103,22 +103,30 @@ const History = () => {
                             >
                               {subEvent.title}
                             </Typography>
-                            <p className="text-muted small mb-1">
-                              <FaCalendarAlt className="me-1" />
+                            <Typography
+                              variant="h6"
+                              sx={{
+                                my: 2,
+                              }}
+                            >
+                              <FaRegCalendarAlt
+                                size={30}
+                                style={{ marginRight: 8 }}
+                              />
                               {subEvent.date}
-                            </p>
+                            </Typography>
                             <blockquote className="blockquote">
                               <FaQuoteLeft className="text-primary" />
                               <p className="mb-0">{subEvent.quote}</p>
                             </blockquote>
+
                             <Button
-                              variant="outline-primary"
-                              size="sm"
+                              variant="contained"
                               onClick={() => handleMarkerClick(subEvent)}
                             >
                               Xem chi tiết
                             </Button>
-                          </div>
+                          </Box>
                         </Col>
                       ))}
                     </Row>

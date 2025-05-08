@@ -9,6 +9,7 @@ export const events = [
     details:
       "Lễ diễu binh với sự tham gia của các lực lượng vũ trang, thanh niên xung kích và nhiều tầng lớp nhân dân, nhằm tái hiện khí thế hào hùng của dân tộc trong ngày lịch sử 30/4. Chương trình bao gồm các tiết mục nghệ thuật đặc sắc, các đội hình tiêu binh đại diện cho sức mạnh và tinh thần đoàn kết dân tộc.",
     image: "/images/DuyetBinh.jpg",
+    video: "/videos/duyetBinh2.mp4",
   },
   {
     id: 2,
@@ -20,6 +21,7 @@ export const events = [
     details:
       "Triển lãm trưng bày hơn 500 hiện vật, tài liệu, hình ảnh quý giá về quá trình đấu tranh thống nhất đất nước. Đặc biệt, triển lãm có sự tham gia của các nhân chứng lịch sử, các cựu chiến binh với những câu chuyện xúc động về một thời hào hùng của dân tộc.",
     image: "/images/HoiThaoHome.png",
+    video: "/videos/trien-lam.mp4",
   },
   {
     id: 3,
@@ -31,6 +33,7 @@ export const events = [
     details:
       "Hội thảo quy tụ các nhà sử học, chuyên gia trong và ngoài nước cùng thảo luận về ý nghĩa lịch sử của ngày 30/4/1975. Các chủ đề chính bao gồm: Chiến thắng lịch sử và bài học kinh nghiệm, Vai trò của nhân dân trong sự nghiệp thống nhất đất nước, và Giá trị thời đại của chiến thắng 30/4.",
     image: "/images/HoiThaoKhoaHoc.jpg",
+    video: "/videos/hoi-thao.mp4",
   },
   {
     id: 4,
@@ -42,6 +45,7 @@ export const events = [
     details:
       "Chương trình nghệ thuật đặc sắc với sự tham gia của các nghệ sĩ nổi tiếng, các đoàn nghệ thuật truyền thống từ khắp cả nước. Các tiết mục được dàn dựng công phu, tái hiện lại những khoảnh khắc lịch sử hào hùng của dân tộc qua ngôn ngữ nghệ thuật.",
     image: "/images/NgheThuatTruyenThong.jpg",
+    video: "/videos/nghe-thuat.mp4",
   },
   {
     id: 5,
@@ -53,6 +57,7 @@ export const events = [
     details:
       "Đêm nhạc hoành tráng với sự tham gia của hơn 100 nghệ sĩ, ca sĩ nổi tiếng. Chương trình được dàn dựng công phu với các ca khúc cách mạng, những bài hát về tình yêu quê hương đất nước, cùng những tiết mục nghệ thuật đặc sắc, tạo nên một đêm nhạc đầy cảm xúc.",
     image: "/images/DemNhac.jpg",
+    video: "/videos/dem-nhac.mp4",
   },
   {
     id: 6,
@@ -64,5 +69,6 @@ export const events = [
     details:
       "Lễ thắp nến tri ân được tổ chức trang nghiêm với sự tham gia của đông đảo các tầng lớp nhân dân, các cựu chiến binh, thân nhân liệt sĩ. Chương trình bao gồm các nghi thức tưởng niệm, thắp nến tri ân, và các hoạt động văn hóa nghệ thuật đặc sắc, thể hiện lòng biết ơn sâu sắc đối với các anh hùng liệt sĩ đã hy sinh vì sự nghiệp thống nhất đất nước.",
     image: "/images/ThapNen.jpg",
+    video: "/videos/thap-nen.mp4",
   },
 ];

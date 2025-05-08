@@ -64,7 +64,7 @@ export const historicalEvents = [
         images: ["./images/Geneve.jpg"],
         video: "/videos/genever.mp4",
         quote:
-          "Hòa bình là quý báu, nhưng độc lập tự do còn quý báu hơn. Chúng ta đấu tranh cho hòa bình không phải bằng mọi giá, mà là để bảo vệ nền độc lập thiêng liêng và quyền sống của dân tộc mình.",
+          "Hòa bình là quý báu, nhưng độc lập tự do còn quý báu hơn. Chúng ta đấu tranh cho hòa bình bằng mọi giá, để bảo vệ nền độc lập thiêng liêng và quyền sống của dân tộc mình.",
       },
     ],
   },

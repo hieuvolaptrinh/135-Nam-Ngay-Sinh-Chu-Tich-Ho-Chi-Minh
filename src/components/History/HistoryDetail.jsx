@@ -9,7 +9,8 @@ import {
   Box,
 } from "@mui/material";
 import ReactPlayer from "react-player";
-import { FaQuoteLeft, FaCalendarAlt } from "react-icons/fa";
+import { FaQuoteLeft, FaCalendarAlt, FaRegCalendarAlt } from "react-icons/fa";
+import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
 
 const HistoryDetail = ({ show, onHide, selectedEvent }) => {
   return (
@@ -42,16 +43,16 @@ const HistoryDetail = ({ show, onHide, selectedEvent }) => {
         </Typography>
       </DialogTitle>
       <DialogContent>
-        <Box sx={{ mb: 3 }}>
+        <Box sx={{ my: 3 }}>
           <Typography
-            variant="body2"
+            variant="h6"
             color="text.secondary"
-            sx={{ display: "flex", alignItems: "center", mb: 2 }}
+            sx={{ alignItems: "center", mb: 2 }}
           >
-            <FaCalendarAlt style={{ marginRight: 8 }} />
-            {selectedEvent?.date}
+            <FaRegCalendarAlt size={30} style={{ marginRight: 8 }} />
+            {selectedEvent?.date} {""}
+            {selectedEvent?.description}
           </Typography>
-          <Typography variant="h6">{selectedEvent?.description}</Typography>
         </Box>
 
         {/* Video Player */}
