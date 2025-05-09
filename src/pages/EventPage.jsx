@@ -8,18 +8,18 @@ function EventPage() {
     <>
       <Events
         events={giaiPhongEvents}
-        title="Các sự kiện kỷ niệm 50 năm ngày giải phóng miền Nam"
+        title="CÁC SỰ KIỆN KỶ NIỆM 50 NĂM THỐNG NHẤT ĐẤT NƯỚC"
         themeColor="rgb(235, 116, 116)"
         titleColor="#e74c3c"
       />
       <Events
         events={hcmEvents}
-        title="Các sự kiện kỷ niệm 135 năm ngày sinh Chủ tịch Hồ Chí Minh"
+        title={`CÁC SỰ KIỆN KỶ NIỆM 135 NĂM NGÀY SINH CHỦ TỊCH HỒ CHÍ MINH`}
         themeColor="rgb(235, 116, 116)"
         titleColor="#e74c3c"
       />
 
-      <FeaturedEvents />
+      {/* <FeaturedEvents /> */}
     </>
   );
 }

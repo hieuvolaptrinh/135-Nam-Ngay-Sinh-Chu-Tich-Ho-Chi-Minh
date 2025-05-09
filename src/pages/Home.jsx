@@ -23,7 +23,7 @@ const Home = () => {
         titleColor="#e74c3c"
       />
       <HoChiMinhTimeline />
-      <FeaturedEvents />
+      {/* <FeaturedEvents /> */}
     </>
   );
 };

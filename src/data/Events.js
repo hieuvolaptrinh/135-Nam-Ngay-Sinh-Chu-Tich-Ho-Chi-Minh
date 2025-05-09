@@ -1,33 +1,22 @@
 export const hcmEvents = [
   {
     id: 1,
-    title: "Lễ dâng hương, dâng hoa tại các địa danh lịch sử",
+    title:
+      "Tuyên truyền kỷ niệm 135 năm Ngày sinh Chủ tịch Hồ Chí Minh 19/5/1890 - 19/5/2025",
     date: "19/5/2025 | 7h00 – 8h00",
     location: "Quảng trường Ba Đình, Khu Di tích Kim Liên, Nghệ An",
     description:
-      "Dâng hương tưởng niệm Bác Hồ, thể hiện lòng biết ơn và tôn kính với vị lãnh tụ vĩ đại.",
-    details:
-      "Lễ dâng hương được tổ chức trang nghiêm tại các địa danh lịch sử gắn liền với cuộc đời và sự nghiệp của Chủ tịch Hồ Chí Minh. Chương trình bao gồm các nghi thức truyền thống, dâng hương, dâng hoa và phút mặc niệm, thể hiện lòng thành kính sâu sắc đối với vị lãnh tụ vĩ đại của dân tộc. <br />[img]/images/LeDangHuong2.jpg|Lễ dâng hương tại Quảng trường Ba Đình[/img]<br />Đặc biệt, buổi lễ có sự tham gia của đông đảo các tầng lớp nhân dân, các cựu chiến binh và thế hệ trẻ. Mỗi người đều mang trong mình tình cảm sâu sắc và lòng biết ơn vô hạn đối với Bác Hồ kính yêu.",
+      "Đại sứ quán Việt Nam tại Thái Lan đã tổ chức trọng thể lễ mít-tinh kỷ niệm 50 năm Ngày giải phóng miền Nam, thống nhất đất nước (30/4/1975 - 30/4/2025) và 135 năm ngày sinh Chủ tịch Hồ Chí Minh (19/5/1890 – 19/5/2025)",
+    details: "",
     image: "/images/LeDangHuong.jpg",
+    video: "https://www.youtube.com/watch?v=rg29l8PBEKo",
   },
   {
     id: 2,
-    title: "Chương trình nghệ thuật đặc biệt 'Người là niềm tin tất thắng'",
-    date: "19/5/2025 | 20h00 – 22h00",
-    location: "Nhà hát Lớn Hà Nội / Truyền hình trực tiếp trên VTV",
-    description:
-      "Các tiết mục nghệ thuật ca ngợi tư tưởng, đạo đức và sự nghiệp cách mạng của Chủ tịch Hồ Chí Minh.",
-    details:
-      "Chương trình nghệ thuật đặc biệt với sự tham gia của các nghệ sĩ nổi tiếng, các đoàn nghệ thuật chuyên nghiệp. Các tiết mục được dàn dựng công phu, tái hiện lại những khoảnh khắc lịch sử, những câu chuyện cảm động về Bác Hồ qua ngôn ngữ nghệ thuật đa dạng.",
-    image: "/images/NgheThuatDacBiet.jpg",
-    video: "/videos/nghe-thuat-dac-biet.mp4",
-  },
-  {
-    id: 3,
     title:
-      "Hội thảo khoa học 'Tư tưởng Hồ Chí Minh với công cuộc đổi mới và hội nhập'",
-    date: "18/5/2025 | 8h30 – 11h30",
-    location: "Học viện Chính trị Quốc gia Hồ Chí Minh",
+      "Hội thảo khoa học: Vận dụng và phát triển sáng tạo tư tưởng Hồ Chí Minh trong kỷ nguyên mới",
+    date: "9/04/2025",
+    location: "Học viện Chính trị Quốc gia Hà Nội",
     description:
       "Trình bày tham luận, nghiên cứu về giá trị trường tồn trong tư tưởng Hồ Chí Minh.",
     details:
@@ -107,9 +96,14 @@ export const hcmEvents = [
     date: "19/5/2025",
     location: "Khuôn viên công sở, trường học, khu dân cư",
     description:
-      "Mỗi đơn vị trồng từ 5 – 135 cây xanh nhân ngày sinh nhật Bác.",
-    details:
-      "Chương trình trồng cây được phát động rộng khắp tại các cơ quan, đơn vị, trường học và khu dân cư. Mỗi đơn vị sẽ trồng từ 5 đến 135 cây xanh, tương ứng với số tuổi của Bác, nhằm tạo môi trường xanh, sạch, đẹp và góp phần bảo vệ môi trường.",
+      "Tết đến, xuân về, mỗi người dân Việt Nam bồi hồi nhớ lời căn dặn của Bác Hồ phát động Tết trồng cây năm xưa",
+    details: `
+   Ngày 28-11-1959, Chủ tịch Hồ Chí Minh viết bài “Tết trồng cây” với bút danh “Trần Lực”, phát động phong trào Tết trồng cây đầu xuân.
+
+66 năm trôi qua, lời phát động, lời dạy của Bác kính yêu vẫn vang vọng trong mỗi người dân Việt Nam: “Mùa xuân là Tết trồng cây / Làm cho đất nước càng ngày càng xuân”.
+
+Mỗi độ xuân về, cả nước đồng loạt tổ chức “Tết trồng cây đời đời nhớ ơn Bác Hồ”, làm cho quê hương, đất nước thêm xanh mát, tươi đẹp.
+    `,
     image: "/images/TrongCay.jpg",
   },
 ];
@@ -192,17 +186,18 @@ Cả quảng trường như lặng đi khi danh hiệu "Anh hùng Lao động" �
 
 Tham dự chương trình có Phó Chủ tịch UBND TP Hồ Chí Minh Trần Thị Diệu Thúy, Chủ nhiệm Ủy ban Kiểm tra Thành ủy TP Hồ Chí Minh Trần Kim Yến; nguyên Trưởng ban Tuyên giáo Thành ủy TP Hồ Chí Minh Phan Nguyễn Như Khuê; bà Emmanuelle Pavillon-Grosser - Tổng lãnh sự Pháp tại TP Hồ Chí Minh.
       
-<br /> [img]./images/GiaiPhong/SacMauTPbac/SM1.jpg|Phó Chủ tịch UBND TP Hồ Chí Minh - Trần Thị Diệu Thúy - phát biểu tại lễ khai mạc.[/img]<br /> 
+<br /> [img]./images/GiaiPhong/SacMauTPBac/SM1.jpg|Phó Chủ tịch UBND TP Hồ Chí Minh - Trần Thị Diệu Thúy - phát biểu tại lễ khai mạc.[/img]<br /> 
 
 Phát biểu tại lễ khai mạc, Phó Chủ tịch UBND TP Hồ Chí Minh - Trần Thị Diệu Thúy - cho rằng, chuỗi hoạt động Sắc màu Thành phố Bác không chỉ là sự kiện văn hóa nghệ thuật đơn thuần mà còn mang ý nghĩa chính trị, lịch sử sâu sắc. Tròn 50 năm sau ngày Giải phóng miền Nam, thống nhất đất nước, TP Hồ Chí Minh -  thành phố mang tên Bác, đã không ngừng nỗ lực vươn lên, từng bước khẳng định vai trò là trung tâm kinh tế, văn hóa, khoa học, giáo dục, đổi mới sáng tạo và hội nhập quốc tế của cả nước.
      
 Đây là dịp để người dân thành phố và cả nước cùng nhau tôn vinh những giá trị của độc lập, tự do, tri ân những thế hệ cha anh đã ngã xuống vì sự nghiệp giải phóng dân tộc, đồng thời quảng bá hình ảnh một thành phố hiện đại, sáng tạo, nghĩa tình và hội nhập đến bạn bè trong nước và quốc tế", bà Trần Thị Diệu Thúy nhấn mạnh.
 
 Phần trình diễn 3D Mapping quốc tế mở đầu lễ hội, với sự tham gia của 3 đội sáng tạo đến từ Pháp, Bỉ, Singapore. Mỗi đội mang đến một sắc màu riêng trong cách kể chuyện bằng ánh sáng, từ những biểu tượng văn hóa, công nghệ đến cái nhìn đương đại về TP Hồ Chí Minh. Ấn tượng nhất trong đêm khai mạc là màn trình diễn của đội chủ nhà Việt Nam, đưa khán giả du ngoạn dọc theo mảnh đất hình chữ S, tái hiện lại những thời khắc lịch sử hào hùng của dân tộc.
-
-<br /> [img]./images/GiaiPhong/SacMauTPbac/SM2.jpg|Đại tiệc 3D Mapping mãn nhãn.[/img]<br /> 
+<br /> [img]./images/GiaiPhong/SacMauTPBac/SM2.jpg|Đại tiệc 3D Mapping mãn nhãn.[/img]<br /> 
 Chương trình hòa nhạc giao hưởng, hợp xướng kết hợp với công nghệ trình diễn Mapping Visual Art cũng là sáng tạo mới, phát huy sự giao thoa, tương tác của của loại hình nghệ thuật hàn lâm và đương đại cũng đã mang đến nhiều cảm xúc cho người xem.
-<br /> [img]./images/GiaiPhong/SacMauTPbac/SM3.jpg|Chương trình nhạc giao hưởng, hợp xướng kết hợp trình diễn Mapping Visual Art mang lại nhiều cảm xúc cho khán giả.[/img]<br /> 
+
+<br /> [img]./images/GiaiPhong/SacMauTPBac/SM3.jpg|Chương trình nhạc giao hưởng, hợp xướng kết hợp trình diễn Mapping Visual Art mang lại nhiều cảm xúc cho khán giả.[/img]<br /> 
+
 Cùng lúc, các khu vực như công viên Bạch Đằng, sân khấu nổi trên sông Sài Gòn, phố đi bộ Nguyễn Huệ trở thành không gian lễ hội với các hoạt động múa lân – sư – rồng, tuồng, đờn ca tài tử, võ thuật, thể thao đường phố… đã tạo ra một không khí lễ hội rộn ràng, náo nhiệt thu hút rất đông người dân và du khách tham gia.
 
 Điểm nhấn của lễ khai mạc là những màn trình diễn xếp hình bằng ánh sáng bởi công nghệ thiết bị bay không người lái (drone) và pháo hoa nghệ thuật diễn ra tại Công viên Bờ sông Sài Gòn, thắp sáng bầu trời TP Hồ Chí Minh.
@@ -214,21 +209,36 @@ Sau đêm khai mạc, các đêm 26/4/2025 và 29/4/2025 cũng sẽ tiếp tục
 
 Chuỗi hoạt động Sắc màu Thành phố Bác là dịp để TP Hồ Chí Minh tự hào giới thiệu đến bạn bè trong nước và quốc tế một đô thị năng động, sáng tạo, đầy bản sắc - nơi hội tụ tinh thần dân tộc và khát vọng tương lai.
       `,
-    image: "/images/SacMauThanhPhoBac.jpg",
+    image: "./images/GiaiPhong/SacMauTPBac/SacMauTPBac.jpg",
     video: "https://www.youtube.com/watch?v=SpU4HFg5YWU",
   },
 
   {
     id: 3,
     title: "Triển lãm điện ảnh 'Âm vang đại thắng mùa Xuân 1975'",
-    date: "27 – 28/04/2025",
-    location: "Sân khấu Nguyễn Huệ – Ngô Đức Kế, Quận 1, TP.HCM",
+    date: "27/04/2025 – 28/04/2025",
+    location: "Phố đi bộ Nguyễn Huệ, Quận 1, TP.HCM",
     description:
-      "Triển lãm ảnh tư liệu quý và chiếu phim cộng đồng về đại thắng mùa Xuân.",
-    details:
-      "Triển lãm trưng bày hơn 300 ảnh tư liệu quý, kết hợp các suất chiếu phim tài liệu, phóng sự về Chiến dịch Hồ Chí Minh lịch sử. Người xem có cơ hội gặp gỡ các nhân chứng lịch sử, lắng nghe chia sẻ cảm động từ những người đã trực tiếp tham gia chiến dịch.",
-    image: "/images/AmVangDaiThang.jpg",
-    video: "https://www.youtube.com/watch?v=amvang_example",
+      "Sự kiện là điểm nhấn quan trọng trong chuỗi các hoạt động văn hóa, thể thao hưởng ứng chào mừng kỷ niệm 50 năm đất nước thống nhất",
+    details: `
+    Sự kiện là điểm nhấn quan trọng trong chuỗi các hoạt động văn hóa, thể thao hưởng ứng chào mừng kỷ niệm 50 năm đất nước thống nhất, do Viện Phim VN (Bộ VH-TT-DL) phối hợp Sở Văn hóa - Thể thao TP.HCM và các đơn vị liên quan tổ chức.
+    Triển lãm trưng bày khoảng 300 bức ảnh, được tuyển chọn từ các phim tài liệu, phim truyện đề tài chiến tranh cách mạng như Đừng đốt, Nổi gió, Địa đạo: Mặt trời trong bóng tối… nhằm khai thác, phổ biến giá trị lịch sử và văn hóa của tư liệu, tài liệu điện ảnh đến đông đảo công chúng.
+    
+    Các bức ảnh được tuyển chọn từ các phim tài liệu, phim truyện, tư liệu về cuộc Tổng tiến công và nổi dậy mùa Xuân năm 1975 đỉnh cao của chiến dịch Hồ Chí Minh lịch sử giành thắng lợi hoàn toàn. Hình ảnh về các nghệ sĩ điện ảnh tác nghiệp trên chiến trường miền Nam thời kỳ kháng chiến chống Mỹ, cứu nước. Bên cạnh đó, còn có hình ảnh về vẻ đẹp bình dị cùng nhịp sống sôi động, hội nhập của Sài Gòn - Thành phố Hồ Chí Minh hôm nay.
+Triển lãm gồm 2 nội dung: "Điện ảnh với những khoảnh khắc lịch sử" gồm 3 chủ đề: Từ cuộc tổng tiến công và nổi dậy Tết Mậu Thân 1968; Chiến dịch Hồ Chí Minh lịch sử - đại thắng mùa xuân 1975, Điện ảnh trên những nẻo đường kháng chiến Nam Bộ và nội dung Sài Gòn - Thành phố Hồ Chí Minh qua góc nhìn điện ảnh.
+Điểm nhấn của lễ khai mạc là những màn trình diễn xếp hình bằng ánh sáng bởi công nghệ thiết bị bay không người lái (drone) và pháo hoa nghệ thuật diễn ra tại Công viên Bờ sông Sài Gòn, thắp sáng bầu trời TP Hồ Chí Minh.
+<br /> [img]./images/GiaiPhong/MuaXuan1975/MX1.jpg|Triển lãm Âm vang Đại thắng mùa xuân 1975 trong điện ảnh thu hút nhiều sao Việt tham dự, có thể kể đến như NSND Kim Xuân, đạo diễn Phan Gia Nhật Linh, diễn viên Thu Trang, diễn viên Tiến Luật...[/img]<br /> 
+Trong khuôn khổ chương trình còn có hoạt động trình chiếu, giao lưu với các đoàn phim do Sở Văn hóa và Thể thao Thành phố Hồ Chí Minh chủ trì thực hiện, sẽ diễn ra tại 3 địa điểm khác nhau như: Tại Phố đi bộ Nguyễn Huệ, Quận 1, TP. Hồ Chí Minh sẽ chiếu phim Tài liệu "Sài Gòn - Thành phố Hồ Chí Minh: 50 năm thực hiện Di chúc Bác Hồ" (tập 2: "Tiến lên toàn thắng ắt về ta") vào ngày 27/4/2025 (19h30 - 21h00).
+ <br /><br /> 
+Giao lưu với Đoàn làm phim "Địa đạo" và chiếu phim Tài liệu "Thành phố lúc rạng đông" tại Phố đi bộ Nguyễn Huệ, Quận 1, TP. Hồ Chí Minh vào 19h30 - 21h00, ngày 28/4/2025
+ <br /><br /> 
+Chương trình chiếu phim (do Viện Phim Việt Nam chủ trì thực hiện) tại Thư viện Khoa học Tổng hợp TP. Hồ Chí Minh, 69 Lý Tự Trọng, phường Bến Thành, Quận 1, TP. Hồ Chí Minh từ ngày 18/4 - 23/4/2025 (9h00 - 11h00 và 15h00 - 17h00) với phim truyện "Cánh đồng hoang"; phim Tài liệu "Đường ra phía trước" từ ngày 24/4 - 29/4/2025 (9h00 - 11h00 và 15h00 - 17h00); phim Tài liệu "Vài hình ảnh về Giải phóng Sài Gòn", "Sài Gòn vui chiến thắng" từ ngày 05/5 - 08/5/2025 (9h00 - 11h00 và 15h00 - 17h00).
+ <br /><br /> 
+Tại Trường Đại học Mở TP. Hồ Chí Minh, 97 Võ Văn Tần, Quận 3, TP. Hồ Chí Minh chiếu phim Tài liệu "Sài Gòn - Thành phố Hồ Chí Minh: 50 năm thực hiện Di chúc Bác Hồ" (tập 2: "Tiến lên toàn thắng ắt về ta" ngày 25/4/2025 (17h00).
+
+
+    `,
+    image: "/images/GiaiPhong/MuaXuan1975/MuaXuan1975.jpg",
   },
   {
     id: 4,
@@ -236,34 +246,32 @@ Chuỗi hoạt động Sắc màu Thành phố Bác là dịp để TP Hồ Chí
     date: "29/04/2025 | 18h00 – 22h00",
     location: "Công viên Sáng Tạo, TP.HCM",
     description:
-      "Đêm nghệ thuật đặc biệt với sự tham dự của lãnh đạo Đảng và Nhà nước.",
-    details:
-      "Chương trình nghệ thuật lớn với các tiết mục tái hiện hành trình thống nhất đất nước và các thành tựu sau 50 năm. Với sự tham gia của nhiều nghệ sĩ tên tuổi và lãnh đạo cấp cao, đây là sự kiện trọng điểm của chuỗi kỷ niệm. <br />[img]/images/MuaXuanThongNhat.jpg|Các tiết mục nghệ thuật đặc sắc trong chương trình[/img]",
-    image: "/images/MuaXuanThongNhat.jpg",
-    video: "https://www.youtube.com/watch?v=muaxuan_example",
-  },
-  {
-    id: 5,
-    title: "Đêm nhạc 'Dấu ấn thống nhất'",
-    date: "30/04/2025 | 19h00 – 22h00",
-    location: "Sân vận động Quốc gia Mỹ Đình",
-    description:
-      "Chương trình ca nhạc hoành tráng với các ca sĩ hàng đầu Việt Nam.",
-    details:
-      "Đêm nhạc quy mô lớn với hơn 100 nghệ sĩ, tái hiện không khí hào hùng và ca ngợi quê hương, đất nước. Các tiết mục được dàn dựng công phu, thể hiện niềm tự hào dân tộc qua các giai điệu bất hủ như 'Đất nước trọn niềm vui', 'Tiến quân ca', 'Như có Bác trong ngày vui đại thắng'…",
-    image: "/images/DemNhac.jpg",
-    video: "https://www.youtube.com/watch?v=daunhat_example",
-  },
-  {
-    id: 6,
-    title: "Lễ thắp nến tri ân anh hùng liệt sĩ",
-    date: "30/04/2025 | 20h00",
-    location: "Nghĩa trang liệt sĩ Trường Sơn, Quảng Trị",
-    description:
-      "Lễ tưởng niệm trang nghiêm tri ân các anh hùng đã hy sinh vì Tổ quốc.",
-    details:
-      "Lễ thắp nến do Bộ LĐ-TB&XH và UBND tỉnh Quảng Trị tổ chức, với sự tham gia của thân nhân liệt sĩ, đoàn viên thanh niên, cựu chiến binh. Hàng ngàn ngọn nến được thắp lên, hòa cùng lời ca, tiếng nhạc và nghi thức tưởng niệm đầy xúc động, lan tỏa thông điệp uống nước nhớ nguồn.",
-    image: "/images/ThapNen.jpg",
-    video: "https://www.youtube.com/watch?v=thapnen_example",
+      "Chương trình nghệ thuật đặc biệt 'Mùa xuân thống nhất' là hoạt động chào mừng kỷ niệm 50 năm ngày đất nước thống nhất (30.4.1975 - 30.4.2025).",
+    details: `
+      "Chương trình nghệ thuật lớn với các tiết mục tái hiện hành trình thống nhất đất nước và các thành tựu sau 50 năm. Với sự tham gia của nhiều nghệ sĩ tên tuổi và lãnh đạo cấp cao, đây là sự kiện trọng điểm của chuỗi kỷ niệm."
+       <br />[img]/images/GiaiPhong/MuaXuanThongNhat/MXTN1.jpg|Tổng Bí thư Tô Lâm và phu nhân, Thủ tướng Phạm Minh Chính cùng các lãnh đạo Đảng, Nhà nước dự chương trình[/img]<br />
+    
+      Theo ban tổ chức, chương trình kết hợp giữa các yếu tố của nghệ thuật truyền thống với nghệ thuật hiện đại, thông qua ngôn ngữ âm nhạc, múa, kết hợp với hệ thống âm thanh, ánh sáng hiện đại để tạo nên những gam màu đặc sắc, tái hiện quá trình đấu tranh anh dũng, bền bỉ, kiên cường của toàn dân tộc để thống nhất đất nước.
+ <br /><br /> 
+Qua các tiết mục, ban tổ chức mong muốn khắc họa bức tranh của đất nước Việt Nam với những thành tựu vĩ đại sau 50 năm thống nhất, dưới sự lãnh đạo sáng suốt, tài tình của Đảng. Từ đó viết tiếp tinh thần của ngày toàn thắng để xây dựng đất nước Việt Nam ngày càng giàu mạnh như ước nguyện của Chủ tịch Hồ Chí Minh. Phát biểu khai mạc, Bộ trưởng Bộ VH-TT-DL Nguyễn Văn Hùng cho biết chương trình nghệ thuật đặc biệt Mùa xuân thống nhất là nơi tiếng hát được vang lên từ quá khứ, vọng về hiện tại và ngân mãi đến tương lai: “Chương trình là lời tri ân sâu sắc xin được gửi tới thế hệ đi trước, các chiến sĩ đồng bào đã không tiếc máu xương, sẵn sàng hy sinh vì độc lập tự do của Tổ quốc”. Bộ trưởng Nguyễn Văn Hùng đề cập đến ca từ trong bài hát Viết tiếp câu chuyện hòa bình của nhạc sĩ Nguyễn Văn Chung, đồng thời chia sẻ thêm: “Thông điệp của chương trình là niềm tin mãnh liệt vào sự lãnh đạo của Đảng Cộng sản Việt Nam quang vinh để có mùa xuân thống nhất. Nhân dân Việt Nam sẽ đoàn kết cùng nhau viết tiếp bản hùng ca mới, của kỷ nguyên xây dựng đất nước hùng cường và phát triển”.
+   <br /><br /> 
+Ở chương đầu tiên - Nỗi đau chia cắt và con đường thống nhất - chương trình tái hiện lại thời điểm đất nước bị chia cắt hai miền. “Bao gia đình ly tán, cả dân tộc khắc khoải khát vọng lớn lao - thống nhất non sông”, MC Vũ Mạnh Cường dẫn dắt.
+ <br /><br /> 
+NSND Thu Hiền ngân vang câu hò đầy khắc khoải, sau đó là màn thể hiện liên khúc Câu hò bên bến Hiền Lương và tân cổ Ở hai đầu nỗi nhớ với sự góp giọng của NSƯT Võ Minh Lâm và NSND Hồ Ngọc Trinh. Các sinh viên, bộ đội cùng vũ đoàn Tre tái hiện cảnh chia cắt ở bờ Hiền Lương. Đáng chú ý, màn hát vọng cổ của NSƯT Võ Minh Lâm nhận được tràng vỗ tay nồng nhiệt của khán giả
+ <br /><br /> 
+Ngay từ những tiết mục mở đầu, chương trình Mùa xuân thống nhất khiến khán giả choáng ngợp bởi độ hoành tráng, dàn dựng sân khấu khơi gợi nhiều cảm xúc. Trên sân khấu, Đức Tuấn thể hiện Giải phóng miền Nam, kết hợp cùng hoạt cảnh ghi lại quá trình đấu tranh kiên cường, bất khuất của người dân. Sau đó, NSND Thu Hiền trở lại sân khấu với Bài ca năm tấn cùng hình ảnh người dân tăng gia sản xuất, hình ảnh những chàng trai cô gái vượt Trường Sơn vào chiến trường miền Nam...
+
+       <br />[img]/images/GiaiPhong/MuaXuanThongNhat/MXTN2.jpg|Chương trình được tổng đạo diễn dàn dựng liền mạch, như kể câu chuyện về hành trình vượt qua giai đoạn khó khăn của quân và dân ta để giành độc lập dân tộc.[/img]<br />
+       <br />[img]/images/GiaiPhong/MuaXuanThongNhat/MXTN3.jpg|Hoạt cảnh Mậu thân 1968 - Dưới hầm tối là nơi sáng nhất và ca cổ cải lương Mặt trời trong bóng tối[/img]<br />
+
+
+       Chương trình nghệ thuật đặc biệt Mùa xuân thống nhất thể hiện ý nghĩa, tầm vóc vĩ đại, giá trị to lớn của đại thắng mùa xuân năm 1975 trong lịch sử dựng nước, giữ nước của dân tộc ta. Thông qua chương trình, ban tổ chức tuyên truyền đến các tầng lớp nhân dân về tình yêu quê hương, đất nước, niềm tự hào dân tộc và truyền thống cách mạng dưới sự lãnh đạo của Đảng Cộng sản Việt Nam.
+ <br /><br /> 
+  Đây cũng là dịp đánh giá toàn diện, sâu sắc những thành tựu phát triển của đất nước trên các lĩnh vực sau 50 năm thống nhất đất nước, qua 40 năm tiến hành công cuộc đổi mới của cả nước nói chung và TP.HCM nói riêng. Chương trình còn hướng tới mục tiêu bảo tồn, phát huy văn hóa truyền thống tốt đẹp kết hợp phát triển du lịch, tăng cường khối đại đoàn kết toàn dân, thực hiện thắng lợi công cuộc đổi mới của đất nước trong kỷ nguyên mới.
+
+
+`,
+    image: "/images/GiaiPhong/MuaXuanThongNhat/MuaXuanThongNhat.jpg",
+    video: "https://www.youtube.com/watch?v=JcjUMRYQ2jo",
   },
 ];

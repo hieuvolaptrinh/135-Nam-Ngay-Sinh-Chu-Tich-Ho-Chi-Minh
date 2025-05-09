@@ -54,7 +54,7 @@ export const historicalEvents = [
         images: ["./images/DienBienPhu.jpg"],
         video: "/videos/DienBienPhu.mp4",
         quote:
-          "Chúng ta thà hy sinh tất cả, chứ nhất định không chịu mất nước, không chịu làm nô lệ. Sự quyết tâm ấy đã hun đúc nên một chiến thắng oanh liệt, ghi dấu vàng son vào trang sử dân tộc.",
+          "Chúng ta thà hy sinh tất cả, chứ nhất định không chịu mất nước, không chịu làm nô lệ. Đã tạo nên một chiến thắng oanh liệt, ghi dấu vàng son vào trang sử dân tộc.",
       },
       {
         title: "Hiệp định Genève",
