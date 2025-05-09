@@ -25,6 +25,33 @@ const About = () => {
       >
         <Row>
           <Col xs={12} sm={6} md={6} className="text-center mb-4">
+            <h2
+              className="text-center mb-5"
+              initial="initial"
+              animate="animate"
+              style={{
+                position: "relative",
+                backgroundSize: "200% 200%",
+                color: "rgb(237, 62, 50)",
+                fontWeight: "bold",
+                fontSize: "2rem",
+              }}
+            >
+              THÔNG ĐIỆP
+              <span
+                style={{
+                  content: '""',
+                  position: "absolute",
+                  bottom: "-10px",
+                  left: "50%",
+                  transform: "translateX(-50%)",
+                  width: "100px",
+                  height: "4px",
+                  backgroundColor: "#007bff",
+                  borderRadius: "2px",
+                }}
+              />
+            </h2>
             <AboutHCM />
           </Col>
           <Col xs={12} sm={6} md={6} className="text-center mb-4">

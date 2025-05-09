@@ -51,7 +51,7 @@ const EventModal = ({
         return (
           <Box key={index} sx={{ mb: 3 }}>
             <Typography
-              variant="body1"
+              variant="h5"
               sx={{
                 textIndent: "20px",
                 mb: 2,
@@ -173,7 +173,6 @@ const EventModal = ({
               display: "flex",
               alignItems: "center",
               gap: 3,
-              mb: 3,
             }}
           >
             <Box
@@ -184,7 +183,7 @@ const EventModal = ({
               }}
             >
               <CalendarTodayIcon sx={{ mr: 1, color: themeColor }} />
-              <Typography variant="body1" sx={{ fontWeight: "medium" }}>
+              <Typography variant="h6" sx={{ fontWeight: "medium" }}>
                 {event.date}
               </Typography>
             </Box>
@@ -196,7 +195,7 @@ const EventModal = ({
               }}
             >
               <LocationOnIcon sx={{ mr: 1, color: themeColor }} />
-              <Typography variant="body1" sx={{ fontWeight: "medium" }}>
+              <Typography variant="h6" sx={{ fontWeight: "medium" }}>
                 {event.location}
               </Typography>
             </Box>

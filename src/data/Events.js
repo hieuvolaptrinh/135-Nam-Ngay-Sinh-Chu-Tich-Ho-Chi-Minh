@@ -1,112 +1,75 @@
 export const hcmEvents = [
   {
     id: 1,
-    title:
-      "Tuyên truyền kỷ niệm 135 năm Ngày sinh Chủ tịch Hồ Chí Minh 19/5/1890 - 19/5/2025",
+    title: "Lễ dâng hương, dâng hoa tưởng niệm Chủ tịch Hồ Chí Minh",
     date: "19/5/2025 | 7h00 – 8h00",
-    location: "Quảng trường Ba Đình, Khu Di tích Kim Liên, Nghệ An",
+    location: "Quảng trường Ba Đình (Hà Nội); Khu Di tích Kim Liên (Nghệ An)",
     description:
-      "Đại sứ quán Việt Nam tại Thái Lan đã tổ chức trọng thể lễ mít-tinh kỷ niệm 50 năm Ngày giải phóng miền Nam, thống nhất đất nước (30/4/1975 - 30/4/2025) và 135 năm ngày sinh Chủ tịch Hồ Chí Minh (19/5/1890 – 19/5/2025)",
+      "Lễ dâng hương, dâng hoa tại các khu di tích lịch sử, địa điểm tưởng niệm Chủ tịch Hồ Chí Minh nhằm tưởng nhớ công lao to lớn của Người.",
     details: "",
-    image: "/images/LeDangHuong.jpg",
-    video: "https://www.youtube.com/watch?v=rg29l8PBEKo",
+    image: "/images/HoChiMinh/DanHuong.jpg",
   },
   {
     id: 2,
     title:
-      "Hội thảo khoa học: Vận dụng và phát triển sáng tạo tư tưởng Hồ Chí Minh trong kỷ nguyên mới",
-    date: "9/04/2025",
-    location: "Học viện Chính trị Quốc gia Hà Nội",
+      "Tuyên truyền 135 năm Ngày sinh Chủ tịch Hồ Chí Minh 19/5/1890 - 19/5/2025",
+    date: "Tháng 5/2025",
+    location: "Toàn quốc",
     description:
-      "Trình bày tham luận, nghiên cứu về giá trị trường tồn trong tư tưởng Hồ Chí Minh.",
-    details:
-      "Hội thảo quy tụ các nhà khoa học, chuyên gia trong và ngoài nước cùng thảo luận về giá trị trường tồn của tư tưởng Hồ Chí Minh trong bối cảnh đổi mới và hội nhập quốc tế. Các tham luận tập trung phân tích sâu sắc về tư tưởng, đạo đức và phong cách Hồ Chí Minh.",
-    image: "/images/HoiThaoKhoaHoc.jpg",
+      "Toàn quốc phát động tuyên truyền kỷ niệm 135 năm Ngày sinh Chủ tịch Hồ Chí Minh 19/5/1890 - 19/5/2025",
+    details: "",
+    image: "/images/HoChiMinh/TuyenTruyen.jpg",
   },
   {
-    id: 4,
-    title:
-      "Phát động đợt sinh hoạt chính trị 'Học tập và làm theo tư tưởng, đạo đức, phong cách Hồ Chí Minh'",
-    date: "15/5 – 30/6/2025",
-    location: "Tất cả cơ sở Đảng, trường học, cơ quan nhà nước",
+    id: 3,
+    title: "Hội thảo khoa học cấp quốc gia",
+    date: "Dự kiến: Tháng 5/2025",
+    location: "Học viện Chính trị quốc gia Hồ Chí Minh",
     description:
-      "Diễn đàn, tọa đàm, thảo luận chuyên đề theo từng nhóm đối tượng.",
-    details:
-      "Đợt sinh hoạt chính trị được tổ chức rộng khắp tại các cơ sở Đảng, trường học và cơ quan nhà nước. Chương trình bao gồm các hoạt động đa dạng như diễn đàn, tọa đàm, thảo luận chuyên đề, nhằm nâng cao nhận thức và thực hiện học tập, làm theo tư tưởng, đạo đức, phong cách Hồ Chí Minh.",
-    image: "/images/SinhHoatChinhTri.jpg",
+      "Hội thảo khoa học cấp quốc gia kỷ niệm 135 năm ngày sinh Chủ tịch Hồ Chí Minh (19/5/1890 – 19/5/2025)",
+    details: "",
+    image: "/images/HoChiMinh/TuyenTruyen.jpg",
+  },
+
+  {
+    id: 4,
+    title: "Xuất bản ấn phẩm kỷ niệm 135 năm Ngày sinh Chủ tịch Hồ Chí Minh",
+    date: "Tháng 4–5/2025",
+    location: "Toàn quốc",
+    description:
+      "Các nhà xuất bản trung ương và địa phương phối hợp xuất bản các ấn phẩm tuyên truyền về tư tưởng, đạo đức, phong cách Hồ Chí Minh.",
+    details: "",
+    image: "/images/HoChiMinh/XuatBanAnPham/XuatBanAnPham.jpg",
+    video: "",
   },
   {
     id: 5,
-    title: "Triển lãm ảnh và tư liệu 'Bác Hồ với non sông đất nước'",
-    date: "17 – 23/5/2025",
-    location: "Bảo tàng Hồ Chí Minh / Các trung tâm văn hóa tỉnh",
+    title: "Triển lãm ảnh, tư liệu về Chủ tịch Hồ Chí Minh",
+    date: "16/5/2005 – 20/5/2025",
+    location: "Trung tâm Văn hóa tỉnh Nghệ An",
     description:
-      "Trưng bày ảnh, thư tịch, hiện vật về cuộc đời và sự nghiệp Bác Hồ.",
-    details:
-      "Triển lãm trưng bày hơn 500 hiện vật, tài liệu, hình ảnh quý giá về cuộc đời và sự nghiệp của Chủ tịch Hồ Chí Minh. Đặc biệt, triển lãm có sự tham gia của các nhân chứng lịch sử, các cựu chiến binh với những câu chuyện xúc động về Bác.",
-    image: "/images/TrienLamAnh.jpg",
-  },
-  {
-    id: 6,
-    title: "Giải chạy 'Hành trình theo chân Bác'",
-    date: "19/5/2025 | 6h00 – 9h00",
-    location: "Công viên Thống Nhất / Công viên trung tâm các tỉnh",
-    description:
-      "Giải chạy dành cho mọi lứa tuổi, truyền cảm hứng rèn luyện sức khỏe theo gương Bác.",
-    details:
-      "Giải chạy được tổ chức đồng loạt tại các công viên trung tâm của các tỉnh, thành phố. Chương trình bao gồm các cự ly chạy phù hợp với mọi lứa tuổi, nhằm tuyên truyền về tinh thần rèn luyện sức khỏe theo gương Bác Hồ và tạo sân chơi lành mạnh cho cộng đồng.",
-    image: "/images/GiaiChay.jpg",
-  },
-  {
-    id: 7,
-    title: "Chiếu phim tư liệu 'Hồ Chí Minh – chân dung một con người'",
-    date: "13 – 19/5/2025",
-    location: "Rạp chiếu phim, nhà văn hóa, trường học",
-    description:
-      "Trình chiếu phim tài liệu về cuộc đời và hành trình cách mạng của Chủ tịch Hồ Chí Minh.",
-    details:
-      "Chương trình trình chiếu các bộ phim tài liệu quý giá về cuộc đời và sự nghiệp của Chủ tịch Hồ Chí Minh. Các bộ phim được lựa chọn kỹ lưỡng, phản ánh chân thực về con người, tư tưởng và đạo đức của Bác.",
-    image: "/images/ChieuPhim.jpg",
-  },
-  {
-    id: 8,
-    title: "Cuộc thi tìm hiểu 'Hồ Chí Minh – Hành trình vĩ đại'",
-    date: "Phát động từ tháng 4 – chung kết 19/5/2025",
-    location: "Toàn quốc",
-    description:
-      "Thi trực tuyến hoặc trực tiếp, tìm hiểu tiểu sử, tư tưởng, đạo đức Hồ Chí Minh.",
-    details:
-      "Cuộc thi được tổ chức rộng rãi dành cho học sinh, sinh viên, đoàn viên, thanh niên. Các thí sinh sẽ tham gia tìm hiểu về tiểu sử, tư tưởng, đạo đức và phong cách Hồ Chí Minh thông qua hình thức thi trực tuyến và trực tiếp.",
-    image: "/images/CuocThi.jpg",
-  },
-  {
-    id: 9,
-    title: "Cuộc thi sáng tác tranh – thơ – ca khúc về Bác Hồ",
-    date: "Từ tháng 3 – tổng kết vào tháng 5/2025",
-    location: "Toàn quốc",
-    description:
-      "Tôn vinh hình ảnh Bác qua nghệ thuật thị giác, âm nhạc và thơ ca.",
-    details:
-      "Cuộc thi dành cho các nghệ sĩ chuyên và không chuyên, thiếu nhi, thanh thiếu niên. Các tác phẩm dự thi thể hiện tình cảm, lòng kính yêu đối với Bác Hồ thông qua các loại hình nghệ thuật đa dạng như hội họa, âm nhạc và thơ ca.",
-    image: "/images/SangTac.jpg",
-  },
-  {
-    id: 10,
-    title: "Trồng cây nhớ ơn Bác Hồ",
-    date: "19/5/2025",
-    location: "Khuôn viên công sở, trường học, khu dân cư",
-    description:
-      "Tết đến, xuân về, mỗi người dân Việt Nam bồi hồi nhớ lời căn dặn của Bác Hồ phát động Tết trồng cây năm xưa",
+      "Triển lãm ảnh, hiện vật, tư liệu quý về cuộc đời và sự nghiệp Chủ tịch Hồ Chí Minh nhằm giáo dục truyền thống cách mạng cho thế hệ trẻ.",
     details: `
-   Ngày 28-11-1959, Chủ tịch Hồ Chí Minh viết bài “Tết trồng cây” với bút danh “Trần Lực”, phát động phong trào Tết trồng cây đầu xuân.
+    Đây là sự kiện do Bộ Văn hoá, Thể thao và Du lịch phối hợp với UBND tỉnh Nghệ An và 14 tỉnh, thành phố khác tổ chức nhân dịp kỷ niệm 135 năm ngày sinh Chủ tịch Hồ Chí Minh (19/5/1890 - 19/5/2025). Triển lãm sẽ diễn ra từ ngày 16 – 20/5 tại Trung tâm Văn hóa tỉnh Nghệ An, phố đi bộ Hồ Tùng Mậu, TP Vinh, Nghệ An.
+<br /><br />
+Ban tổ chức cho biết, đây là hoạt động văn hóa có ý nghĩa chính trị văn hóa xã hội trong khuôn khổ “Lễ hội Làng Sen năm 2025”, nhằm tôn vinh và tri ân sâu sắc công lao, cống hiến vĩ đại của Chủ tịch Hồ Chí Minh đối với cách mạng Việt Nam; thể hiện lòng biết ơn, sự thành kính của nhân dân cả nước, bạn bè quốc tế đối với Chủ tịch Hồ Chí Minh. Các nội dung trưng bày sẽ được sắp xếp khoa học làm nổi bật cuộc đời, sự nghiệp và tư tưởng của Người.
+<br />[img]./images/HoChiMinh/TrienLamTuLieu/TL1.jpg|Ngày 2/9/1945, tại Quảng trường Ba Đình – Hà Nội, Chủ tịch Hồ Chí Minh đọc “Tuyên ngôn Độc lập”.[/img]<br />
+Cụ thể, khu trưng bày chung mang tên “Hồ Chí Minh đẹp nhất tên Người” với những hình ảnh, tư liệu, hiện vật làm nổi bật các chủ đề: “Chủ tịch Hồ Chí Minh - Anh hùng giải phóng dân tộc”, “Chủ tịch Hồ Chí Minh - Nhà văn hóa kiệt xuất”, "Chủ tịch Hồ Chí Minh với đồng bào các dân tộc Việt Nam, với lực lượng vũ trang nhân dân và thanh niên Việt Nam” và "Chủ tịch Hồ Chí Minh trong lòng bạn bè và nhân dân thế giới”.
+<br />[img]./images/HoChiMinh/TrienLamTuLieu/TL2.jpg|Cuối tháng 9/1953, tại bản Tỉn Keo, An toàn khu Định Hoá (nay thuộc xóm Tỉn Keo, xã Phú Đình, huyện Định Hoá, tỉnh Thái Nguyên), Chủ tịch Hồ Chí Minh chủ trì cuộc họp của Bộ Chính trị.[/img]<br />
+Đáng chú ý, cùng với kho tư liệu ảnh đồ sộ, tại khu trưng bày này giới thiệu những tác phẩm tiêu biểu của Chủ tịch Hồ Chí Minh, trong đó có những tác phẩm được công nhận là bảo vật quốc gia: Đường Kách mệnh, Nhật ký trong tù, Lời kêu gọi toàn quốc kháng chiến, Lời kêu gọi đồng bào và chiến sĩ cả nước và Di chúc của Người.
+<br />[img]./images/HoChiMinh/TrienLamTuLieu/TL3.jpg|Chủ tịch Hồ Chí Minh tham gia tát nước chống hạn cùng nông dân xã Đại Thanh, Hà Đông (nay là Hà Nội), ngày 12/1/1958.[/img]<br />
 
-66 năm trôi qua, lời phát động, lời dạy của Bác kính yêu vẫn vang vọng trong mỗi người dân Việt Nam: “Mùa xuân là Tết trồng cây / Làm cho đất nước càng ngày càng xuân”.
-
-Mỗi độ xuân về, cả nước đồng loạt tổ chức “Tết trồng cây đời đời nhớ ơn Bác Hồ”, làm cho quê hương, đất nước thêm xanh mát, tươi đẹp.
+Trong khuôn khổ triển lãm còn có các khu trưng bày của các đơn vị bảo tàng, các sở quản lý văn hoá của các địa phương. Đáng chú ý, Bảo tàng CAND sẽ trưng bày chủ đề “CAND khắc ghi lời Bác”, giới thiệu những hình ảnh, tư liệu về Bác Hồ với CAND, thể hiện sự quan tâm, chăm lo giáo dục và rèn luyện của Chủ tịch Hồ Chí Minh đối với lực lượng Công an; sưu tập phần thưởng của Bác dành tặng cho cán bộ, chiến sĩ CAND.
+<br /><br />
+Trưng bày cũng giới thiệu nhiều hình ảnh tiêu biểu về CAND làm theo lời Bác như: Phong trào CAND học tập, thực hiện Sáu điều Bác Hồ dạy (1948 - 2025); những chiến công xuất sắc và tấm gương hy sinh anh dũng, thầm lặng của lực lượng CAND trong đấu tranh bảo vệ an ninh, trật tự qua 77 năm học tập, thực hiện Sáu điều Bác Hồ dạy; hình ảnh đẹp về người chiến sĩ CAND luôn tận tụy phục vụ nhân dân; các ấn phẩm tiêu biểu viết về lực lượng CAND. Đặc biệt, tất cả những nội dung trên đều được kết hợp giữa trưng bày hình ảnh, tài liệu hiện vật gốc và ứng dụng công nghệ phòng trải nghiệm đa giác quan Immersive room, mở ra không gian trải nghiệm công nghệ, kết hợp giữa hình ảnh 3D sống động và âm thanh vòm 5.1 đánh thức các giác quan, khơi dậy cảm xúc cho khách tham quan…
+Ban tổ chức triển lãm cũng cho biết, xuyên suốt các ngày diễn ra triển lãm là các chương trình nghệ thuật đặc sắc: Chương trình giao lưu, gặp mặt các nhân vật tiêu biểu với chủ đề “Thanh niên làm theo lời Bác”, Giao lưu nghệ thuật "Hoa tháng 5 dâng Người", “Lời ca dâng Bác”…, với sự tham gia của nghệ sĩ, diễn viên của các tỉnh, thành tham gia triển lãm.
+<br /><br />
+Khách tham quan cũng được chiêm ngưỡng khu trưng bày và trình diễn các tác phẩm điêu khắc ánh sáng về Chủ tịch Hồ Chí Minh, khu trưng bày “Sen trong đời sống văn hóa Việt Nam”, không gian văn hóa trà và hoa sen, các bộ sưu tập áo dài “Hoa sen Việt Nam”, ảnh hoa sen Việt Nam, các sản phẩm quà lưu niệm, đặc sản từ sen, ẩm thực từ sen.
     `,
-    image: "/images/TrongCay.jpg",
+    image: "./images/HoChiMinh/TrienLamTuLieu/TrienLamTuLieu.jpg",
   },
 ];
+
 //  "Đoạn văn bản. <br />[img]/images/example.jpg|Chú thích cho hình ảnh[/img]<br />Đoạn văn bản tiếp theo. <br />[img]/images/example2.jpg[/img]<br />Đoạn văn bản cuối cùng.";
 
 /* <br /><br /> */
@@ -176,7 +139,7 @@ Cả quảng trường như lặng đi khi danh hiệu "Anh hùng Lao động" �
   },
   {
     id: 2,
-    title: `"Lễ hội 'Sắc màu Thành phố Bác"`,
+    title: `Lễ hội văn nghệ "Sắc màu Thành phố Bác"`,
     date: "19/04 – 30/04/2025",
     location: "Mặt tiền UBND TP.HCM, Quận 1",
     description:

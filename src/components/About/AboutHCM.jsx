@@ -7,10 +7,10 @@ const AboutHCM = () => {
     <>
       <Box
         sx={{
-          textAlign: "justify",
+          textAlign: "",
           display: "flex",
           flexDirection: { xs: "column", sm: "column" }, // Xếp dọc trên mọi màn hình để kiểm soát float
-          alignItems: { xs: "center", sm: "flex-start" },
+          alignItems: { xs: "center", sm: "center" },
         }}
       >
         <Typography

@@ -136,12 +136,13 @@ const Events = ({
                     sx={{
                       fontWeight: "bold",
                       mb: 2,
-                      minHeight: "64px",
+                      minHeight: "96px",
                       display: "-webkit-box",
-                      WebkitLineClamp: 2,
+                      WebkitLineClamp: 3,
                       WebkitBoxOrient: "vertical",
                       overflow: "hidden",
                       textOverflow: "ellipsis",
+                      textAlign: "justify",
                     }}
                   >
                     {event.title}
