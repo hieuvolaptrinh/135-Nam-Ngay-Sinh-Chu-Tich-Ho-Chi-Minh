@@ -11,7 +11,12 @@ import CloseIcon from "@mui/icons-material/Close";
 import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 
-const EventModal = ({ open, onClose, event }) => {
+const EventModal = ({
+  open,
+  onClose,
+  event,
+  themeColor = "rgb(235, 116, 116)",
+}) => {
   if (!event) return null;
 
   return (
@@ -30,8 +35,7 @@ const EventModal = ({ open, onClose, event }) => {
     >
       <DialogTitle
         sx={{
-          background:
-            "linear-gradient(135deg,rgb(235, 116, 116),rgb(248, 220, 78))",
+          background: `linear-gradient(135deg, ${themeColor}, rgb(248, 220, 78))`,
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
@@ -57,14 +61,50 @@ const EventModal = ({ open, onClose, event }) => {
       <DialogContent sx={{ p: 0 }}>
         <Box
           sx={{
-            width: "100%",
-            height: { xs: "200px", sm: "300px", md: "400px" },
-            position: "relative",
-            overflow: "hidden",
-            borderRadius: "0 0 16px 16px",
+            px: 2,
+            py: 2,
           }}
         >
-          {event.video ? (
+          {/* tiêu đề ngày + địa chỉ */}
+          <Box
+            sx={{
+              mb: 2,
+            }}
+          >
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
+              }}
+            >
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                }}
+              >
+                <CalendarTodayIcon sx={{ mr: 1, color: themeColor }} />
+                <Typography variant="body1" sx={{ fontWeight: "medium" }}>
+                  {event.date}
+                </Typography>
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                }}
+              >
+                <LocationOnIcon sx={{ mr: 1, color: themeColor }} />
+                <Typography variant="body1" sx={{ fontWeight: "medium" }}>
+                  {event.location}
+                </Typography>
+              </Box>
+            </Box>
+          </Box>
+        </Box>
+
+        {event.video ? (
+          <Box sx={{ px: 2 }}>
             <video
               controls
               style={{
@@ -73,79 +113,43 @@ const EventModal = ({ open, onClose, event }) => {
                 objectFit: "cover",
                 borderRadius: "0 0 16px 16px",
               }}
-              poster={event.image}
             >
               <source src={event.video} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
-          ) : (
-            <Box
-              component="img"
-              src={event.image}
-              alt={event.title}
-              sx={{
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-                borderRadius: "0 0 16px 16px",
-              }}
-            />
-          )}
-        </Box>
+          </Box>
+        ) : (
+          <Box
+            component="img"
+            src={event.image}
+            alt={event.title}
+            sx={{
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              borderRadius: "0 0 16px 16px",
+            }}
+          />
+        )}
 
         <Box sx={{ p: 3 }}>
-          <Box
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              mb: 2,
-              backgroundColor: "rgba(0,0,0,0.03)",
-              p: 1.5,
-              borderRadius: "8px",
-            }}
-          >
-            <CalendarTodayIcon sx={{ mr: 1, color: "rgb(235, 116, 116)" }} />
-            <Typography variant="body1" sx={{ fontWeight: "medium" }}>
-              {event.date}
-            </Typography>
-          </Box>
-
-          <Box
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              mb: 3,
-              backgroundColor: "rgba(0,0,0,0.03)",
-              p: 1.5,
-              borderRadius: "8px",
-            }}
-          >
-            <LocationOnIcon sx={{ mr: 1, color: "rgb(235, 116, 116)" }} />
-            <Typography variant="body1" sx={{ fontWeight: "medium" }}>
-              {event.location}
-            </Typography>
-          </Box>
-
-          <Divider sx={{ my: 2 }} />
-
           <Typography
-            variant="body1"
+            variant="h5"
             sx={{
-              color: "#666",
               lineHeight: 1.8,
               mb: 2,
-              backgroundColor: "rgba(0,0,0,0.02)",
+              backgroundColor: "rgba(0, 119, 255, 0.32)",
               p: 2,
               borderRadius: "8px",
+              fontWeight: "bold",
             }}
           >
             {event.description}
           </Typography>
 
           <Typography
-            variant="body1"
+            variant="h6"
             sx={{
-              color: "#333",
               lineHeight: 1.8,
               backgroundColor: "rgba(0,0,0,0.02)",
               p: 2,
