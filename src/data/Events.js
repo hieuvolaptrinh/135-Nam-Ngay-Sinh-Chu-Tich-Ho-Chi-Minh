@@ -7,7 +7,7 @@ export const hcmEvents = [
     description:
       "Dâng hương tưởng niệm Bác Hồ, thể hiện lòng biết ơn và tôn kính với vị lãnh tụ vĩ đại.",
     details:
-      "Lễ dâng hương được tổ chức trang nghiêm tại các địa danh lịch sử gắn liền với cuộc đời và sự nghiệp của Chủ tịch Hồ Chí Minh. Chương trình bao gồm các nghi thức truyền thống, dâng hương, dâng hoa và phút mặc niệm, thể hiện lòng thành kính sâu sắc đối với vị lãnh tụ vĩ đại của dân tộc.",
+      "Lễ dâng hương được tổ chức trang nghiêm tại các địa danh lịch sử gắn liền với cuộc đời và sự nghiệp của Chủ tịch Hồ Chí Minh. Chương trình bao gồm các nghi thức truyền thống, dâng hương, dâng hoa và phút mặc niệm, thể hiện lòng thành kính sâu sắc đối với vị lãnh tụ vĩ đại của dân tộc. <br />[img]/images/LeDangHuong2.jpg|Lễ dâng hương tại Quảng trường Ba Đình[/img]<br />Đặc biệt, buổi lễ có sự tham gia của đông đảo các tầng lớp nhân dân, các cựu chiến binh và thế hệ trẻ. Mỗi người đều mang trong mình tình cảm sâu sắc và lòng biết ơn vô hạn đối với Bác Hồ kính yêu.",
     image: "/images/LeDangHuong.jpg",
   },
   {
@@ -113,78 +113,78 @@ export const hcmEvents = [
     image: "/images/TrongCay.jpg",
   },
 ];
+//  "Đoạn văn bản. <br />[img]/images/example.jpg|Chú thích cho hình ảnh[/img]<br />Đoạn văn bản tiếp theo. <br />[img]/images/example2.jpg[/img]<br />Đoạn văn bản cuối cùng.";
 export const giaiPhongEvents = [
   {
     id: 1,
-    title: "Lễ diễu binh - diễu hành",
-    date: "30/04/2025 | 7h00 - 9h00",
-    location: "Quảng trường Ba Đình",
+    title: "Lễ kỷ niệm cấp quốc gia & Diễu binh – Diễu hành",
+    date: "30/04/2025 | 6h30 – 10h00",
+    location: "Hội trường Thống Nhất & đường Lê Duẩn, Quận 1, TP.HCM",
     description:
-      "Diễu hành chào mừng 50 năm thống nhất với hàng ngàn người tham gia.",
+      "Sự kiện trọng thể kỷ niệm 50 năm Giải phóng miền Nam với hơn 13.000 người tham gia diễu binh, diễu hành.",
     details:
-      "Lễ diễu binh với sự tham gia của các lực lượng vũ trang, thanh niên xung kích và nhiều tầng lớp nhân dân, nhằm tái hiện khí thế hào hùng của dân tộc trong ngày lịch sử 30/4. Chương trình bao gồm các tiết mục nghệ thuật đặc sắc, các đội hình tiêu binh đại diện cho sức mạnh và tinh thần đoàn kết dân tộc.",
+      "Lễ diễu binh quy mô lớn với sự tham gia của các lực lượng vũ trang, công an, thanh niên, phụ nữ và đại diện kiều bào. Mở đầu bằng 21 loạt đại bác, tiếp theo là màn trình diễn không quân và đội hình diễu hành qua Hội trường Thống Nhất, tái hiện khí thế lịch sử ngày 30/4.",
     image: "/images/DuyetBinh.jpg",
-    video: "/videos/duyetBinh2.mp4",
+    video: "https://www.youtube.com/watch?v=V2cWKa1M98w",
   },
   {
     id: 2,
-    title: "Triển lãm mỹ thuật Việt Nam",
-    date: "30/04/2025 | 9h30 - 17h00",
-    location: "Bảo tàng mỹ thuật Quốc gia",
+    title: "Lễ hội 'Sắc màu Thành phố Bác'",
+    date: "19/04 – 30/04/2025",
+    location: "Mặt tiền UBND TP.HCM, Quận 1",
     description:
-      "Trưng bày hình ảnh, tài liệu quý về công cuộc thống nhất đất nước.",
+      "Lễ hội ánh sáng kết hợp trình chiếu 3D Mapping độc đáo trên mặt tiền trụ sở UBND TP.HCM.",
     details:
-      "Triển lãm trưng bày hơn 500 hiện vật, tài liệu, hình ảnh quý giá về quá trình đấu tranh thống nhất đất nước. Đặc biệt, triển lãm có sự tham gia của các nhân chứng lịch sử, các cựu chiến binh với những câu chuyện xúc động về một thời hào hùng của dân tộc.",
-    image: "/images/trienLamMyThuat.jpg",
-    video: "/videos/trienlamMT.mp4",
+      "Trình chiếu nghệ thuật 3D Mapping kết hợp âm thanh, ánh sáng và nhạc giao hưởng – hợp xướng, tái hiện những dấu ấn hào hùng của dân tộc và sự phát triển hiện đại của TP.HCM. Đây là điểm nhấn nghệ thuật thu hút hàng vạn lượt người xem trong suốt thời gian lễ hội.",
+    image: "/images/SacMauThanhPhoBac.jpg",
+    video: "https://www.youtube.com/watch?v=sacmau_example",
   },
   {
     id: 3,
-    title: "Hội thảo khoa học 'Dấu ấn lịch sử'",
-    date: "30/04/2025 | 10h00 - 12h00",
-    location: "Trung tâm Hội nghị Quốc gia",
+    title: "Triển lãm điện ảnh 'Âm vang đại thắng mùa Xuân 1975'",
+    date: "27 – 28/04/2025",
+    location: "Sân khấu Nguyễn Huệ – Ngô Đức Kế, Quận 1, TP.HCM",
     description:
-      "Các chuyên gia thảo luận về ý nghĩa lịch sử của ngày thống nhất.",
+      "Triển lãm ảnh tư liệu quý và chiếu phim cộng đồng về đại thắng mùa Xuân.",
     details:
-      "Hội thảo quy tụ các nhà sử học, chuyên gia trong và ngoài nước cùng thảo luận về ý nghĩa lịch sử của ngày 30/4/1975. Các chủ đề chính bao gồm: Chiến thắng lịch sử và bài học kinh nghiệm, Vai trò của nhân dân trong sự nghiệp thống nhất đất nước, và Giá trị thời đại của chiến thắng 30/4.",
-    image: "/images/HoiThaoKhoaHoc.jpg",
-    video: "/videos/hoi-thao.mp4",
+      "Triển lãm trưng bày hơn 300 ảnh tư liệu quý, kết hợp các suất chiếu phim tài liệu, phóng sự về Chiến dịch Hồ Chí Minh lịch sử. Người xem có cơ hội gặp gỡ các nhân chứng lịch sử, lắng nghe chia sẻ cảm động từ những người đã trực tiếp tham gia chiến dịch.",
+    image: "/images/AmVangDaiThang.jpg",
+    video: "https://www.youtube.com/watch?v=amvang_example",
   },
   {
     id: 4,
-    title: "Chương trình nghệ thuật “Mùa xuân thống nhất”",
-    date: "29/04/2025 | 18h00 - 22h00",
+    title: `Chương trình nghệ thuật "Mùa xuân thống nhất"`,
+    date: "29/04/2025 | 18h00 – 22h00",
     location: "Công viên Sáng Tạo, TP.HCM",
     description:
-      " Chương trình nghệ thuật đặc biệt chào mừng 50 năm Ngày Giải phóng miền Nam, thống nhất đất nước (30/4/1974 - 30/4/2025)",
+      "Đêm nghệ thuật đặc biệt với sự tham dự của lãnh đạo Đảng và Nhà nước.",
     details:
-      "Chương trình nghệ thuật đặc biệt 'Mùa xuân thống nhất' là hoạt động chào mừng kỷ niệm 50 năm ngày đất nước thống nhất (30.4.1975 - 30.4.2025). Sự kiện do Bộ VH-TT-DL chủ trì, phối hợp với UBND TP.HCM và các đơn vị liên quan tổ chức, diễn ra vào tối 29.4 tại Công viên Sáng Tạo, TP.HCM.     <br />Tham dự đêm nghệ thuật đặc biệt có Tổng Bí thư Tô Lâm và phu nhân; Chủ tịch nước Lương Cường; Thủ tướng Chính phủ Phạm Minh Chính; Chủ tịch Quốc hội Trần Thanh Mẫn; Thường trực Ban Bí thư Trần Cẩm Tú; Chủ tịch Ủy ban T.Ư MTTQ Việt Nam Đỗ Văn Chiến. Cùng dự có nguyên Tổng Bí thư Nông Đức Mạnh, nguyên Chủ tịch nước Nguyễn Minh Triết, nguyên Chủ tịch nước Trương Tấn Sang, nguyên Thủ tướng Chính phủ Nguyễn Tấn Dũng, nguyên Chủ tịch Quốc hội Nguyễn Thị Kim Ngân, nguyên Thường trực Ban Bí thư Trần Quốc Vượng; lãnh đạo TP.HCM cùng các đoàn quan khách quốc tế…     <br />Qua các tiết mục, ban tổ chức mong muốn khắc họa bức tranh của đất nước Việt Nam với những thành tựu vĩ đại sau 50 năm thống nhất, dưới sự lãnh đạo sáng suốt, tài tình của Đảng. Từ đó viết tiếp tinh thần của ngày toàn thắng để xây dựng đất nước Việt Nam ngày càng giàu mạnh như ước nguyện của Chủ tịch Hồ Chí Minh.    <br />Phát biểu khai mạc, Bộ trưởng Bộ VH-TT-DL Nguyễn Văn Hùng cho biết chương trình nghệ thuật đặc biệt Mùa xuân thống nhất là nơi tiếng hát được vang lên từ quá khứ, vọng về hiện tại và ngân mãi đến tương lai: “Chương trình là lời tri ân sâu sắc xin được gửi tới thế hệ đi trước, các chiến sĩ đồng bào đã không tiếc máu xương, sẵn sàng hy sinh vì độc lập tự do của Tổ quốc ",
-
+      "Chương trình nghệ thuật lớn với các tiết mục tái hiện hành trình thống nhất đất nước và các thành tựu sau 50 năm. Với sự tham gia của nhiều nghệ sĩ tên tuổi và lãnh đạo cấp cao, đây là sự kiện trọng điểm của chuỗi kỷ niệm. <br />[img]/images/MuaXuanThongNhat3.jpg|Các tiết mục nghệ thuật đặc sắc trong chương trình[/img]",
     image: "/images/MuaXuanThongNhat.jpg",
-    video: "/videos/MuaXuanThongNhat.mp4",
+    video: "https://www.youtube.com/watch?v=muaxuan_example",
   },
   {
     id: 5,
     title: "Đêm nhạc 'Dấu ấn thống nhất'",
-    date: "30/04/2025 | 19h00 - 22h00",
+    date: "30/04/2025 | 19h00 – 22h00",
     location: "Sân vận động Quốc gia Mỹ Đình",
     description:
-      "Chương trình ca nhạc quy mô lớn với sự tham gia của các nghệ sĩ nổi tiếng.",
+      "Chương trình ca nhạc hoành tráng với các ca sĩ hàng đầu Việt Nam.",
     details:
-      "Đêm nhạc hoành tráng với sự tham gia của hơn 100 nghệ sĩ, ca sĩ nổi tiếng. Chương trình được dàn dựng công phu với các ca khúc cách mạng, những bài hát về tình yêu quê hương đất nước, cùng những tiết mục nghệ thuật đặc sắc, tạo nên một đêm nhạc đầy cảm xúc.",
+      "Đêm nhạc quy mô lớn với hơn 100 nghệ sĩ, tái hiện không khí hào hùng và ca ngợi quê hương, đất nước. Các tiết mục được dàn dựng công phu, thể hiện niềm tự hào dân tộc qua các giai điệu bất hủ như 'Đất nước trọn niềm vui', 'Tiến quân ca', 'Như có Bác trong ngày vui đại thắng'…",
     image: "/images/DemNhac.jpg",
-    video: "/videos/dem-nhac.mp4",
+    video: "https://www.youtube.com/watch?v=daunhat_example",
   },
   {
     id: 6,
     title: "Lễ thắp nến tri ân anh hùng liệt sĩ",
     date: "30/04/2025 | 20h00",
-    location: "Nghĩa trang liệt sĩ Trường Sơn",
+    location: "Nghĩa trang liệt sĩ Trường Sơn, Quảng Trị",
     description:
-      "Thắp nến tưởng niệm, tri ân những người đã hy sinh cho Tổ quốc.",
+      "Lễ tưởng niệm trang nghiêm tri ân các anh hùng đã hy sinh vì Tổ quốc.",
     details:
-      "Lễ thắp nến tri ân được tổ chức trang nghiêm với sự tham gia của đông đảo các tầng lớp nhân dân, các cựu chiến binh, thân nhân liệt sĩ. Chương trình bao gồm các nghi thức tưởng niệm, thắp nến tri ân, và các hoạt động văn hóa nghệ thuật đặc sắc, thể hiện lòng biết ơn sâu sắc đối với các anh hùng liệt sĩ đã hy sinh vì sự nghiệp thống nhất đất nước.",
+      "Lễ thắp nến do Bộ LĐ-TB&XH và UBND tỉnh Quảng Trị tổ chức, với sự tham gia của thân nhân liệt sĩ, đoàn viên thanh niên, cựu chiến binh. Hàng ngàn ngọn nến được thắp lên, hòa cùng lời ca, tiếng nhạc và nghi thức tưởng niệm đầy xúc động, lan tỏa thông điệp uống nước nhớ nguồn.",
     image: "/images/ThapNen.jpg",
-    video: "/videos/thap-nen.mp4",
+    video: "https://www.youtube.com/watch?v=thapnen_example",
   },
 ];
