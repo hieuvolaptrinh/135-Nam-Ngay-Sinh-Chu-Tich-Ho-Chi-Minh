@@ -19,6 +19,15 @@ const EventModal = ({
 }) => {
   if (!event) return null;
 
+  // Function to extract YouTube video ID from URL
+  const getYouTubeId = (url) => {
+    if (!url) return null;
+    const regExp =
+      /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+    const match = url.match(regExp);
+    return match && match[2].length === 11 ? match[2] : null;
+  };
+
   // hàm render content + image + thụt html tag
   const renderContent = (content) => {
     if (!content) return null;
@@ -196,18 +205,35 @@ const EventModal = ({
 
         {event.video ? (
           <Box sx={{ px: 3, mb: 3 }}>
-            <video
-              controls
-              style={{
+            <Box
+              sx={{
+                position: "relative",
                 width: "100%",
-                height: "auto",
-                objectFit: "contain",
+                paddingTop: "56.25%", // 16:9 Aspect Ratio
                 borderRadius: "12px",
+                overflow: "hidden",
                 boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
               }}
             >
-              <source src={event.video} type="video/mp4" />
-            </video>
+              <iframe
+                src={`https://www.youtube.com/embed/${getYouTubeId(
+                  event.video
+                )}?rel=0`}
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                loading="lazy"
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  width: "100%",
+                  height: "100%",
+                  border: "none",
+                }}
+              />
+            </Box>
           </Box>
         ) : (
           <Box sx={{ px: 3, mb: 3 }}>
