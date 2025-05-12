@@ -17,6 +17,7 @@
     "@mui/material": "^7.0.2",
     "bootstrap": "^5.3.5",
     "framer-motion": "^12.10.0",
+    "gh-pages": "^6.3.0",
     "howler": "^2.2.4",
     "react": "^19.0.0",
     "react-bootstrap": "^2.10.9",
