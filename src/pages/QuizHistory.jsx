@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import {
   Typography,
@@ -11,7 +11,6 @@ import {
   FormControlLabel,
   Button,
   LinearProgress,
-  Snackbar,
   Dialog,
   DialogTitle,
   DialogContent,
@@ -137,6 +136,7 @@ const QuizHistory = () => {
   const [timerActive, setTimerActive] = useState(false);
   const [userAnswers, setUserAnswers] = useState([]);
   const [quizStarted, setQuizStarted] = useState(false);
+  const quizAudioRef = useRef(null);
 
   useEffect(() => {
     let timer;
@@ -149,6 +149,22 @@ const QuizHistory = () => {
     }
     return () => clearInterval(timer);
   }, [timeLeft, timerActive]);
+
+  useEffect(() => {
+    // Khởi tạo audio cho quiz
+    const quizAudio = new Audio();
+    quizAudio.src = "./quizMute.mp3";
+    quizAudio.volume = 0.3;
+    quizAudio.loop = true;
+    quizAudioRef.current = quizAudio;
+
+    return () => {
+      if (quizAudioRef.current) {
+        quizAudioRef.current.pause();
+        quizAudioRef.current = null;
+      }
+    };
+  }, []);
 
   const handleAnswerSelect = (event) => {
     setSelectedAnswer(parseInt(event.target.value));
@@ -206,7 +222,14 @@ const QuizHistory = () => {
   };
 
   const toggleSound = () => {
-    setSoundEnabled(!soundEnabled);
+    if (quizAudioRef.current) {
+      if (soundEnabled) {
+        quizAudioRef.current.pause();
+      } else {
+        quizAudioRef.current.play();
+      }
+      setSoundEnabled(!soundEnabled);
+    }
   };
 
   const progress = ((currentQuestion + 1) / quizQuestions.length) * 100;
@@ -219,6 +242,14 @@ const QuizHistory = () => {
   };
 
   const handleStartQuiz = () => {
+    // Dừng nhạc nền
+    if (window.pauseBackgroundMusic) {
+      window.pauseBackgroundMusic();
+    }
+    // Phát nhạc quiz
+    if (quizAudioRef.current) {
+      quizAudioRef.current.play();
+    }
     setQuizStarted(true);
     setTimerActive(true);
   };

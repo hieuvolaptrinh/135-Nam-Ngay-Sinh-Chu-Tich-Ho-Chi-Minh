@@ -36,8 +36,8 @@ const BacHoQuote = () => {
         m: 2,
         p: 3,
         background:
-        //  "linear-gradient(to right,rgb(170, 142, 218), #F8BBD0)",
-        "linear-gradient(135deg,rgb(227, 149, 149),rgb(248, 220, 78))",
+          //  "linear-gradient(to right,rgb(170, 142, 218), #F8BBD0)",
+          "linear-gradient(135deg,rgb(227, 149, 149),rgb(248, 220, 78))",
 
         borderRadius: 2,
         position: "relative",
@@ -49,7 +49,7 @@ const BacHoQuote = () => {
           left: 0,
           right: 0,
           bottom: 0,
-          background: "url('/images/pattern.png')",
+
           opacity: 0.1,
           zIndex: 0,
         },

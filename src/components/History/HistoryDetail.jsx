@@ -63,6 +63,15 @@ const HistoryDetail = ({ show, onHide, selectedEvent }) => {
               width="100%"
               height="100%"
               controls
+              playing={false}
+              config={{
+                youtube: {
+                  playerVars: {
+                    modestbranding: 1,
+                    rel: 0,
+                  },
+                },
+              }}
               style={{ position: "absolute", top: 0, left: 0 }}
             />
           </Box>

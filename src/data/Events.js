@@ -13,7 +13,7 @@ export const hcmEvents = [
       Chương trình có sự tham gia của các nghệ sĩ nổi tiếng từ nhiều thế hệ như các Nghệ sĩ Nhân dân Thu Hiền, Quang Vinh, Trường Giang, Phương Thảo, Lệ Giang, Tố Nga, Trường Bắc, Hoàng Tùng … và những gương mặt trẻ như Anh Tú, Minh Châu, Thảo Nguyên, CeeJay, Lena, Charlie Winston, nhóm Oplus, Hoàng Hải, Trang Pháp, Hoàng Hồng Ngọc, Rapper RamC…
       <br /><br /> 
       Chương trình gồm 3 chương: “Người đi tìm hình của nước”, “Ngọn cờ vì hòa bình” và “Sáng mãi tên Người - Hồ Chí Minh”, được dàn dựng công phu với sự kết hợp của nhiều loại hình nghệ thuật ca, múa, nhạc, kịch, hoạt cảnh, điện ảnh và công nghệ trình chiếu 3D mapping hiện đại.
-      <br />[img]/images/HoChiMinh/QuaThang5DanNguoi/QT5DN1.jpg|Các em thiếu nhi mở màn ca khúc Ai yêu Bác Hồ Chí Minh hơn thiếu niên nhi đồng.[/img]<br />
+      <br />[img]./images/HoChiMinh/QuaThang5DanNguoi/QT5DN1.jpg|Các em thiếu nhi mở màn ca khúc Ai yêu Bác Hồ Chí Minh hơn thiếu niên nhi đồng.[/img]<br />
       Ở chương đầu, chương trình tái hiện tuổi thơ của cậu bé Nguyễn Sinh Cung và chặng đường 30 năm bôn ba tìm đường cứu nước của Người. Tiết mục múa kết hợp trình chiếu hologram trong Những mùa đông trắng tạo nên những hình ảnh xúc động về hành trình của Bác trong những năm tháng ở nơi đất khách quê người, Pháp.
       <br /><br /> 
       Chương 2 của chương trình mang thông điệp về tinh thần quốc tế trong tư tưởng Hồ Chí Minh, với tư tưởng về hòa bình, bác ái và nhân văn. Phóng sự “Hồ Chí Minh – Ngọn cờ vì hòa bình và sức lan tỏa toàn cầu” giúp khán giả được tiếp cận với những phát biểu của học giả nước ngoài, bạn bè quốc tế từ Pháp, Ấn Độ, Cuba, châu Phi... Tất cả đều kính phục trước tầm vóc trong tư tưởng và trái tim nhân ái của Người.
@@ -28,7 +28,7 @@ export const hcmEvents = [
 
       “Quà tháng 5 dâng Người” là chương trình nghệ thuật thường niên của Báo Văn Hóa tổ chức, hướng tới kỷ niệm Ngày sinh nhật Bác hằng năm, với các tiết mục nghệ thuật chất lượng cao, được khán giả yêu thích.
     `,
-    image: "/images/HoChiMinh/QuaThang5DanNguoi/QuaThang5DanNguoi.jpg",
+    image: "./images/HoChiMinh/QuaThang5DanNguoi/QuaThang5DanNguoi.jpg",
   },
 
   {
@@ -40,14 +40,14 @@ export const hcmEvents = [
       "Đoàn TNCS Hồ Chí Minh phường Thanh Sơn tổ chức sinh hoạt chính trị với chuyên đề  “Nhớ về Bác – lòng ta trong sáng hơn”, hướng tới kỷ niệm 135 năm Ngày sinh Chủ tịch Hồ Chí Minh (19/5/1890 - 19/5/2025).",
     details: `
     Ngày 11/5, Đoàn TNCS Hồ Chí Minh phường Thanh Sơn tổ chức sinh hoạt chính trị với chuyên đề “Nhớ về Bác – lòng ta trong sáng hơn”, hướng tới kỷ niệm 135 năm Ngày sinh Chủ tịch Hồ Chí Minh (19/5/1890 - 19/5/2025).
-<br />[img]/images/HoChiMinh/SinhHoatChinhTri/SHCT1.jpg|Đại biểu dự chương trình.[/img]<br />
+<br />[img]./images/HoChiMinh/SinhHoatChinhTri/SHCT1.jpg|Đại biểu dự chương trình.[/img]<br />
 Tại chương trình, các đoàn viên đã được tuyên truyền, tìm hiểu sâu sắc về tư tưởng, đạo đức, phong cách Hồ Chí Minh; phân tích những giá trị trường tồn và sự vận dụng sáng tạo tư tưởng của Người trong công cuộc đổi mới, công nghiệp hóa – hiện đại hóa đất nước và hội nhập quốc tế. Đồng thời, buổi sinh hoạt cũng đề cập tới việc đấu tranh phản bác các quan điểm sai trái, xuyên tạc về thân thế, sự nghiệp và tư tưởng Hồ Chí Minh, bảo vệ vững chắc nền tảng tư tưởng của Đảng, chế độ xã hội chủ nghĩa và khối đại đoàn kết toàn dân tộc.
-<br />[img]/images/HoChiMinh/SinhHoatChinhTri/SHCT2.jpg|BTC khen thưởng các em học sinh xuất sắc trong phần thi trực tuyến tìm hiểu về thân thế và sự nghiệp cách mạng của Chủ tịch Hồ Chí Minh.[/img]<br />
+<br />[img]./images/HoChiMinh/SinhHoatChinhTri/SHCT2.jpg|BTC khen thưởng các em học sinh xuất sắc trong phần thi trực tuyến tìm hiểu về thân thế và sự nghiệp cách mạng của Chủ tịch Hồ Chí Minh.[/img]<br />
 Nội dung gồm: chiếu phim tài liệu “Những giờ phút cuối đời của Bác Hồ”, thi trắc nghiệm tìm hiểu về Bác và các chuyên đề: “Chủ tịch Hồ Chí Minh - Anh hùng giải phóng dân tộc, nhà văn hóa kiệt xuất”, “Tư tưởng Hồ Chí Minh trong kỷ nguyên mới”…
-<br />[img]/images/HoChiMinh/SinhHoatChinhTri/SHCT3.jpg|Quang cảnh chương trình.[/img]<br />
+<br />[img]./images/HoChiMinh/SinhHoatChinhTri/SHCT3.jpg|Quang cảnh chương trình.[/img]<br />
 Chương trình còn lồng ghép tuyên truyền về an toàn giao thông, kỹ năng phòng, chống đuối nước và tai nạn thương tích cho học sinh - góp phần nâng cao nhận thức, trách nhiệm trong việc bảo vệ bản thân và cộng đồng, đặc biệt trong dịp hè sắp tới.
     `,
-    image: "/images/HoChiMinh/SinhHoatChinhTri/SinhHoatChinhTri.jpg",
+    image: "./images/HoChiMinh/SinhHoatChinhTri/SinhHoatChinhTri.jpg",
     video: "",
   },
   {
@@ -94,7 +94,7 @@ Chương trình còn lồng ghép tuyên truyền về an toàn giao thông, k�
     <br /><br />
     Thông qua các hoạt động nhằm tưởng nhớ, tri ân, tôn vinh những cống hiến vĩ đại của Chủ tịch Hồ Chí Minh đối với sự nghiệp cách mạng của Đảng và dân tộc. Qua đó, nâng cao trách nhiệm của các cấp, các ngành và nhân dân trong việc thực hiện Di chúc của Bác, đẩy mạnh học tập và làm theo tư tưởng, đạo đức, phong cách Hồ Chí Minh. Đồng thời, góp phần giáo dục truyền thống đạo lý “Uống nước nhớ nguồn” của dân tộc; cổ vũ, động viên các cấp, các ngành, doanh nghiệp và Nhân dân trong tỉnh vượt qua khó khăn, thách thức, chung sức, đồng lòng quyết tâm thực hiện thắng lợi Nghị quyết Đại hội đại biểu Đảng bộ tỉnh lần thứ XVI, Nghị quyết Đại hội lần thứ XIII của Đảng.
    `,
-    image: "/images/HoChiMinh/BanPhaoHoaCaMau/BanPhaoHoaCaMau.jpg",
+    image: "./images/HoChiMinh/BanPhaoHoaCaMau/BanPhaoHoaCaMau.jpg",
     video: "",
   },
   // {
@@ -106,7 +106,7 @@ Chương trình còn lồng ghép tuyên truyền về an toàn giao thông, k�
   //     "Lễ dâng hương, dâng hoa tại các khu di tích lịch sử, địa điểm tưởng niệm Chủ tịch Hồ Chí Minh nhằm tưởng nhớ công lao to lớn của Người.",
   //   details: `
   //   `,
-  //   image: "/images/HoChiMinh/DanHuong.jpg",
+  //   image: "./images/HoChiMinh/DanHuong.jpg",
   // },
   // {
   //   id: 2,
@@ -117,11 +117,11 @@ Chương trình còn lồng ghép tuyên truyền về an toàn giao thông, k�
   //   description:
   //     "Toàn quốc phát động tuyên truyền kỷ niệm 135 năm Ngày sinh Chủ tịch Hồ Chí Minh 19/5/1890 - 19/5/2025",
   //   details: "",
-  //   image: "/images/HoChiMinh/TuyenTruyen.jpg",
+  //   image: "./images/HoChiMinh/TuyenTruyen.jpg",
   // },
 ];
 
-//  "Đoạn văn bản. <br />[img]/images/example.jpg|Chú thích cho hình ảnh[/img]<br />Đoạn văn bản tiếp theo. <br />[img]/images/example2.jpg[/img]<br />Đoạn văn bản cuối cùng.";
+//  "Đoạn văn bản. <br />[img]./images/example.jpg|Chú thích cho hình ảnh[/img]<br />Đoạn văn bản tiếp theo. <br />[img]./images/example2.jpg[/img]<br />Đoạn văn bản cuối cùng.";
 
 /* <br /><br /> */
 
@@ -252,7 +252,7 @@ Tại Trường Đại học Mở TP. Hồ Chí Minh, 97 Võ Văn Tần, Quận 
 
 
     `,
-    image: "/images/GiaiPhong/MuaXuan1975/MuaXuan1975.jpg",
+    image: "./images/GiaiPhong/MuaXuan1975/MuaXuan1975.jpg",
   },
   {
     id: 4,
@@ -263,7 +263,7 @@ Tại Trường Đại học Mở TP. Hồ Chí Minh, 97 Võ Văn Tần, Quận 
       "Chương trình nghệ thuật đặc biệt 'Mùa xuân thống nhất' là hoạt động chào mừng kỷ niệm 50 năm ngày đất nước thống nhất (30.4.1975 - 30.4.2025).",
     details: `
       "Chương trình nghệ thuật lớn với các tiết mục tái hiện hành trình thống nhất đất nước và các thành tựu sau 50 năm. Với sự tham gia của nhiều nghệ sĩ tên tuổi và lãnh đạo cấp cao, đây là sự kiện trọng điểm của chuỗi kỷ niệm."
-       <br />[img]/images/GiaiPhong/MuaXuanThongNhat/MXTN1.jpg|Tổng Bí thư Tô Lâm và phu nhân, Thủ tướng Phạm Minh Chính cùng các lãnh đạo Đảng, Nhà nước dự chương trình[/img]<br />
+       <br />[img]./images/GiaiPhong/MuaXuanThongNhat/MXTN1.jpg|Tổng Bí thư Tô Lâm và phu nhân, Thủ tướng Phạm Minh Chính cùng các lãnh đạo Đảng, Nhà nước dự chương trình[/img]<br />
     
       Theo ban tổ chức, chương trình kết hợp giữa các yếu tố của nghệ thuật truyền thống với nghệ thuật hiện đại, thông qua ngôn ngữ âm nhạc, múa, kết hợp với hệ thống âm thanh, ánh sáng hiện đại để tạo nên những gam màu đặc sắc, tái hiện quá trình đấu tranh anh dũng, bền bỉ, kiên cường của toàn dân tộc để thống nhất đất nước.
  <br /><br /> 
@@ -275,8 +275,8 @@ NSND Thu Hiền ngân vang câu hò đầy khắc khoải, sau đó là màn th�
  <br /><br /> 
 Ngay từ những tiết mục mở đầu, chương trình Mùa xuân thống nhất khiến khán giả choáng ngợp bởi độ hoành tráng, dàn dựng sân khấu khơi gợi nhiều cảm xúc. Trên sân khấu, Đức Tuấn thể hiện Giải phóng miền Nam, kết hợp cùng hoạt cảnh ghi lại quá trình đấu tranh kiên cường, bất khuất của người dân. Sau đó, NSND Thu Hiền trở lại sân khấu với Bài ca năm tấn cùng hình ảnh người dân tăng gia sản xuất, hình ảnh những chàng trai cô gái vượt Trường Sơn vào chiến trường miền Nam...
 
-       <br />[img]/images/GiaiPhong/MuaXuanThongNhat/MXTN2.jpg|Chương trình được tổng đạo diễn dàn dựng liền mạch, như kể câu chuyện về hành trình vượt qua giai đoạn khó khăn của quân và dân ta để giành độc lập dân tộc.[/img]<br />
-       <br />[img]/images/GiaiPhong/MuaXuanThongNhat/MXTN3.jpg|Hoạt cảnh Mậu thân 1968 - Dưới hầm tối là nơi sáng nhất và ca cổ cải lương Mặt trời trong bóng tối[/img]<br />
+       <br />[img]./images/GiaiPhong/MuaXuanThongNhat/MXTN2.jpg|Chương trình được tổng đạo diễn dàn dựng liền mạch, như kể câu chuyện về hành trình vượt qua giai đoạn khó khăn của quân và dân ta để giành độc lập dân tộc.[/img]<br />
+       <br />[img]./images/GiaiPhong/MuaXuanThongNhat/MXTN3.jpg|Hoạt cảnh Mậu thân 1968 - Dưới hầm tối là nơi sáng nhất và ca cổ cải lương Mặt trời trong bóng tối[/img]<br />
 
 
        Chương trình nghệ thuật đặc biệt Mùa xuân thống nhất thể hiện ý nghĩa, tầm vóc vĩ đại, giá trị to lớn của đại thắng mùa xuân năm 1975 trong lịch sử dựng nước, giữ nước của dân tộc ta. Thông qua chương trình, ban tổ chức tuyên truyền đến các tầng lớp nhân dân về tình yêu quê hương, đất nước, niềm tự hào dân tộc và truyền thống cách mạng dưới sự lãnh đạo của Đảng Cộng sản Việt Nam.
@@ -285,7 +285,7 @@ Ngay từ những tiết mục mở đầu, chương trình Mùa xuân thống n
 
 
 `,
-    image: "/images/GiaiPhong/MuaXuanThongNhat/MuaXuanThongNhat.jpg",
+    image: "./images/GiaiPhong/MuaXuanThongNhat/MuaXuanThongNhat.jpg",
     video: "https://www.youtube.com/watch?v=JcjUMRYQ2jo",
   },
 ];

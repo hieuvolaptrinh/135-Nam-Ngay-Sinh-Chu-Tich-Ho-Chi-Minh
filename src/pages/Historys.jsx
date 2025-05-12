@@ -80,8 +80,8 @@ const History = () => {
                   <Card.Body className="p-3">
                     {event.events.length == 2 ? (
                       <Row>
-                        {event.events.map((subEvent) => (
-                          <Col md={12} lg={6}>
+                        {event.events.map((subEvent, index) => (
+                          <Col md={12} lg={6} key={`${event.year}-${index}`}>
                             <Box>
                               <div className="mb-2">
                                 <CardMedia
