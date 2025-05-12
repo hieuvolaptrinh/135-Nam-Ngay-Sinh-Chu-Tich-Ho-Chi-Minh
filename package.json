@@ -1,5 +1,6 @@
 {
   "name": "vonguyendaihieu_duthi",
+  "homepage": "https://hieuvolaptrinh.github.io/vonguyendaihieu_duthi/50-nam-giai-phong-135-nam-ngay-sinh-bac-ho/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -7,7 +8,9 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
@@ -17,7 +20,6 @@
     "@mui/material": "^7.0.2",
     "bootstrap": "^5.3.5",
     "framer-motion": "^12.10.0",
-    "gh-pages": "^6.3.0",
     "howler": "^2.2.4",
     "react": "^19.0.0",
     "react-bootstrap": "^2.10.9",
