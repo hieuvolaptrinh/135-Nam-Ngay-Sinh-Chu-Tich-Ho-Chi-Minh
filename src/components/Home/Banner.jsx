@@ -11,6 +11,7 @@ const Banner = () => {
     </motion.div>
   );
   // test sửa
+  // test sửa
 };
 
 export default Banner;
