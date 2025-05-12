@@ -1,60 +1,38 @@
 export const hcmEvents = [
   {
-    id: 1,
-    title: "Lễ dâng hương, dâng hoa tưởng niệm Chủ tịch Hồ Chí Minh",
-    date: "19/5/2025 | 7h00 – 8h00",
-    location: "Quảng trường Ba Đình (Hà Nội); Khu Di tích Kim Liên (Nghệ An)",
-    description:
-      "Lễ dâng hương, dâng hoa tại các khu di tích lịch sử, địa điểm tưởng niệm Chủ tịch Hồ Chí Minh nhằm tưởng nhớ công lao to lớn của Người.",
-    details: "",
-    image: "/images/HoChiMinh/DanHuong.jpg",
-  },
-  {
-    id: 2,
-    title:
-      "Tuyên truyền 135 năm Ngày sinh Chủ tịch Hồ Chí Minh 19/5/1890 - 19/5/2025",
-    date: "Tháng 5/2025",
-    location: "Toàn quốc",
-    description:
-      "Toàn quốc phát động tuyên truyền kỷ niệm 135 năm Ngày sinh Chủ tịch Hồ Chí Minh 19/5/1890 - 19/5/2025",
-    details: "",
-    image: "/images/HoChiMinh/TuyenTruyen.jpg",
-  },
-  {
-    id: 3, // oke
+    id: 1, // oke
     title: `"Quà tháng 5 dâng Người" – Chương trình nghệ thuật đặc biệt kỷ niệm 135 năm Ngày sinh Chủ tịch Hồ Chí Minh`,
-    date: "14/5/2025 ",
+    date: "14/5/2025 | 19h30 - 23h30",
     location: "Nhà hát Lớn Hà Nội",
     description: `Thương trình nghệ thuật đặc biệt “Quà tháng 5 dâng Người” sẽ diễn ra nhân kỷ niệm 135 năm Ngày sinh Chủ tịch Hồ Chí Minh (19/5/1890-19/5/2025).`,
     details: `
-    Chương trình do Bộ Văn hóa, Thể thao và Du lịch chỉ đạo, với sự tham gia thực hiện của Báo Văn hóa, Nhà hát Ca Múa Nhạc Việt Nam và Công ty cổ phần truyền thông và chiến lược Social impact.
-<br /><br /> 
-Chương trình do Thứ trưởng Văn hóa, Thể thao và Du lịch Tạ Quang Đông chỉ đạo nghệ thuật, Nghệ sĩ Ưu tú Nguyễn Hải Linh và nhà báo Nguyễn Anh Vũ, Tổng Biên tập Báo Văn hóa chỉ đạo sản xuất, các nghệ sĩ ưu tú Trường Bắc và Hoàng Tùng làm Tổng đạo diễn.
+      Chương trình do Bộ Văn hóa, Thể thao và Du lịch chỉ đạo, với sự tham gia thực hiện của Báo Văn hóa, Nhà hát Ca Múa Nhạc Việt Nam và Công ty cổ phần truyền thông và chiến lược Social impact.
+      <br /><br /> 
+      Chương trình do Thứ trưởng Văn hóa, Thể thao và Du lịch Tạ Quang Đông chỉ đạo nghệ thuật, Nghệ sĩ Ưu tú Nguyễn Hải Linh và nhà báo Nguyễn Anh Vũ, Tổng Biên tập Báo Văn hóa chỉ đạo sản xuất, các nghệ sĩ ưu tú Trường Bắc và Hoàng Tùng làm Tổng đạo diễn.
 
-Chương trình có sự tham gia của các nghệ sĩ nổi tiếng từ nhiều thế hệ như các Nghệ sĩ Nhân dân Thu Hiền, Quang Vinh, Trường Giang, Phương Thảo, Lệ Giang, Tố Nga, Trường Bắc, Hoàng Tùng … và những gương mặt trẻ như Anh Tú, Minh Châu, Thảo Nguyên, CeeJay, Lena, Charlie Winston, nhóm Oplus, Hoàng Hải, Trang Pháp, Hoàng Hồng Ngọc, Rapper RamC…
-<br /><br /> 
-Chương trình gồm 3 chương: “Người đi tìm hình của nước”, “Ngọn cờ vì hòa bình” và “Sáng mãi tên Người - Hồ Chí Minh”, được dàn dựng công phu với sự kết hợp của nhiều loại hình nghệ thuật ca, múa, nhạc, kịch, hoạt cảnh, điện ảnh và công nghệ trình chiếu 3D mapping hiện đại.
-<br />[img]/images/HoChiMinh/QuaThang5DanNguoi/QT5DN1.jpg|Các em thiếu nhi mở màn ca khúc Ai yêu Bác Hồ Chí Minh hơn thiếu niên nhi đồng.[/img]<br />
-Ở chương đầu, chương trình tái hiện tuổi thơ của cậu bé Nguyễn Sinh Cung và chặng đường 30 năm bôn ba tìm đường cứu nước của Người. Tiết mục múa kết hợp trình chiếu hologram trong Những mùa đông trắng tạo nên những hình ảnh xúc động về hành trình của Bác trong những năm tháng ở nơi đất khách quê người, Pháp.
-<br /><br /> 
-Chương 2 của chương trình mang thông điệp về tinh thần quốc tế trong tư tưởng Hồ Chí Minh, với tư tưởng về hòa bình, bác ái và nhân văn. Phóng sự “Hồ Chí Minh – Ngọn cờ vì hòa bình và sức lan tỏa toàn cầu” giúp khán giả được tiếp cận với những phát biểu của học giả nước ngoài, bạn bè quốc tế từ Pháp, Ấn Độ, Cuba, châu Phi... Tất cả đều kính phục trước tầm vóc trong tư tưởng và trái tim nhân ái của Người.
-<br /><br /> 
-Với chương 3, các tiết mục thể hiện tinh thần đoàn kết của cả dân tộc, vững bước đi theo con đường Bác Hồ đã chọn. Con đường Người đã chọn cho dân tộc ta, nhân dân ta cho đến nay vẫn còn nguyên giá trị, phù hợp với thực tiễn đất nước và xu hướng chung của thế giới.
+      Chương trình có sự tham gia của các nghệ sĩ nổi tiếng từ nhiều thế hệ như các Nghệ sĩ Nhân dân Thu Hiền, Quang Vinh, Trường Giang, Phương Thảo, Lệ Giang, Tố Nga, Trường Bắc, Hoàng Tùng … và những gương mặt trẻ như Anh Tú, Minh Châu, Thảo Nguyên, CeeJay, Lena, Charlie Winston, nhóm Oplus, Hoàng Hải, Trang Pháp, Hoàng Hồng Ngọc, Rapper RamC…
+      <br /><br /> 
+      Chương trình gồm 3 chương: “Người đi tìm hình của nước”, “Ngọn cờ vì hòa bình” và “Sáng mãi tên Người - Hồ Chí Minh”, được dàn dựng công phu với sự kết hợp của nhiều loại hình nghệ thuật ca, múa, nhạc, kịch, hoạt cảnh, điện ảnh và công nghệ trình chiếu 3D mapping hiện đại.
+      <br />[img]/images/HoChiMinh/QuaThang5DanNguoi/QT5DN1.jpg|Các em thiếu nhi mở màn ca khúc Ai yêu Bác Hồ Chí Minh hơn thiếu niên nhi đồng.[/img]<br />
+      Ở chương đầu, chương trình tái hiện tuổi thơ của cậu bé Nguyễn Sinh Cung và chặng đường 30 năm bôn ba tìm đường cứu nước của Người. Tiết mục múa kết hợp trình chiếu hologram trong Những mùa đông trắng tạo nên những hình ảnh xúc động về hành trình của Bác trong những năm tháng ở nơi đất khách quê người, Pháp.
+      <br /><br /> 
+      Chương 2 của chương trình mang thông điệp về tinh thần quốc tế trong tư tưởng Hồ Chí Minh, với tư tưởng về hòa bình, bác ái và nhân văn. Phóng sự “Hồ Chí Minh – Ngọn cờ vì hòa bình và sức lan tỏa toàn cầu” giúp khán giả được tiếp cận với những phát biểu của học giả nước ngoài, bạn bè quốc tế từ Pháp, Ấn Độ, Cuba, châu Phi... Tất cả đều kính phục trước tầm vóc trong tư tưởng và trái tim nhân ái của Người.
+      <br /><br /> 
+      Với chương 3, các tiết mục thể hiện tinh thần đoàn kết của cả dân tộc, vững bước đi theo con đường Bác Hồ đã chọn. Con đường Người đã chọn cho dân tộc ta, nhân dân ta cho đến nay vẫn còn nguyên giá trị, phù hợp với thực tiễn đất nước và xu hướng chung của thế giới.
 
-Trong chương trình, những giai điệu như Ca ngợi Hồ Chủ tịch, Bài ca Hồ Chí Minh, hay Quyền được sống trong hòa bình... được thể hiện qua giọng ca của những nghệ sĩ hàng đầu, góp phần làm nổi bật lý tưởng sống cao đẹp của Bác.
-<br /><br /> 
-Ngoài ra, các tiết mục “My Kool Việt Nam – Việt Nam quê hương tôi”, hoạt cảnh “Nguyện theo Di chúc của Người” và đặc biệt là liên khúc “Ai yêu Bác Hồ Chí Minh hơn thiếu niên nhi đồng – Bác Hồ Người cho em tất cả” thể hiện những tình cảm trân quý mà mỗi người con đất Việt dành cho Bác, tinh thần dân tộc, sự giao hòa giữa những giá trị truyền thống, hiện đại và quốc tế.
+      Trong chương trình, những giai điệu như Ca ngợi Hồ Chủ tịch, Bài ca Hồ Chí Minh, hay Quyền được sống trong hòa bình... được thể hiện qua giọng ca của những nghệ sĩ hàng đầu, góp phần làm nổi bật lý tưởng sống cao đẹp của Bác.
+      <br /><br /> 
+      Ngoài ra, các tiết mục “My Kool Việt Nam – Việt Nam quê hương tôi”, hoạt cảnh “Nguyện theo Di chúc của Người” và đặc biệt là liên khúc “Ai yêu Bác Hồ Chí Minh hơn thiếu niên nhi đồng – Bác Hồ Người cho em tất cả” thể hiện những tình cảm trân quý mà mỗi người con đất Việt dành cho Bác, tinh thần dân tộc, sự giao hòa giữa những giá trị truyền thống, hiện đại và quốc tế.
 
-Ê-kíp thực hiện chương trình mong muốn, mỗi tiết mục không chỉ là một câu chuyện nghệ thuật, mà còn là một lời gửi gắm tới thế hệ trẻ rằng sự trân trọng quá khứ, biết ơn lịch sử và tinh thần học tập, phấn đấu không ngừng chính là con đường để hiện thực hóa khát vọng Việt Nam hùng cường, đúng như di nguyện thiêng liêng của Người.
+      Ê-kíp thực hiện chương trình mong muốn, mỗi tiết mục không chỉ là một câu chuyện nghệ thuật, mà còn là một lời gửi gắm tới thế hệ trẻ rằng sự trân trọng quá khứ, biết ơn lịch sử và tinh thần học tập, phấn đấu không ngừng chính là con đường để hiện thực hóa khát vọng Việt Nam hùng cường, đúng như di nguyện thiêng liêng của Người.
 
-“Quà tháng 5 dâng Người” là chương trình nghệ thuật thường niên của Báo Văn Hóa tổ chức, hướng tới kỷ niệm Ngày sinh nhật Bác hằng năm, với các tiết mục nghệ thuật chất lượng cao, được khán giả yêu thích.
-    
+      “Quà tháng 5 dâng Người” là chương trình nghệ thuật thường niên của Báo Văn Hóa tổ chức, hướng tới kỷ niệm Ngày sinh nhật Bác hằng năm, với các tiết mục nghệ thuật chất lượng cao, được khán giả yêu thích.
     `,
     image: "/images/HoChiMinh/QuaThang5DanNguoi/QuaThang5DanNguoi.jpg",
   },
 
   {
-    id: 4,
+    id: 2, // oke 50% --> có thể bỏ
     title: "Sinh hoạt chính trị kỷ niệm 135 năm Ngày sinh Chủ tịch Hồ Chí Minh",
     date: "Ngày 11/5/2025",
     location: "phường Thanh Sơn, TP. Uông Bí, tỉnh Quảng Ninh",
@@ -73,7 +51,7 @@ Chương trình còn lồng ghép tuyên truyền về an toàn giao thông, k�
     video: "",
   },
   {
-    id: 5, // oke
+    id: 3, // oke
     title: "Triển lãm ảnh, tư liệu về Chủ tịch Hồ Chí Minh",
     date: "16/5/2005 – 20/5/2025",
     location: "Trung tâm Văn hóa tỉnh Nghệ An",
@@ -81,44 +59,66 @@ Chương trình còn lồng ghép tuyên truyền về an toàn giao thông, k�
       "Triển lãm ảnh, hiện vật, tư liệu quý về cuộc đời và sự nghiệp Chủ tịch Hồ Chí Minh nhằm giáo dục truyền thống cách mạng cho thế hệ trẻ.",
     details: `
     Đây là sự kiện do Bộ Văn hoá, Thể thao và Du lịch phối hợp với UBND tỉnh Nghệ An và 14 tỉnh, thành phố khác tổ chức nhân dịp kỷ niệm 135 năm ngày sinh Chủ tịch Hồ Chí Minh (19/5/1890 - 19/5/2025). Triển lãm sẽ diễn ra từ ngày 16 – 20/5 tại Trung tâm Văn hóa tỉnh Nghệ An, phố đi bộ Hồ Tùng Mậu, TP Vinh, Nghệ An.
-<br /><br />
-Ban tổ chức cho biết, đây là hoạt động văn hóa có ý nghĩa chính trị văn hóa xã hội trong khuôn khổ “Lễ hội Làng Sen năm 2025”, nhằm tôn vinh và tri ân sâu sắc công lao, cống hiến vĩ đại của Chủ tịch Hồ Chí Minh đối với cách mạng Việt Nam; thể hiện lòng biết ơn, sự thành kính của nhân dân cả nước, bạn bè quốc tế đối với Chủ tịch Hồ Chí Minh. Các nội dung trưng bày sẽ được sắp xếp khoa học làm nổi bật cuộc đời, sự nghiệp và tư tưởng của Người.
-<br />[img]./images/HoChiMinh/TrienLamTuLieu/TL1.jpg|Ngày 2/9/1945, tại Quảng trường Ba Đình – Hà Nội, Chủ tịch Hồ Chí Minh đọc “Tuyên ngôn Độc lập”.[/img]<br />
-Cụ thể, khu trưng bày chung mang tên “Hồ Chí Minh đẹp nhất tên Người” với những hình ảnh, tư liệu, hiện vật làm nổi bật các chủ đề: “Chủ tịch Hồ Chí Minh - Anh hùng giải phóng dân tộc”, “Chủ tịch Hồ Chí Minh - Nhà văn hóa kiệt xuất”, "Chủ tịch Hồ Chí Minh với đồng bào các dân tộc Việt Nam, với lực lượng vũ trang nhân dân và thanh niên Việt Nam” và "Chủ tịch Hồ Chí Minh trong lòng bạn bè và nhân dân thế giới”.
-<br />[img]./images/HoChiMinh/TrienLamTuLieu/TL2.jpg|Cuối tháng 9/1953, tại bản Tỉn Keo, An toàn khu Định Hoá (nay thuộc xóm Tỉn Keo, xã Phú Đình, huyện Định Hoá, tỉnh Thái Nguyên), Chủ tịch Hồ Chí Minh chủ trì cuộc họp của Bộ Chính trị.[/img]<br />
-Đáng chú ý, cùng với kho tư liệu ảnh đồ sộ, tại khu trưng bày này giới thiệu những tác phẩm tiêu biểu của Chủ tịch Hồ Chí Minh, trong đó có những tác phẩm được công nhận là bảo vật quốc gia: Đường Kách mệnh, Nhật ký trong tù, Lời kêu gọi toàn quốc kháng chiến, Lời kêu gọi đồng bào và chiến sĩ cả nước và Di chúc của Người.
-<br />[img]./images/HoChiMinh/TrienLamTuLieu/TL3.jpg|Chủ tịch Hồ Chí Minh tham gia tát nước chống hạn cùng nông dân xã Đại Thanh, Hà Đông (nay là Hà Nội), ngày 12/1/1958.[/img]<br />
+    <br /><br />
+    Ban tổ chức cho biết, đây là hoạt động văn hóa có ý nghĩa chính trị văn hóa xã hội trong khuôn khổ “Lễ hội Làng Sen năm 2025”, nhằm tôn vinh và tri ân sâu sắc công lao, cống hiến vĩ đại của Chủ tịch Hồ Chí Minh đối với cách mạng Việt Nam; thể hiện lòng biết ơn, sự thành kính của nhân dân cả nước, bạn bè quốc tế đối với Chủ tịch Hồ Chí Minh. Các nội dung trưng bày sẽ được sắp xếp khoa học làm nổi bật cuộc đời, sự nghiệp và tư tưởng của Người.
+    <br />[img]./images/HoChiMinh/TrienLamTuLieu/TL1.jpg|Ngày 2/9/1945, tại Quảng trường Ba Đình – Hà Nội, Chủ tịch Hồ Chí Minh đọc “Tuyên ngôn Độc lập”.[/img]<br />
+    Cụ thể, khu trưng bày chung mang tên “Hồ Chí Minh đẹp nhất tên Người” với những hình ảnh, tư liệu, hiện vật làm nổi bật các chủ đề: “Chủ tịch Hồ Chí Minh - Anh hùng giải phóng dân tộc”, “Chủ tịch Hồ Chí Minh - Nhà văn hóa kiệt xuất”, "Chủ tịch Hồ Chí Minh với đồng bào các dân tộc Việt Nam, với lực lượng vũ trang nhân dân và thanh niên Việt Nam” và "Chủ tịch Hồ Chí Minh trong lòng bạn bè và nhân dân thế giới”.
+    <br />[img]./images/HoChiMinh/TrienLamTuLieu/TL2.jpg|Cuối tháng 9/1953, tại bản Tỉn Keo, An toàn khu Định Hoá (nay thuộc xóm Tỉn Keo, xã Phú Đình, huyện Định Hoá, tỉnh Thái Nguyên), Chủ tịch Hồ Chí Minh chủ trì cuộc họp của Bộ Chính trị.[/img]<br />
+    Đáng chú ý, cùng với kho tư liệu ảnh đồ sộ, tại khu trưng bày này giới thiệu những tác phẩm tiêu biểu của Chủ tịch Hồ Chí Minh, trong đó có những tác phẩm được công nhận là bảo vật quốc gia: Đường Kách mệnh, Nhật ký trong tù, Lời kêu gọi toàn quốc kháng chiến, Lời kêu gọi đồng bào và chiến sĩ cả nước và Di chúc của Người.
+    <br />[img]./images/HoChiMinh/TrienLamTuLieu/TL3.jpg|Chủ tịch Hồ Chí Minh tham gia tát nước chống hạn cùng nông dân xã Đại Thanh, Hà Đông (nay là Hà Nội), ngày 12/1/1958.[/img]<br />
 
-Trong khuôn khổ triển lãm còn có các khu trưng bày của các đơn vị bảo tàng, các sở quản lý văn hoá của các địa phương. Đáng chú ý, Bảo tàng CAND sẽ trưng bày chủ đề “CAND khắc ghi lời Bác”, giới thiệu những hình ảnh, tư liệu về Bác Hồ với CAND, thể hiện sự quan tâm, chăm lo giáo dục và rèn luyện của Chủ tịch Hồ Chí Minh đối với lực lượng Công an; sưu tập phần thưởng của Bác dành tặng cho cán bộ, chiến sĩ CAND.
-<br /><br />
-Trưng bày cũng giới thiệu nhiều hình ảnh tiêu biểu về CAND làm theo lời Bác như: Phong trào CAND học tập, thực hiện Sáu điều Bác Hồ dạy (1948 - 2025); những chiến công xuất sắc và tấm gương hy sinh anh dũng, thầm lặng của lực lượng CAND trong đấu tranh bảo vệ an ninh, trật tự qua 77 năm học tập, thực hiện Sáu điều Bác Hồ dạy; hình ảnh đẹp về người chiến sĩ CAND luôn tận tụy phục vụ nhân dân; các ấn phẩm tiêu biểu viết về lực lượng CAND. Đặc biệt, tất cả những nội dung trên đều được kết hợp giữa trưng bày hình ảnh, tài liệu hiện vật gốc và ứng dụng công nghệ phòng trải nghiệm đa giác quan Immersive room, mở ra không gian trải nghiệm công nghệ, kết hợp giữa hình ảnh 3D sống động và âm thanh vòm 5.1 đánh thức các giác quan, khơi dậy cảm xúc cho khách tham quan…
-Ban tổ chức triển lãm cũng cho biết, xuyên suốt các ngày diễn ra triển lãm là các chương trình nghệ thuật đặc sắc: Chương trình giao lưu, gặp mặt các nhân vật tiêu biểu với chủ đề “Thanh niên làm theo lời Bác”, Giao lưu nghệ thuật "Hoa tháng 5 dâng Người", “Lời ca dâng Bác”…, với sự tham gia của nghệ sĩ, diễn viên của các tỉnh, thành tham gia triển lãm.
-<br /><br />
-Khách tham quan cũng được chiêm ngưỡng khu trưng bày và trình diễn các tác phẩm điêu khắc ánh sáng về Chủ tịch Hồ Chí Minh, khu trưng bày “Sen trong đời sống văn hóa Việt Nam”, không gian văn hóa trà và hoa sen, các bộ sưu tập áo dài “Hoa sen Việt Nam”, ảnh hoa sen Việt Nam, các sản phẩm quà lưu niệm, đặc sản từ sen, ẩm thực từ sen.
-    `,
+    Trong khuôn khổ triển lãm còn có các khu trưng bày của các đơn vị bảo tàng, các sở quản lý văn hoá của các địa phương. Đáng chú ý, Bảo tàng CAND sẽ trưng bày chủ đề “CAND khắc ghi lời Bác”, giới thiệu những hình ảnh, tư liệu về Bác Hồ với CAND, thể hiện sự quan tâm, chăm lo giáo dục và rèn luyện của Chủ tịch Hồ Chí Minh đối với lực lượng Công an; sưu tập phần thưởng của Bác dành tặng cho cán bộ, chiến sĩ CAND.
+    <br /><br />
+    Trưng bày cũng giới thiệu nhiều hình ảnh tiêu biểu về CAND làm theo lời Bác như: Phong trào CAND học tập, thực hiện Sáu điều Bác Hồ dạy (1948 - 2025); những chiến công xuất sắc và tấm gương hy sinh anh dũng, thầm lặng của lực lượng CAND trong đấu tranh bảo vệ an ninh, trật tự qua 77 năm học tập, thực hiện Sáu điều Bác Hồ dạy; hình ảnh đẹp về người chiến sĩ CAND luôn tận tụy phục vụ nhân dân; các ấn phẩm tiêu biểu viết về lực lượng CAND. Đặc biệt, tất cả những nội dung trên đều được kết hợp giữa trưng bày hình ảnh, tài liệu hiện vật gốc và ứng dụng công nghệ phòng trải nghiệm đa giác quan Immersive room, mở ra không gian trải nghiệm công nghệ, kết hợp giữa hình ảnh 3D sống động và âm thanh vòm 5.1 đánh thức các giác quan, khơi dậy cảm xúc cho khách tham quan…
+    Ban tổ chức triển lãm cũng cho biết, xuyên suốt các ngày diễn ra triển lãm là các chương trình nghệ thuật đặc sắc: Chương trình giao lưu, gặp mặt các nhân vật tiêu biểu với chủ đề “Thanh niên làm theo lời Bác”, Giao lưu nghệ thuật "Hoa tháng 5 dâng Người", “Lời ca dâng Bác”…, với sự tham gia của nghệ sĩ, diễn viên của các tỉnh, thành tham gia triển lãm.
+    <br /><br />
+    Khách tham quan cũng được chiêm ngưỡng khu trưng bày và trình diễn các tác phẩm điêu khắc ánh sáng về Chủ tịch Hồ Chí Minh, khu trưng bày “Sen trong đời sống văn hóa Việt Nam”, không gian văn hóa trà và hoa sen, các bộ sưu tập áo dài “Hoa sen Việt Nam”, ảnh hoa sen Việt Nam, các sản phẩm quà lưu niệm, đặc sản từ sen, ẩm thực từ sen.
+   `,
     image: "./images/HoChiMinh/TrienLamTuLieu/TrienLamTuLieu.jpg",
   },
   {
-    id: 6, // ok 50%
+    id: 4, // ok 50%
     title:
       "Cà Mau bắn pháo hoa tầm cao nhân kỷ niệm 135 năm ngày sinh Chủ tịch Hồ Chí Minh",
     date: "19h30 ngày 19/5/2025",
     location: `Thị trấn Trần Văn Thời, huyện Trần Văn Thời, tỉnh Cà Mau`,
     description: `
-Nhân dịp kỷ niệm 135 năm ngày sinh Chủ tịch Hồ Chí Minh, Cà Mau sẽ tổ chức Chương trình nghệ thuật kết hợp bắn pháo hoa tầm cao phục vụ nhân dân tại huyện Trần Văn Thời.    
+    Nhân dịp kỷ niệm 135 năm ngày sinh Chủ tịch Hồ Chí Minh, Cà Mau sẽ tổ chức Chương trình nghệ thuật kết hợp bắn pháo hoa tầm cao phục vụ nhân dân tại huyện Trần Văn Thời.    
     `,
     details: `
     Thời gian tổ chức chương trình nghệ thuật kỷ niệm 135 năm ngày Sinh Chủ tịch Hồ Chí Minh diễn ra lúc 19 giờ 30 phút ngày 19/5/2025 (dự kiến 70 phút), kết hợp bắn pháo hoa tầm cao phục vụ nhân dân tại Thị trấn Trần Văn Thời, Huyện Trần Văn Thời.
-<br /><br />
-Tổ chức lễ viếng, dâng hương, dâng hoa kỷ niệm 135 năm ngày Sinh Chủ tịch Hồ Chí Minh (19/5/1890 - 19/5/2025), lúc 07 giờ, ngày 19/5/2025, tại Khu tưởng niệm Chủ tịch Hồ Chí Minh.
-<br /><br />
-Ngoài ra, còn tổ chức các hoạt động khác như: Trồng cây nhớ Bác; tuyên dương và báo công với Bác; tổ chức sinh hoạt chuyên đề dưới cờ; biểu diễn nghệ thuật phục vụ Nhân dân tại các huyện, thành phố Cà Mau; tổ chức trưng bày kết hợp hoạt động ngoại khóa về cuộc đời và sự nghiệp của Chủ tịch Hồ Chí Minh; cuộc thi vẽ tranh chủ đề “Bác Hồ với thiếu nhi”; giải thể thao “Rèn luyện thân thể theo gương Bác Hồ vĩ đại”.
-<br /><br />
-Thông qua các hoạt động nhằm tưởng nhớ, tri ân, tôn vinh những cống hiến vĩ đại của Chủ tịch Hồ Chí Minh đối với sự nghiệp cách mạng của Đảng và dân tộc. Qua đó, nâng cao trách nhiệm của các cấp, các ngành và nhân dân trong việc thực hiện Di chúc của Bác, đẩy mạnh học tập và làm theo tư tưởng, đạo đức, phong cách Hồ Chí Minh. Đồng thời, góp phần giáo dục truyền thống đạo lý “Uống nước nhớ nguồn” của dân tộc; cổ vũ, động viên các cấp, các ngành, doanh nghiệp và Nhân dân trong tỉnh vượt qua khó khăn, thách thức, chung sức, đồng lòng quyết tâm thực hiện thắng lợi Nghị quyết Đại hội đại biểu Đảng bộ tỉnh lần thứ XVI, Nghị quyết Đại hội lần thứ XIII của Đảng.
+    <br /><br />
+    Tổ chức lễ viếng, dâng hương, dâng hoa kỷ niệm 135 năm ngày Sinh Chủ tịch Hồ Chí Minh (19/5/1890 - 19/5/2025), lúc 07 giờ, ngày 19/5/2025, tại Khu tưởng niệm Chủ tịch Hồ Chí Minh.
+    <br /><br />
+    Ngoài ra, còn tổ chức các hoạt động khác như: Trồng cây nhớ Bác; tuyên dương và báo công với Bác; tổ chức sinh hoạt chuyên đề dưới cờ; biểu diễn nghệ thuật phục vụ Nhân dân tại các huyện, thành phố Cà Mau; tổ chức trưng bày kết hợp hoạt động ngoại khóa về cuộc đời và sự nghiệp của Chủ tịch Hồ Chí Minh; cuộc thi vẽ tranh chủ đề “Bác Hồ với thiếu nhi”; giải thể thao “Rèn luyện thân thể theo gương Bác Hồ vĩ đại”.
+    <br /><br />
+    Thông qua các hoạt động nhằm tưởng nhớ, tri ân, tôn vinh những cống hiến vĩ đại của Chủ tịch Hồ Chí Minh đối với sự nghiệp cách mạng của Đảng và dân tộc. Qua đó, nâng cao trách nhiệm của các cấp, các ngành và nhân dân trong việc thực hiện Di chúc của Bác, đẩy mạnh học tập và làm theo tư tưởng, đạo đức, phong cách Hồ Chí Minh. Đồng thời, góp phần giáo dục truyền thống đạo lý “Uống nước nhớ nguồn” của dân tộc; cổ vũ, động viên các cấp, các ngành, doanh nghiệp và Nhân dân trong tỉnh vượt qua khó khăn, thách thức, chung sức, đồng lòng quyết tâm thực hiện thắng lợi Nghị quyết Đại hội đại biểu Đảng bộ tỉnh lần thứ XVI, Nghị quyết Đại hội lần thứ XIII của Đảng.
    `,
     image: "/images/HoChiMinh/BanPhaoHoaCaMau/BanPhaoHoaCaMau.jpg",
     video: "",
   },
+  // {
+  //   id: 1,
+  //   title: "Lễ dâng hương, dâng hoa tưởng niệm Chủ tịch Hồ Chí Minh",
+  //   date: "19/5/2025 | 7h00 – 8h00",
+  //   location: "Quảng trường Ba Đình (Hà Nội); Khu Di tích Kim Liên (Nghệ An)",
+  //   description:
+  //     "Lễ dâng hương, dâng hoa tại các khu di tích lịch sử, địa điểm tưởng niệm Chủ tịch Hồ Chí Minh nhằm tưởng nhớ công lao to lớn của Người.",
+  //   details: `
+  //   `,
+  //   image: "/images/HoChiMinh/DanHuong.jpg",
+  // },
+  // {
+  //   id: 2,
+  //   title:
+  //     "Tuyên truyền 135 năm Ngày sinh Chủ tịch Hồ Chí Minh 19/5/1890 - 19/5/2025",
+  //   date: "Tháng 5/2025",
+  //   location: "Toàn quốc",
+  //   description:
+  //     "Toàn quốc phát động tuyên truyền kỷ niệm 135 năm Ngày sinh Chủ tịch Hồ Chí Minh 19/5/1890 - 19/5/2025",
+  //   details: "",
+  //   image: "/images/HoChiMinh/TuyenTruyen.jpg",
+  // },
 ];
 
 //  "Đoạn văn bản. <br />[img]/images/example.jpg|Chú thích cho hình ảnh[/img]<br />Đoạn văn bản tiếp theo. <br />[img]/images/example2.jpg[/img]<br />Đoạn văn bản cuối cùng.";

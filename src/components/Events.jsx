@@ -72,7 +72,6 @@ const Events = ({
           sx={{
             textAlign: "center",
             mb: 2,
-            position: "relative",
             color: titleColor,
             fontWeight: "bold",
             textShadow: "2px 2px 2px rgba(0, 0, 0, 0.63)",
