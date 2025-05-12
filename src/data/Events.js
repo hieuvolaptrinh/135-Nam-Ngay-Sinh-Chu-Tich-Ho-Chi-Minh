@@ -64,8 +64,10 @@ Ngoài ra, các tiết mục “My Kool Việt Nam – Việt Nam quê hương t
     Ngày 11/5, Đoàn TNCS Hồ Chí Minh phường Thanh Sơn tổ chức sinh hoạt chính trị với chuyên đề “Nhớ về Bác – lòng ta trong sáng hơn”, hướng tới kỷ niệm 135 năm Ngày sinh Chủ tịch Hồ Chí Minh (19/5/1890 - 19/5/2025).
 <br />[img]/images/HoChiMinh/SinhHoatChinhTri/SHCT1.jpg|Đại biểu dự chương trình.[/img]<br />
 Tại chương trình, các đoàn viên đã được tuyên truyền, tìm hiểu sâu sắc về tư tưởng, đạo đức, phong cách Hồ Chí Minh; phân tích những giá trị trường tồn và sự vận dụng sáng tạo tư tưởng của Người trong công cuộc đổi mới, công nghiệp hóa – hiện đại hóa đất nước và hội nhập quốc tế. Đồng thời, buổi sinh hoạt cũng đề cập tới việc đấu tranh phản bác các quan điểm sai trái, xuyên tạc về thân thế, sự nghiệp và tư tưởng Hồ Chí Minh, bảo vệ vững chắc nền tảng tư tưởng của Đảng, chế độ xã hội chủ nghĩa và khối đại đoàn kết toàn dân tộc.
-
-<br /><br />
+<br />[img]/images/HoChiMinh/SinhHoatChinhTri/SHCT2.jpg|BTC khen thưởng các em học sinh xuất sắc trong phần thi trực tuyến tìm hiểu về thân thế và sự nghiệp cách mạng của Chủ tịch Hồ Chí Minh.[/img]<br />
+Nội dung gồm: chiếu phim tài liệu “Những giờ phút cuối đời của Bác Hồ”, thi trắc nghiệm tìm hiểu về Bác và các chuyên đề: “Chủ tịch Hồ Chí Minh - Anh hùng giải phóng dân tộc, nhà văn hóa kiệt xuất”, “Tư tưởng Hồ Chí Minh trong kỷ nguyên mới”…
+<br />[img]/images/HoChiMinh/SinhHoatChinhTri/SHCT3.jpg|Quang cảnh chương trình.[/img]<br />
+Chương trình còn lồng ghép tuyên truyền về an toàn giao thông, kỹ năng phòng, chống đuối nước và tai nạn thương tích cho học sinh - góp phần nâng cao nhận thức, trách nhiệm trong việc bảo vệ bản thân và cộng đồng, đặc biệt trong dịp hè sắp tới.
     `,
     image: "/images/HoChiMinh/SinhHoatChinhTri/SinhHoatChinhTri.jpg",
     video: "",
@@ -95,6 +97,27 @@ Ban tổ chức triển lãm cũng cho biết, xuyên suốt các ngày diễn r
 Khách tham quan cũng được chiêm ngưỡng khu trưng bày và trình diễn các tác phẩm điêu khắc ánh sáng về Chủ tịch Hồ Chí Minh, khu trưng bày “Sen trong đời sống văn hóa Việt Nam”, không gian văn hóa trà và hoa sen, các bộ sưu tập áo dài “Hoa sen Việt Nam”, ảnh hoa sen Việt Nam, các sản phẩm quà lưu niệm, đặc sản từ sen, ẩm thực từ sen.
     `,
     image: "./images/HoChiMinh/TrienLamTuLieu/TrienLamTuLieu.jpg",
+  },
+  {
+    id: 6, // ok 50%
+    title:
+      "Cà Mau bắn pháo hoa tầm cao nhân kỷ niệm 135 năm ngày sinh Chủ tịch Hồ Chí Minh",
+    date: "19h30 ngày 19/5/2025",
+    location: `Thị trấn Trần Văn Thời, huyện Trần Văn Thời, tỉnh Cà Mau`,
+    description: `
+Nhân dịp kỷ niệm 135 năm ngày sinh Chủ tịch Hồ Chí Minh, Cà Mau sẽ tổ chức Chương trình nghệ thuật kết hợp bắn pháo hoa tầm cao phục vụ nhân dân tại huyện Trần Văn Thời.    
+    `,
+    details: `
+    Thời gian tổ chức chương trình nghệ thuật kỷ niệm 135 năm ngày Sinh Chủ tịch Hồ Chí Minh diễn ra lúc 19 giờ 30 phút ngày 19/5/2025 (dự kiến 70 phút), kết hợp bắn pháo hoa tầm cao phục vụ nhân dân tại Thị trấn Trần Văn Thời, Huyện Trần Văn Thời.
+<br /><br />
+Tổ chức lễ viếng, dâng hương, dâng hoa kỷ niệm 135 năm ngày Sinh Chủ tịch Hồ Chí Minh (19/5/1890 - 19/5/2025), lúc 07 giờ, ngày 19/5/2025, tại Khu tưởng niệm Chủ tịch Hồ Chí Minh.
+<br /><br />
+Ngoài ra, còn tổ chức các hoạt động khác như: Trồng cây nhớ Bác; tuyên dương và báo công với Bác; tổ chức sinh hoạt chuyên đề dưới cờ; biểu diễn nghệ thuật phục vụ Nhân dân tại các huyện, thành phố Cà Mau; tổ chức trưng bày kết hợp hoạt động ngoại khóa về cuộc đời và sự nghiệp của Chủ tịch Hồ Chí Minh; cuộc thi vẽ tranh chủ đề “Bác Hồ với thiếu nhi”; giải thể thao “Rèn luyện thân thể theo gương Bác Hồ vĩ đại”.
+<br /><br />
+Thông qua các hoạt động nhằm tưởng nhớ, tri ân, tôn vinh những cống hiến vĩ đại của Chủ tịch Hồ Chí Minh đối với sự nghiệp cách mạng của Đảng và dân tộc. Qua đó, nâng cao trách nhiệm của các cấp, các ngành và nhân dân trong việc thực hiện Di chúc của Bác, đẩy mạnh học tập và làm theo tư tưởng, đạo đức, phong cách Hồ Chí Minh. Đồng thời, góp phần giáo dục truyền thống đạo lý “Uống nước nhớ nguồn” của dân tộc; cổ vũ, động viên các cấp, các ngành, doanh nghiệp và Nhân dân trong tỉnh vượt qua khó khăn, thách thức, chung sức, đồng lòng quyết tâm thực hiện thắng lợi Nghị quyết Đại hội đại biểu Đảng bộ tỉnh lần thứ XVI, Nghị quyết Đại hội lần thứ XIII của Đảng.
+   `,
+    image: "/images/HoChiMinh/BanPhaoHoaCaMau/BanPhaoHoaCaMau.jpg",
+    video: "",
   },
 ];
 
