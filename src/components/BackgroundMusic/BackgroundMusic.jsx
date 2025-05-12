@@ -43,53 +43,22 @@ const BackgroundMusic = () => {
   const audioRef = useRef(null);
 
   useEffect(() => {
-    let isMounted = true;
+    // Khởi tạo audio element
+    const audio = new Audio();
+    audio.src = "./nhacNen.mp3";
+    audio.volume = 0.3;
+    audio.loop = true;
+    audio.preload = "auto";
+    audioRef.current = audio;
 
-    const initAudio = async () => {
-      try {
-        // Khởi tạo audio element
-        const audio = new Audio();
-        audio.src = "./nhacNen.mp3";
-        audio.volume = 0.3;
-        audio.loop = true;
-        audio.preload = "auto";
-
-        // Xử lý lỗi khi tải audio
-        audio.onerror = (e) => {
-          console.error("Error loading background music:", e);
-          if (isMounted) {
-            setAudioError(true);
-          }
-        };
-
-        // Xử lý khi audio đã sẵn sàng
-        audio.oncanplaythrough = () => {
-          console.log("Background music is ready to play");
-          if (isMounted) {
-            audioRef.current = audio;
-          }
-        };
-
-        // Load trạng thái từ localStorage
-        const savedMuted = localStorage.getItem("musicMuted");
-        if (savedMuted !== null && isMounted) {
-          setIsMuted(savedMuted === "true");
-          if (audioRef.current) {
-            audioRef.current.muted = savedMuted === "true";
-          }
-        }
-      } catch (error) {
-        console.error("Error initializing audio:", error);
-        if (isMounted) {
-          setAudioError(true);
-        }
-      }
-    };
-
-    initAudio();
+    // Load trạng thái từ localStorage
+    const savedMuted = localStorage.getItem("musicMuted");
+    if (savedMuted !== null) {
+      setIsMuted(savedMuted === "true");
+      audio.muted = savedMuted === "true";
+    }
 
     return () => {
-      isMounted = false;
       if (audioRef.current) {
         audioRef.current.pause();
         audioRef.current = null;
@@ -105,6 +74,10 @@ const BackgroundMusic = () => {
 
     try {
       if (audioRef.current) {
+        audioRef.current.muted = false;
+        setIsMuted(false);
+        localStorage.setItem("musicMuted", "false");
+
         await audioRef.current.play();
         setIsPlaying(true);
         setShowPlayButton(false);
@@ -129,6 +102,7 @@ const BackgroundMusic = () => {
     if (audioRef.current) {
       audioRef.current.pause();
       setIsPlaying(false);
+      setShowPlayButton(true);
     }
   };
 
@@ -140,7 +114,10 @@ const BackgroundMusic = () => {
     };
   }, []);
 
-  if (audioError) {
+  // Kiểm tra xem có đang ở trang quiz không
+  const isQuizPage = window.location.pathname.includes("/quiz-history");
+
+  if (audioError || isQuizPage) {
     return null;
   }
 

@@ -151,10 +151,15 @@ const QuizHistory = () => {
   }, [timeLeft, timerActive]);
 
   useEffect(() => {
+    // Dừng nhạc nền khi vào trang quiz
+    if (window.pauseBackgroundMusic) {
+      window.pauseBackgroundMusic();
+    }
+
     // Khởi tạo audio cho quiz
     const quizAudio = new Audio();
     quizAudio.src = "./quizMute.mp3";
-    quizAudio.volume = 0.3;
+    quizAudio.volume = 1;
     quizAudio.loop = true;
     quizAudioRef.current = quizAudio;
 
@@ -242,13 +247,11 @@ const QuizHistory = () => {
   };
 
   const handleStartQuiz = () => {
-    // Dừng nhạc nền
-    if (window.pauseBackgroundMusic) {
-      window.pauseBackgroundMusic();
-    }
     // Phát nhạc quiz
     if (quizAudioRef.current) {
-      quizAudioRef.current.play();
+      quizAudioRef.current
+        .play()
+        .catch((error) => console.log("Error playing quiz music:", error));
     }
     setQuizStarted(true);
     setTimerActive(true);
