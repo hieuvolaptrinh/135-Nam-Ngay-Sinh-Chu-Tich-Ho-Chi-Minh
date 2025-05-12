@@ -38,6 +38,7 @@ import {
   ExpandMore as ExpandMoreIcon,
   CheckCircle as CheckCircleIcon,
   Cancel as CancelIcon,
+  Close as CloseIcon,
 } from "@mui/icons-material";
 import { quizQuestions } from "../data/quizData";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -588,8 +589,24 @@ const QuizHistory = () => {
                 color: "white",
                 textAlign: "center",
                 py: 3,
+                position: "relative",
               }}
             >
+              <IconButton
+                aria-label="close"
+                onClick={() => window.location.reload()}
+                sx={{
+                  position: "absolute",
+                  right: 8,
+                  top: 8,
+                  color: "white",
+                  "&:hover": {
+                    bgcolor: "rgba(255, 255, 255, 0.1)",
+                  },
+                }}
+              >
+                <CloseIcon />
+              </IconButton>
               <Typography variant="h4" sx={{ fontWeight: "bold" }}>
                 Kết quả của bạn
               </Typography>
