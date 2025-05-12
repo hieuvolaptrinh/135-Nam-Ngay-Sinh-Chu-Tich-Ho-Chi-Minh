@@ -10,6 +10,7 @@ const Banner = () => {
       />
     </motion.div>
   );
+  // test sửa
 };
 
 export default Banner;
