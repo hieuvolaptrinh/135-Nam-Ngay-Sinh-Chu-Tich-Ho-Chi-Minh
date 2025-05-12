@@ -72,7 +72,7 @@ export const quizQuestions = [
   {
     question: "Chủ tịch Hồ Chí Minh đã viết bản Di chúc vào năm nào?",
     options: ["1965", "1967", "1968", "1969"],
-    correctAnswerIndex: 2,
+    correctAnswerIndex: 0,
     explanation:
       "Chủ tịch Hồ Chí Minh bắt đầu viết Di chúc vào năm 1965 và hoàn chỉnh vào năm 1968. Bản Di chúc là tài sản tinh thần vô giá, thể hiện tình cảm, ý chí, niềm tin và trách nhiệm của Người đối với Đảng, với dân tộc.",
   },
@@ -84,12 +84,12 @@ export const quizQuestions = [
       "Nguyễn Ái Quốc",
       "Cả A và B đều đúng",
     ],
-    correctAnswerIndex: 1,
+    correctAnswerIndex: 0,
     explanation:
       "Chủ tịch Hồ Chí Minh có tên khai sinh là Nguyễn Sinh Cung, sau đổi thành Nguyễn Tất Thành. Trong quá trình hoạt động cách mạng, Người còn sử dụng nhiều bí danh khác như Nguyễn Ái Quốc, Văn Ba, Tống Văn Sơ...",
   },
   {
-    question: "Chiến dịch giải phóng miền Nam năm 1975 bắt đầu từ đâu?",
+    question: "Chiến dịch Mùa Xuân 1975 bắt đầu từ đâu?",
     options: ["Sài Gòn", "Tây Nguyên", "Huế", "Đà Nẵng"],
     correctAnswerIndex: 1,
     explanation:

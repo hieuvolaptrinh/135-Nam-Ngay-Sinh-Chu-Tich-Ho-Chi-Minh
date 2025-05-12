@@ -133,7 +133,7 @@ const QuizHistory = () => {
   });
   const [soundEnabled, setSoundEnabled] = useState(true);
   const [timeLeft, setTimeLeft] = useState(30);
-  const [timerActive, setTimerActive] = useState(true);
+  const [timerActive, setTimerActive] = useState(false);
   const [userAnswers, setUserAnswers] = useState([]);
   const [quizStarted, setQuizStarted] = useState(false);
 
@@ -339,36 +339,33 @@ const QuizHistory = () => {
       <Container className="py-5" sx={{ bgcolor: "background.default" }}>
         <Stack spacing={4}>
           {/* Tiêu đề */}
-          <Box
-            sx={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              flexDirection: "column",
-            }}
+
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: false, amount: 0.5 }}
+            style={{ width: "100%" }}
           >
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: false, amount: 0.5 }}
-              style={{ width: "100%" }}
+            <Typography
+              variant="h3"
+              align="center"
+              sx={{
+                color: "primary.main",
+                fontWeight: "bold",
+                textShadow: "2px 2px 4px rgba(0,0,0,0.2)",
+                fontSize: { xs: "2rem", sm: "2.5rem", md: "3rem" },
+                mb: 2,
+                width: "100%",
+                textAlign: "center",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
             >
-              <Typography
-                variant="h3"
-                align="center"
-                sx={{
-                  color: "primary.main",
-                  fontWeight: "bold",
-                  textShadow: "2px 2px 4px rgba(0,0,0,0.2)",
-                  fontSize: { xs: "2rem", sm: "2.5rem", md: "3rem" },
-                  mb: 2,
-                }}
-              >
-                Thử tài lịch sử - Dấu ấn 30/4 & Bác Hồ
-              </Typography>
-            </motion.div>
-          </Box>
+              Thử tài lịch sử
+            </Typography>
+          </motion.div>
 
           {/* Mô tả quiz */}
           <Paper
@@ -377,7 +374,7 @@ const QuizHistory = () => {
               p: 4,
               borderRadius: 4,
               bgcolor: "background.paper",
-              maxWidth: "800px",
+
               mx: "auto",
               width: "100%",
             }}
@@ -390,18 +387,10 @@ const QuizHistory = () => {
                 textAlign: "justify",
               }}
             >
-              Chào mừng bạn đến với bài quiz Lịch sử Việt Nam! Hãy thử thách
-              kiến thức về sự kiện Giải phóng miền Nam 30/4/1975 và cuộc đời Chủ
-              tịch Hồ Chí Minh qua 10 câu hỏi thú vị.
-              <br /> Mỗi câu hỏi có 4 lựa chọn, thời gian trả lời là 30 giây.
-              Trả lời đúng để nhận điểm số, trả lời sai không bị trừ điểm.
-              <br />
-              Sau khi hoàn thành, bạn có thể xem giải thích đáp án và chia sẻ
-              kết quả với bạn bè. Đây là cơ hội để tìm hiểu thêm về lịch sử dân
-              tộc và những con người đã góp phần xây dựng đất nước.
-              <br />
-              <strong> Sẵn sàng thử sức?</strong> Nhấn{" "}
-              <strong>"Bắt đầu"</strong> để khởi động ngay!
+              Câu hỏi này không chỉ yêu cầu người tham gia nhớ về sự kiện lịch
+              sử, mà còn giúp họ nhận thức sâu sắc về sự ảnh hưởng của nó đối
+              với dân tộc Việt Nam và toàn thế giới, đồng thời khơi gợi niềm tự
+              hào dân tộc.
             </Typography>
           </Paper>
 
@@ -411,7 +400,7 @@ const QuizHistory = () => {
             sx={{
               borderRadius: 4,
               bgcolor: "background.paper",
-              maxWidth: "800px",
+
               mx: "auto",
               width: "100%",
             }}
