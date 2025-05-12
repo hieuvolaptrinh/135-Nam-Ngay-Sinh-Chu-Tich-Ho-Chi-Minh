@@ -34,8 +34,7 @@ Website được xây dựng nhằm kỷ niệm 50 năm thống nhất đất n�
 ## Hướng dẫn cài đặt và chạy dự án
 
 ### Yêu cầu hệ thống
-
-- Node.js (phiên bản 14.0.0 trở lên)
+- Node.js 
 - npm hoặc yarn
 
 ### Các bước cài đặt
