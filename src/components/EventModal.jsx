@@ -134,15 +134,16 @@ const EventModal = ({
     >
       <DialogTitle
         sx={{
-          background: `linear-gradient(135deg, ${themeColor}, rgb(248, 220, 78))`,
+          background: ` ${themeColor}`,
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
-          padding: "24px 32px",
+          px: 2,
+          py: 1,
         }}
       >
         <Typography
-          variant="h4"
+          variant="h5"
           sx={{
             fontWeight: "bold",
             color: "white",

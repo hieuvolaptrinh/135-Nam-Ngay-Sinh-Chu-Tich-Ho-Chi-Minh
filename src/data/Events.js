@@ -1,7 +1,7 @@
 export const hcmEvents = [
   {
     id: 1, // oke
-    title: `"Quà tháng 5 dâng Người" – Chương trình nghệ thuật đặc biệt kỷ niệm 135 năm Ngày sinh Chủ tịch Hồ Chí Minh`,
+    title: `"Quà tháng 5 dâng Người" – Chương trình nghệ thuật kỷ niệm 135 năm Ngày sinh Chủ tịch Hồ Chí Minh`,
     date: "14/5/2025 | 19h30 - 23h30",
     location: "Nhà hát Lớn Hà Nội",
     description: `Thương trình nghệ thuật đặc biệt “Quà tháng 5 dâng Người” sẽ diễn ra nhân kỷ niệm 135 năm Ngày sinh Chủ tịch Hồ Chí Minh (19/5/1890-19/5/2025).`,
