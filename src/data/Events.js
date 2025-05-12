@@ -1,6 +1,6 @@
 export const hcmEvents = [
   {
-    id: 1,
+    id: 1, // oke
     title: "Lễ dâng hương, dâng hoa tưởng niệm Chủ tịch Hồ Chí Minh",
     date: "19/5/2025 | 7h00 – 8h00",
     location: "Quảng trường Ba Đình (Hà Nội); Khu Di tích Kim Liên (Nghệ An)",
@@ -10,7 +10,7 @@ export const hcmEvents = [
     image: "/images/HoChiMinh/DanHuong.jpg",
   },
   {
-    id: 2,
+    id: 2, // oke
     title:
       "Tuyên truyền 135 năm Ngày sinh Chủ tịch Hồ Chí Minh 19/5/1890 - 19/5/2025",
     date: "Tháng 5/2025",
@@ -21,14 +21,36 @@ export const hcmEvents = [
     image: "/images/HoChiMinh/TuyenTruyen.jpg",
   },
   {
-    id: 3,
-    title: "Hội thảo khoa học cấp quốc gia",
-    date: "Dự kiến: Tháng 5/2025",
-    location: "Học viện Chính trị quốc gia Hồ Chí Minh",
-    description:
-      "Hội thảo khoa học cấp quốc gia kỷ niệm 135 năm ngày sinh Chủ tịch Hồ Chí Minh (19/5/1890 – 19/5/2025)",
-    details: "",
-    image: "/images/HoChiMinh/TuyenTruyen.jpg",
+    id: 3, // oke
+    title: `"Quà tháng 5 dâng Người" – Chương trình nghệ thuật đặc biệt kỷ niệm 135 năm Ngày sinh Chủ tịch Hồ Chí Minh`,
+    date: "14/5/2025 ",
+    location: "Nhà hát Lớn Hà Nội",
+    description: `Thương trình nghệ thuật đặc biệt “Quà tháng 5 dâng Người” sẽ diễn ra nhân kỷ niệm 135 năm Ngày sinh Chủ tịch Hồ Chí Minh (19/5/1890-19/5/2025).`,
+    details: `
+    Chương trình do Bộ Văn hóa, Thể thao và Du lịch chỉ đạo, với sự tham gia thực hiện của Báo Văn hóa, Nhà hát Ca Múa Nhạc Việt Nam và Công ty cổ phần truyền thông và chiến lược Social impact.
+<br /><br /> 
+Chương trình do Thứ trưởng Văn hóa, Thể thao và Du lịch Tạ Quang Đông chỉ đạo nghệ thuật, Nghệ sĩ Ưu tú Nguyễn Hải Linh và nhà báo Nguyễn Anh Vũ, Tổng Biên tập Báo Văn hóa chỉ đạo sản xuất, các nghệ sĩ ưu tú Trường Bắc và Hoàng Tùng làm Tổng đạo diễn.
+
+Chương trình có sự tham gia của các nghệ sĩ nổi tiếng từ nhiều thế hệ như các Nghệ sĩ Nhân dân Thu Hiền, Quang Vinh, Trường Giang, Phương Thảo, Lệ Giang, Tố Nga, Trường Bắc, Hoàng Tùng … và những gương mặt trẻ như Anh Tú, Minh Châu, Thảo Nguyên, CeeJay, Lena, Charlie Winston, nhóm Oplus, Hoàng Hải, Trang Pháp, Hoàng Hồng Ngọc, Rapper RamC…
+<br /><br /> 
+Chương trình gồm 3 chương: “Người đi tìm hình của nước”, “Ngọn cờ vì hòa bình” và “Sáng mãi tên Người - Hồ Chí Minh”, được dàn dựng công phu với sự kết hợp của nhiều loại hình nghệ thuật ca, múa, nhạc, kịch, hoạt cảnh, điện ảnh và công nghệ trình chiếu 3D mapping hiện đại.
+<br />[img]/images/HoChiMinh/QuaThang5DanNguoi/QT5DN1.jpg|Các em thiếu nhi mở màn ca khúc Ai yêu Bác Hồ Chí Minh hơn thiếu niên nhi đồng.[/img]<br />
+Ở chương đầu, chương trình tái hiện tuổi thơ của cậu bé Nguyễn Sinh Cung và chặng đường 30 năm bôn ba tìm đường cứu nước của Người. Tiết mục múa kết hợp trình chiếu hologram trong Những mùa đông trắng tạo nên những hình ảnh xúc động về hành trình của Bác trong những năm tháng ở nơi đất khách quê người, Pháp.
+<br /><br /> 
+Chương 2 của chương trình mang thông điệp về tinh thần quốc tế trong tư tưởng Hồ Chí Minh, với tư tưởng về hòa bình, bác ái và nhân văn. Phóng sự “Hồ Chí Minh – Ngọn cờ vì hòa bình và sức lan tỏa toàn cầu” giúp khán giả được tiếp cận với những phát biểu của học giả nước ngoài, bạn bè quốc tế từ Pháp, Ấn Độ, Cuba, châu Phi... Tất cả đều kính phục trước tầm vóc trong tư tưởng và trái tim nhân ái của Người.
+<br /><br /> 
+Với chương 3, các tiết mục thể hiện tinh thần đoàn kết của cả dân tộc, vững bước đi theo con đường Bác Hồ đã chọn. Con đường Người đã chọn cho dân tộc ta, nhân dân ta cho đến nay vẫn còn nguyên giá trị, phù hợp với thực tiễn đất nước và xu hướng chung của thế giới.
+
+Trong chương trình, những giai điệu như Ca ngợi Hồ Chủ tịch, Bài ca Hồ Chí Minh, hay Quyền được sống trong hòa bình... được thể hiện qua giọng ca của những nghệ sĩ hàng đầu, góp phần làm nổi bật lý tưởng sống cao đẹp của Bác.
+<br /><br /> 
+Ngoài ra, các tiết mục “My Kool Việt Nam – Việt Nam quê hương tôi”, hoạt cảnh “Nguyện theo Di chúc của Người” và đặc biệt là liên khúc “Ai yêu Bác Hồ Chí Minh hơn thiếu niên nhi đồng – Bác Hồ Người cho em tất cả” thể hiện những tình cảm trân quý mà mỗi người con đất Việt dành cho Bác, tinh thần dân tộc, sự giao hòa giữa những giá trị truyền thống, hiện đại và quốc tế.
+
+Ê-kíp thực hiện chương trình mong muốn, mỗi tiết mục không chỉ là một câu chuyện nghệ thuật, mà còn là một lời gửi gắm tới thế hệ trẻ rằng sự trân trọng quá khứ, biết ơn lịch sử và tinh thần học tập, phấn đấu không ngừng chính là con đường để hiện thực hóa khát vọng Việt Nam hùng cường, đúng như di nguyện thiêng liêng của Người.
+
+“Quà tháng 5 dâng Người” là chương trình nghệ thuật thường niên của Báo Văn Hóa tổ chức, hướng tới kỷ niệm Ngày sinh nhật Bác hằng năm, với các tiết mục nghệ thuật chất lượng cao, được khán giả yêu thích.
+    
+    `,
+    image: "/images/HoChiMinh/QuaThang5DanNguoi/QuaThang5DanNguoi.jpg",
   },
 
   {

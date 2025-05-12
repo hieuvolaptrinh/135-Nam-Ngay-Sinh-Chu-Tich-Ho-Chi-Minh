@@ -9,6 +9,7 @@ import Footer from "./components/Footer";
 import EventPage from "./pages/EventPage";
 import BackToTopButton from "./components/rightSideBar/BackToTop";
 import Navbar from "./components/Navbar";
+import QuizHistory from "./pages/QuizHistory";
 
 import MainLayout from "./pages/MainLayout";
 import Banner from "./components/Home/Banner";
@@ -64,6 +65,14 @@ function App() {
             element={
               <MainLayout>
                 <EventPage />
+              </MainLayout>
+            }
+          />
+          <Route
+            path="/quiz-history"
+            element={
+              <MainLayout>
+                <QuizHistory />
               </MainLayout>
             }
           />
