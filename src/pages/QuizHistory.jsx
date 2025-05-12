@@ -18,8 +18,23 @@ import {
   Container,
   Grid,
   IconButton,
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
+  List,
+  ListItem,
+  ListItemText,
+  ListItemIcon,
+  Divider,
 } from "@mui/material";
-import { Share as ShareIcon, VolumeUp, VolumeOff } from "@mui/icons-material";
+import {
+  Share as ShareIcon,
+  VolumeUp,
+  VolumeOff,
+  ExpandMore as ExpandMoreIcon,
+  CheckCircle as CheckCircleIcon,
+  Cancel as CancelIcon,
+} from "@mui/icons-material";
 import { quizQuestions } from "../data/quizData";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -28,14 +43,15 @@ const QuizHistory = () => {
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [score, setScore] = useState(0);
   const [showResult, setShowResult] = useState(false);
-  const [snackbar, setSnackbar] = useState({
-    open: false,
-    message: "",
+  const [showExplanation, setShowExplanation] = useState(false);
+  const [currentExplanation, setCurrentExplanation] = useState({
     isCorrect: false,
+    explanation: "",
   });
   const [soundEnabled, setSoundEnabled] = useState(true);
   const [timeLeft, setTimeLeft] = useState(30);
   const [timerActive, setTimerActive] = useState(true);
+  const [userAnswers, setUserAnswers] = useState([]);
 
   useEffect(() => {
     let timer;
@@ -59,11 +75,23 @@ const QuizHistory = () => {
     if (isCorrect) {
       setScore(score + 1);
     }
-    setSnackbar({
-      open: true,
-      message: isCorrect ? "Chính xác!" : "Chưa đúng, hãy thử lại!",
+
+    // Save user's answer
+    setUserAnswers([
+      ...userAnswers,
+      {
+        questionIndex: currentQuestion,
+        selectedAnswer,
+        isCorrect,
+      },
+    ]);
+
+    // Show explanation dialog
+    setCurrentExplanation({
       isCorrect,
+      explanation: quizQuestions[currentQuestion].explanation,
     });
+    setShowExplanation(true);
     setTimerActive(false);
   };
 
@@ -78,8 +106,9 @@ const QuizHistory = () => {
     }
   };
 
-  const handleCloseSnackbar = () => {
-    setSnackbar({ ...snackbar, open: false });
+  const handleCloseExplanation = () => {
+    setShowExplanation(false);
+    handleNextQuestion();
   };
 
   const handleShare = () => {
@@ -174,30 +203,114 @@ const QuizHistory = () => {
         </Grid>
       </Grid>
 
-      <Snackbar
-        open={snackbar.open}
-        autoHideDuration={3000}
-        onClose={handleCloseSnackbar}
-        message={snackbar.message}
-        sx={{
-          backgroundColor: snackbar.isCorrect ? "success.main" : "error.main",
-          color: "white",
-        }}
-      />
+      {/* Explanation Dialog */}
+      <Dialog
+        open={showExplanation}
+        onClose={handleCloseExplanation}
+        maxWidth="sm"
+        fullWidth
+      >
+        <DialogTitle>
+          {currentExplanation.isCorrect ? "Chính xác!" : "Chưa đúng!"}
+        </DialogTitle>
+        <DialogContent>
+          <Typography variant="body1" className="mt-2">
+            {currentExplanation.explanation}
+          </Typography>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleCloseExplanation} color="primary">
+            Câu tiếp theo
+          </Button>
+        </DialogActions>
+      </Dialog>
 
-      <Dialog open={showResult} maxWidth="sm" fullWidth>
+      {/* Results Dialog */}
+      <Dialog open={showResult} maxWidth="md" fullWidth>
         <DialogTitle>Kết quả của bạn</DialogTitle>
         <DialogContent>
-          <Typography variant="h4" align="center" className="my-4">
-            {score}/{quizQuestions.length}
+          <Box className="text-center my-4">
+            <Typography variant="h4" gutterBottom>
+              {score}/{quizQuestions.length}
+            </Typography>
+            <Typography variant="h6" color="primary" gutterBottom>
+              {score === quizQuestions.length
+                ? "Xuất sắc! Bạn là một chuyên gia lịch sử!"
+                : score >= quizQuestions.length * 0.7
+                ? "Rất tốt! Kiến thức lịch sử của bạn rất đáng nể!"
+                : "Hãy tiếp tục tìm hiểu thêm về lịch sử Việt Nam!"}
+            </Typography>
+          </Box>
+
+          <Typography variant="h6" className="mb-3">
+            Chi tiết các câu trả lời:
           </Typography>
-          <Typography variant="body1" align="center">
-            {score === quizQuestions.length
-              ? "Xuất sắc! Bạn là một chuyên gia lịch sử!"
-              : score >= quizQuestions.length * 0.7
-              ? "Rất tốt! Kiến thức lịch sử của bạn rất đáng nể!"
-              : "Hãy tiếp tục tìm hiểu thêm về lịch sử Việt Nam!"}
-          </Typography>
+
+          <List>
+            {userAnswers.map((answer, index) => (
+              <React.Fragment key={index}>
+                <Accordion>
+                  <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                    <Box className="d-flex align-items-center w-100">
+                      <ListItemIcon>
+                        {answer.isCorrect ? (
+                          <CheckCircleIcon color="success" />
+                        ) : (
+                          <CancelIcon color="error" />
+                        )}
+                      </ListItemIcon>
+                      <Typography>
+                        Câu {index + 1}: {quizQuestions[index].question}
+                      </Typography>
+                    </Box>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Box>
+                      <Typography
+                        variant="subtitle1"
+                        color="primary"
+                        gutterBottom
+                      >
+                        Đáp án của bạn:
+                      </Typography>
+                      <Typography>
+                        {quizQuestions[index].options[answer.selectedAnswer]}
+                      </Typography>
+
+                      <Typography
+                        variant="subtitle1"
+                        color="primary"
+                        className="mt-3"
+                        gutterBottom
+                      >
+                        Đáp án đúng:
+                      </Typography>
+                      <Typography>
+                        {
+                          quizQuestions[index].options[
+                            quizQuestions[index].correctAnswerIndex
+                          ]
+                        }
+                      </Typography>
+
+                      <Typography
+                        variant="subtitle1"
+                        color="primary"
+                        className="mt-3"
+                        gutterBottom
+                      >
+                        Giải thích:
+                      </Typography>
+                      <Typography>
+                        {quizQuestions[index].explanation}
+                      </Typography>
+                    </Box>
+                  </AccordionDetails>
+                </Accordion>
+                <Divider />
+              </React.Fragment>
+            ))}
+          </List>
         </DialogContent>
         <DialogActions>
           <Button onClick={handleShare} startIcon={<ShareIcon />}>
