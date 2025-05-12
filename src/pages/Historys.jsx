@@ -13,7 +13,7 @@ import AboutHCM from "../components/About/AboutHCM";
 const History = () => {
   const [selectedYear, setSelectedYear] = useState(null);
   const [showModal, setShowModal] = useState(false);
-  const [activeTheme, setActiveTheme] = useState("all");
+
   const [selectedMarker, setSelectedMarker] = useState(null);
   const { scrollYProgress } = useScroll();
   const y = useTransform(scrollYProgress, [0, 1], [0, -50]);
@@ -28,11 +28,6 @@ const History = () => {
     setShowModal(false);
     setSelectedYear(null);
   };
-
-  const filteredEvents =
-    activeTheme === "all"
-      ? historicalEvents
-      : historicalEvents.filter((event) => event.theme === activeTheme);
 
   return (
     <Container className="py-5">
@@ -64,7 +59,7 @@ const History = () => {
       {/* Timeline */}
       <div className="timeline-container">
         <div className="timeline">
-          {filteredEvents.map((event, index) => (
+          {historicalEvents.map((event, index) => (
             <motion.div
               key={event.year}
               initial={{ opacity: 0, x: 50 }}
@@ -83,27 +78,75 @@ const History = () => {
 
                 <Card className="shadow-sm">
                   <Card.Body className="p-3">
-                    <Row className="g-2">
-                      {event.events.map((subEvent, subIndex) => (
-                        <Col
-                          key={subIndex}
-                          md={12}
-                          lg={event.events.length === 1 ? 12 : 6}
-                        >
+                    {event.events.length == 2 ? (
+                      <Row>
+                        {event.events.map((subEvent) => (
+                          <Col md={12} lg={6}>
+                            <Box>
+                              <div className="mb-2">
+                                <CardMedia
+                                  component="img"
+                                  image={subEvent.images[0]}
+                                  alt={subEvent.title}
+                                  sx={{
+                                    width: "100%",
+
+                                    height: {
+                                      xs: 400,
+                                      sm: 300,
+                                      md: 200,
+                                      lg: 400,
+                                    },
+                                    objectFit: "cover",
+                                    objectPosition: "center",
+                                    borderRadius: 2,
+                                  }}
+                                />
+                              </div>
+                              <Typography
+                                variant="h4"
+                                sx={{ fontWeight: "bold" }}
+                              >
+                                {subEvent.title}
+                              </Typography>
+                              <Typography
+                                variant="h6"
+                                sx={{
+                                  my: 2,
+                                }}
+                              >
+                                <FaRegCalendarAlt
+                                  size={30}
+                                  style={{ marginRight: 8 }}
+                                />
+                                {subEvent.date}
+                              </Typography>
+                              <blockquote className="blockquote">
+                                <FaQuoteLeft className="text-primary" />
+                                <p className="mb-0">{subEvent.quote}</p>
+                              </blockquote>
+                              <Button
+                                variant="contained"
+                                onClick={() => handleMarkerClick(subEvent)}
+                              >
+                                Xem chi tiết
+                              </Button>
+                            </Box>
+                          </Col>
+                        ))}
+                      </Row>
+                    ) : (
+                      <Row>
+                        <Col md={12} lg={event.events.length === 1 ? 12 : 6}>
                           <Box>
                             <div className="mb-2">
                               <CardMedia
                                 component="img"
-                                image={subEvent.images[0]}
-                                alt={subEvent.title}
+                                image={event.events[0].images[0]}
+                                alt={event.events[0].title}
                                 sx={{
                                   width: "100%",
-                                  height: {
-                                    xs: 400,
-                                    sm: 300,
-                                    md: 200,
-                                    lg: 400,
-                                  },
+                                  height: "auto",
                                   objectFit: "cover",
                                   objectPosition: "center",
                                   borderRadius: 2,
@@ -114,7 +157,7 @@ const History = () => {
                               variant="h4"
                               sx={{ fontWeight: "bold" }}
                             >
-                              {subEvent.title}
+                              {event.events[0].title}
                             </Typography>
                             <Typography
                               variant="h6"
@@ -126,22 +169,22 @@ const History = () => {
                                 size={30}
                                 style={{ marginRight: 8 }}
                               />
-                              {subEvent.date}
+                              {event.events[0].date}
                             </Typography>
                             <blockquote className="blockquote">
                               <FaQuoteLeft className="text-primary" />
-                              <p className="mb-0">{subEvent.quote}</p>
+                              <p className="mb-0">{event.events[0].quote}</p>
                             </blockquote>
                             <Button
                               variant="contained"
-                              onClick={() => handleMarkerClick(subEvent)}
+                              onClick={() => handleMarkerClick(event.events[0])}
                             >
                               Xem chi tiết
                             </Button>
                           </Box>
                         </Col>
-                      ))}
-                    </Row>
+                      </Row>
+                    )}
                   </Card.Body>
                 </Card>
               </Box>

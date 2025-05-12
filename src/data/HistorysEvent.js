@@ -1,7 +1,7 @@
 export const historicalEvents = [
   {
     year: "1890",
-    theme: "birth",
+    theme: "1",
     title: "19/5/1880",
     events: [
       {
@@ -19,7 +19,7 @@ export const historicalEvents = [
   },
   {
     year: "1945",
-    theme: "independence",
+    theme: "2",
     title: "Độc lập dân tộc",
     events: [
       {
@@ -44,7 +44,7 @@ export const historicalEvents = [
   },
   {
     year: "1954",
-    theme: "victory",
+    theme: "2",
     title: "Chiến thắng Điện Biên Phủ",
     events: [
       {
@@ -70,7 +70,7 @@ export const historicalEvents = [
   },
   {
     year: "1975",
-    theme: "reunification",
+    theme: "1",
     title: "Giải phóng miền Nam",
     events: [
       {
