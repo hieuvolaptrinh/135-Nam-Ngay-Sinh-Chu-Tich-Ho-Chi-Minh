@@ -4,7 +4,7 @@
 
 ## Hoặc
 
-# <h2 align="center"><a href="">Click me</a></h2>
+# <h2 align="center"><a href="https://vndhieutrum.github.io/50-nam-giai-phong-135-nam-ngay-sinh-bac-ho/">Click me</a></h2>
 
 ## Mô tả
 
@@ -34,7 +34,8 @@ Website được xây dựng nhằm kỷ niệm 50 năm thống nhất đất n�
 ## Hướng dẫn cài đặt và chạy dự án
 
 ### Yêu cầu hệ thống
-- Node.js 
+
+- Node.js
 - npm hoặc yarn
 
 ### Các bước cài đặt
