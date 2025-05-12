@@ -26,6 +26,8 @@ import {
   ListItemText,
   ListItemIcon,
   Divider,
+  createTheme,
+  ThemeProvider,
 } from "@mui/material";
 import {
   Share as ShareIcon,
@@ -37,6 +39,85 @@ import {
 } from "@mui/icons-material";
 import { quizQuestions } from "../data/quizData";
 import "bootstrap/dist/css/bootstrap.min.css";
+
+// Custom theme with Vietnamese national colors
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: "#D32F2F", // Red from Vietnamese flag
+      light: "#EF5350",
+      dark: "#B71C1C",
+    },
+    secondary: {
+      main: "#FFC107", // Yellow from Vietnamese flag
+      light: "#FFD54F",
+      dark: "#FFA000",
+    },
+    background: {
+      default: "#F5F5F5",
+      paper: "#FFFFFF",
+    },
+    text: {
+      primary: "#212121",
+      secondary: "#424242",
+    },
+  },
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          borderRadius: 8,
+          textTransform: "none",
+          fontWeight: 600,
+          padding: "8px 24px",
+        },
+        contained: {
+          boxShadow: "none",
+          "&:hover": {
+            boxShadow: "0px 2px 4px rgba(0,0,0,0.2)",
+          },
+        },
+      },
+    },
+    MuiCard: {
+      styleOverrides: {
+        root: {
+          borderRadius: 12,
+          boxShadow: "0px 4px 12px rgba(0,0,0,0.1)",
+        },
+      },
+    },
+    MuiDialog: {
+      styleOverrides: {
+        paper: {
+          borderRadius: 16,
+        },
+      },
+    },
+    MuiAccordion: {
+      styleOverrides: {
+        root: {
+          borderRadius: 8,
+          marginBottom: 8,
+          "&:before": {
+            display: "none",
+          },
+        },
+      },
+    },
+    MuiLinearProgress: {
+      styleOverrides: {
+        root: {
+          height: 8,
+          borderRadius: 4,
+        },
+        bar: {
+          borderRadius: 4,
+        },
+      },
+    },
+  },
+});
 
 const QuizHistory = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -126,200 +207,354 @@ const QuizHistory = () => {
 
   const progress = ((currentQuestion + 1) / quizQuestions.length) * 100;
 
+  const getProgressColor = (progress) => {
+    if (progress >= 80) return "#B71C1C"; // Dark red
+    if (progress >= 60) return "#D32F2F"; // Red
+    if (progress >= 40) return "#EF5350"; // Light red
+    return "#FFCDD2"; // Very light red
+  };
+
   return (
-    <Container className="py-5">
-      <Grid container spacing={3}>
-        <Grid item xs={12}>
-          <Typography
-            variant="h3"
-            component="h1"
-            align="center"
-            gutterBottom
-            className="mb-4"
-          >
-            Thử tài lịch sử - Dấu ấn 30/4 & Bác Hồ
-          </Typography>
-        </Grid>
-
-        <Grid item xs={12}>
-          <Paper elevation={3} className="p-4 mb-4">
-            <Typography variant="body1">
-              Chào mừng bạn đến với bài quiz về lịch sử Việt Nam! Hãy thử thách
-              kiến thức của bạn về sự kiện Giải phóng miền Nam 30/4/1975 và cuộc
-              đời Chủ tịch Hồ Chí Minh. Chúc bạn may mắn!
+    <ThemeProvider theme={theme}>
+      <Container className="py-5" sx={{ bgcolor: "background.default" }}>
+        <Grid container spacing={3}>
+          <Grid item xs={12}>
+            <Typography
+              variant="h3"
+              component="h1"
+              align="center"
+              gutterBottom
+              className="mb-4"
+              sx={{
+                color: "primary.main",
+                fontWeight: 700,
+                textShadow: "1px 1px 2px rgba(0,0,0,0.1)",
+              }}
+            >
+              Thử tài lịch sử - Dấu ấn 30/4 & Bác Hồ
             </Typography>
-          </Paper>
-        </Grid>
+          </Grid>
 
-        <Grid item xs={12}>
-          <Card>
-            <CardContent>
-              <Box className="d-flex justify-content-between align-items-center mb-3">
-                <Typography variant="h6">
-                  Câu hỏi {currentQuestion + 1}/{quizQuestions.length}
-                </Typography>
-                <IconButton onClick={toggleSound}>
-                  {soundEnabled ? <VolumeUp /> : <VolumeOff />}
-                </IconButton>
-              </Box>
-
-              <LinearProgress
-                variant="determinate"
-                value={progress}
-                className="mb-3"
-              />
-
-              <Typography variant="h5" className="mb-4">
-                {quizQuestions[currentQuestion].question}
+          <Grid item xs={12}>
+            <Paper
+              elevation={3}
+              className="p-4 mb-4"
+              sx={{
+                bgcolor: "background.paper",
+                borderRadius: 3,
+                border: "1px solid rgba(0,0,0,0.1)",
+              }}
+            >
+              <Typography variant="body1" sx={{ color: "text.secondary" }}>
+                Chào mừng bạn đến với bài quiz về lịch sử Việt Nam! Hãy thử
+                thách kiến thức của bạn về sự kiện Giải phóng miền Nam 30/4/1975
+                và cuộc đời Chủ tịch Hồ Chí Minh. Chúc bạn may mắn!
               </Typography>
+            </Paper>
+          </Grid>
 
-              <RadioGroup value={selectedAnswer} onChange={handleAnswerSelect}>
-                {quizQuestions[currentQuestion].options.map((option, index) => (
-                  <FormControlLabel
-                    key={index}
-                    value={index}
-                    control={<Radio />}
-                    label={option}
-                    className="mb-2"
-                  />
-                ))}
-              </RadioGroup>
+          <Grid item xs={12}>
+            <Card sx={{ bgcolor: "background.paper" }}>
+              <CardContent>
+                <Box className="d-flex justify-content-between align-items-center mb-3">
+                  <Typography
+                    variant="h6"
+                    sx={{ color: "text.primary", fontWeight: 600 }}
+                  >
+                    Câu hỏi {currentQuestion + 1}/{quizQuestions.length}
+                  </Typography>
+                  <IconButton
+                    onClick={toggleSound}
+                    sx={{
+                      color: "secondary.main",
+                      "&:hover": { color: "secondary.dark" },
+                    }}
+                  >
+                    {soundEnabled ? <VolumeUp /> : <VolumeOff />}
+                  </IconButton>
+                </Box>
 
-              <Box className="d-flex justify-content-between align-items-center mt-4">
-                <Typography variant="body2" color="textSecondary">
-                  Thời gian còn lại: {timeLeft} giây
-                </Typography>
-                <Button
-                  variant="contained"
-                  color="primary"
-                  onClick={handleSubmit}
-                  disabled={selectedAnswer === null}
+                <LinearProgress
+                  variant="determinate"
+                  value={progress}
+                  className="mb-3"
+                  sx={{
+                    bgcolor: "rgba(211, 47, 47, 0.1)",
+                    "& .MuiLinearProgress-bar": {
+                      bgcolor: getProgressColor(progress),
+                    },
+                  }}
+                />
+
+                <Typography
+                  variant="h5"
+                  className="mb-4"
+                  sx={{
+                    color: "text.primary",
+                    fontWeight: 600,
+                  }}
                 >
-                  Trả lời
-                </Button>
-              </Box>
-            </CardContent>
-          </Card>
-        </Grid>
-      </Grid>
+                  {quizQuestions[currentQuestion].question}
+                </Typography>
 
-      {/* Explanation Dialog */}
-      <Dialog
-        open={showExplanation}
-        onClose={handleCloseExplanation}
-        maxWidth="sm"
-        fullWidth
-      >
-        <DialogTitle>
-          {currentExplanation.isCorrect ? "Chính xác!" : "Chưa đúng!"}
-        </DialogTitle>
-        <DialogContent>
-          <Typography variant="body1" className="mt-2">
-            {currentExplanation.explanation}
-          </Typography>
-        </DialogContent>
-        <DialogActions>
-          <Button onClick={handleCloseExplanation} color="primary">
-            Câu tiếp theo
-          </Button>
-        </DialogActions>
-      </Dialog>
-
-      {/* Results Dialog */}
-      <Dialog open={showResult} maxWidth="md" fullWidth>
-        <DialogTitle>Kết quả của bạn</DialogTitle>
-        <DialogContent>
-          <Box className="text-center my-4">
-            <Typography variant="h4" gutterBottom>
-              {score}/{quizQuestions.length}
-            </Typography>
-            <Typography variant="h6" color="primary" gutterBottom>
-              {score === quizQuestions.length
-                ? "Xuất sắc! Bạn là một chuyên gia lịch sử!"
-                : score >= quizQuestions.length * 0.7
-                ? "Rất tốt! Kiến thức lịch sử của bạn rất đáng nể!"
-                : "Hãy tiếp tục tìm hiểu thêm về lịch sử Việt Nam!"}
-            </Typography>
-          </Box>
-
-          <Typography variant="h6" className="mb-3">
-            Chi tiết các câu trả lời:
-          </Typography>
-
-          <List>
-            {userAnswers.map((answer, index) => (
-              <React.Fragment key={index}>
-                <Accordion>
-                  <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                    <Box className="d-flex align-items-center w-100">
-                      <ListItemIcon>
-                        {answer.isCorrect ? (
-                          <CheckCircleIcon color="success" />
-                        ) : (
-                          <CancelIcon color="error" />
-                        )}
-                      </ListItemIcon>
-                      <Typography>
-                        Câu {index + 1}: {quizQuestions[index].question}
-                      </Typography>
-                    </Box>
-                  </AccordionSummary>
-                  <AccordionDetails>
-                    <Box>
-                      <Typography
-                        variant="subtitle1"
-                        color="primary"
-                        gutterBottom
-                      >
-                        Đáp án của bạn:
-                      </Typography>
-                      <Typography>
-                        {quizQuestions[index].options[answer.selectedAnswer]}
-                      </Typography>
-
-                      <Typography
-                        variant="subtitle1"
-                        color="primary"
-                        className="mt-3"
-                        gutterBottom
-                      >
-                        Đáp án đúng:
-                      </Typography>
-                      <Typography>
-                        {
-                          quizQuestions[index].options[
-                            quizQuestions[index].correctAnswerIndex
-                          ]
+                <RadioGroup
+                  value={selectedAnswer}
+                  onChange={handleAnswerSelect}
+                >
+                  {quizQuestions[currentQuestion].options.map(
+                    (option, index) => (
+                      <FormControlLabel
+                        key={index}
+                        value={index}
+                        control={
+                          <Radio
+                            sx={{
+                              color: "primary.main",
+                              "&.Mui-checked": {
+                                color: "primary.main",
+                              },
+                            }}
+                          />
                         }
-                      </Typography>
+                        label={
+                          <Typography sx={{ color: "text.secondary" }}>
+                            {option}
+                          </Typography>
+                        }
+                        className="mb-2"
+                        sx={{
+                          margin: "8px 0",
+                          padding: "8px 16px",
+                          borderRadius: 2,
+                          transition: "all 0.2s",
+                          "&:hover": {
+                            bgcolor: "rgba(211, 47, 47, 0.05)",
+                          },
+                        }}
+                      />
+                    )
+                  )}
+                </RadioGroup>
 
-                      <Typography
-                        variant="subtitle1"
-                        color="primary"
-                        className="mt-3"
-                        gutterBottom
-                      >
-                        Giải thích:
-                      </Typography>
-                      <Typography>
-                        {quizQuestions[index].explanation}
-                      </Typography>
-                    </Box>
-                  </AccordionDetails>
-                </Accordion>
-                <Divider />
-              </React.Fragment>
-            ))}
-          </List>
-        </DialogContent>
-        <DialogActions>
-          <Button onClick={handleShare} startIcon={<ShareIcon />}>
-            Chia sẻ kết quả
-          </Button>
-          <Button onClick={() => window.location.reload()}>Làm lại</Button>
-        </DialogActions>
-      </Dialog>
-    </Container>
+                <Box className="d-flex justify-content-between align-items-center mt-4">
+                  <Typography
+                    variant="body2"
+                    sx={{
+                      color: "text.secondary",
+                      fontWeight: 500,
+                    }}
+                  >
+                    Thời gian còn lại: {timeLeft} giây
+                  </Typography>
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    onClick={handleSubmit}
+                    disabled={selectedAnswer === null}
+                    sx={{
+                      minWidth: 120,
+                      "&:disabled": {
+                        bgcolor: "rgba(211, 47, 47, 0.3)",
+                      },
+                    }}
+                  >
+                    Trả lời
+                  </Button>
+                </Box>
+              </CardContent>
+            </Card>
+          </Grid>
+        </Grid>
+
+        {/* Explanation Dialog */}
+        <Dialog
+          open={showExplanation}
+          onClose={handleCloseExplanation}
+          maxWidth="sm"
+          fullWidth
+        >
+          <DialogTitle
+            sx={{
+              bgcolor: currentExplanation.isCorrect
+                ? "success.light"
+                : "error.light",
+              color: "white",
+            }}
+          >
+            {currentExplanation.isCorrect ? "Chính xác!" : "Chưa đúng!"}
+          </DialogTitle>
+          <DialogContent sx={{ mt: 2 }}>
+            <Typography variant="body1" sx={{ color: "text.primary" }}>
+              {currentExplanation.explanation}
+            </Typography>
+          </DialogContent>
+          <DialogActions>
+            <Button
+              onClick={handleCloseExplanation}
+              color="primary"
+              variant="contained"
+            >
+              Câu tiếp theo
+            </Button>
+          </DialogActions>
+        </Dialog>
+
+        {/* Results Dialog */}
+        <Dialog open={showResult} maxWidth="md" fullWidth>
+          <DialogTitle
+            sx={{
+              bgcolor: "primary.main",
+              color: "white",
+            }}
+          >
+            Kết quả của bạn
+          </DialogTitle>
+          <DialogContent>
+            <Box className="text-center my-4">
+              <Typography
+                variant="h4"
+                gutterBottom
+                sx={{
+                  color: "primary.main",
+                  fontWeight: 700,
+                }}
+              >
+                {score}/{quizQuestions.length}
+              </Typography>
+              <Typography
+                variant="h6"
+                sx={{
+                  color: "text.secondary",
+                  fontWeight: 600,
+                }}
+              >
+                {score === quizQuestions.length
+                  ? "Xuất sắc! Bạn là một chuyên gia lịch sử!"
+                  : score >= quizQuestions.length * 0.7
+                  ? "Rất tốt! Kiến thức lịch sử của bạn rất đáng nể!"
+                  : "Hãy tiếp tục tìm hiểu thêm về lịch sử Việt Nam!"}
+              </Typography>
+            </Box>
+
+            <Typography
+              variant="h6"
+              className="mb-3"
+              sx={{
+                color: "text.primary",
+                fontWeight: 600,
+              }}
+            >
+              Chi tiết các câu trả lời:
+            </Typography>
+
+            <List>
+              {userAnswers.map((answer, index) => (
+                <React.Fragment key={index}>
+                  <Accordion>
+                    <AccordionSummary
+                      expandIcon={<ExpandMoreIcon />}
+                      sx={{
+                        bgcolor: answer.isCorrect
+                          ? "success.light"
+                          : "error.light",
+                        color: "white",
+                        "&:hover": {
+                          bgcolor: answer.isCorrect
+                            ? "success.main"
+                            : "error.main",
+                        },
+                      }}
+                    >
+                      <Box className="d-flex align-items-center w-100">
+                        <ListItemIcon sx={{ color: "white" }}>
+                          {answer.isCorrect ? (
+                            <CheckCircleIcon />
+                          ) : (
+                            <CancelIcon />
+                          )}
+                        </ListItemIcon>
+                        <Typography sx={{ fontWeight: 500 }}>
+                          Câu {index + 1}: {quizQuestions[index].question}
+                        </Typography>
+                      </Box>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                      <Box>
+                        <Typography
+                          variant="subtitle1"
+                          sx={{
+                            color: "primary.main",
+                            fontWeight: 600,
+                          }}
+                          gutterBottom
+                        >
+                          Đáp án của bạn:
+                        </Typography>
+                        <Typography sx={{ color: "text.secondary" }}>
+                          {quizQuestions[index].options[answer.selectedAnswer]}
+                        </Typography>
+
+                        <Typography
+                          variant="subtitle1"
+                          sx={{
+                            color: "primary.main",
+                            fontWeight: 600,
+                          }}
+                          className="mt-3"
+                          gutterBottom
+                        >
+                          Đáp án đúng:
+                        </Typography>
+                        <Typography sx={{ color: "text.secondary" }}>
+                          {
+                            quizQuestions[index].options[
+                              quizQuestions[index].correctAnswerIndex
+                            ]
+                          }
+                        </Typography>
+
+                        <Typography
+                          variant="subtitle1"
+                          sx={{
+                            color: "primary.main",
+                            fontWeight: 600,
+                          }}
+                          className="mt-3"
+                          gutterBottom
+                        >
+                          Giải thích:
+                        </Typography>
+                        <Typography sx={{ color: "text.secondary" }}>
+                          {quizQuestions[index].explanation}
+                        </Typography>
+                      </Box>
+                    </AccordionDetails>
+                  </Accordion>
+                  <Divider />
+                </React.Fragment>
+              ))}
+            </List>
+          </DialogContent>
+          <DialogActions>
+            <Button
+              onClick={handleShare}
+              startIcon={<ShareIcon />}
+              variant="contained"
+              color="secondary"
+            >
+              Chia sẻ kết quả
+            </Button>
+            <Button
+              onClick={() => window.location.reload()}
+              variant="outlined"
+              color="primary"
+            >
+              Làm lại
+            </Button>
+          </DialogActions>
+        </Dialog>
+      </Container>
+    </ThemeProvider>
   );
 };
 

@@ -1,6 +1,6 @@
 export const hcmEvents = [
   {
-    id: 1, // oke
+    id: 1,
     title: "Lễ dâng hương, dâng hoa tưởng niệm Chủ tịch Hồ Chí Minh",
     date: "19/5/2025 | 7h00 – 8h00",
     location: "Quảng trường Ba Đình (Hà Nội); Khu Di tích Kim Liên (Nghệ An)",
@@ -10,7 +10,7 @@ export const hcmEvents = [
     image: "/images/HoChiMinh/DanHuong.jpg",
   },
   {
-    id: 2, // oke
+    id: 2,
     title:
       "Tuyên truyền 135 năm Ngày sinh Chủ tịch Hồ Chí Minh 19/5/1890 - 19/5/2025",
     date: "Tháng 5/2025",
@@ -55,17 +55,23 @@ Ngoài ra, các tiết mục “My Kool Việt Nam – Việt Nam quê hương t
 
   {
     id: 4,
-    title: "Xuất bản ấn phẩm kỷ niệm 135 năm Ngày sinh Chủ tịch Hồ Chí Minh",
-    date: "Tháng 4–5/2025",
-    location: "Toàn quốc",
+    title: "Sinh hoạt chính trị kỷ niệm 135 năm Ngày sinh Chủ tịch Hồ Chí Minh",
+    date: "Ngày 11/5/2025",
+    location: "phường Thanh Sơn, TP. Uông Bí, tỉnh Quảng Ninh",
     description:
-      "Các nhà xuất bản trung ương và địa phương phối hợp xuất bản các ấn phẩm tuyên truyền về tư tưởng, đạo đức, phong cách Hồ Chí Minh.",
-    details: "",
-    image: "/images/HoChiMinh/XuatBanAnPham/XuatBanAnPham.jpg",
+      "Đoàn TNCS Hồ Chí Minh phường Thanh Sơn tổ chức sinh hoạt chính trị với chuyên đề  “Nhớ về Bác – lòng ta trong sáng hơn”, hướng tới kỷ niệm 135 năm Ngày sinh Chủ tịch Hồ Chí Minh (19/5/1890 - 19/5/2025).",
+    details: `
+    Ngày 11/5, Đoàn TNCS Hồ Chí Minh phường Thanh Sơn tổ chức sinh hoạt chính trị với chuyên đề “Nhớ về Bác – lòng ta trong sáng hơn”, hướng tới kỷ niệm 135 năm Ngày sinh Chủ tịch Hồ Chí Minh (19/5/1890 - 19/5/2025).
+<br />[img]/images/HoChiMinh/SinhHoatChinhTri/SHCT1.jpg|Đại biểu dự chương trình.[/img]<br />
+Tại chương trình, các đoàn viên đã được tuyên truyền, tìm hiểu sâu sắc về tư tưởng, đạo đức, phong cách Hồ Chí Minh; phân tích những giá trị trường tồn và sự vận dụng sáng tạo tư tưởng của Người trong công cuộc đổi mới, công nghiệp hóa – hiện đại hóa đất nước và hội nhập quốc tế. Đồng thời, buổi sinh hoạt cũng đề cập tới việc đấu tranh phản bác các quan điểm sai trái, xuyên tạc về thân thế, sự nghiệp và tư tưởng Hồ Chí Minh, bảo vệ vững chắc nền tảng tư tưởng của Đảng, chế độ xã hội chủ nghĩa và khối đại đoàn kết toàn dân tộc.
+
+<br /><br />
+    `,
+    image: "/images/HoChiMinh/SinhHoatChinhTri/SinhHoatChinhTri.jpg",
     video: "",
   },
   {
-    id: 5,
+    id: 5, // oke
     title: "Triển lãm ảnh, tư liệu về Chủ tịch Hồ Chí Minh",
     date: "16/5/2005 – 20/5/2025",
     location: "Trung tâm Văn hóa tỉnh Nghệ An",
