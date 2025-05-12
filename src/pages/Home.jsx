@@ -12,13 +12,13 @@ const Home = () => {
     <>
       <Events
         events={giaiPhongEvents}
-        title="Các sự kiện kỷ niệm 50 năm ngày giải phóng miền Nam"
+        title="CÁC SỰ KIỆN KỶ NIỆM 50 NĂM THỐNG NHẤT ĐẤT NƯỚC (30/4/1975 – 30/4/2025)"
         themeColor="rgb(235, 116, 116)"
         titleColor="#e74c3c"
       />
       <Events
         events={hcmEvents}
-        title="Các sự kiện kỷ niệm 135 năm ngày sinh Chủ tịch Hồ Chí Minh"
+        title="CÁC SỰ KIỆN KỶ NIỆM 135 NĂM NGÀY SINH CHỦ TỊCH HỒ CHÍ MINH (19/5/1890 – 19/5/2025)"
         themeColor="rgb(235, 116, 116)"
         titleColor="#e74c3c"
       />

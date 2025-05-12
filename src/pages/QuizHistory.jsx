@@ -250,17 +250,25 @@ const QuizHistory = () => {
                 transition={{ duration: 0.5 }}
               >
                 <Typography
-                  variant="h3"
+                  variant="h2"
                   align="center"
                   sx={{
-                    mb: 4,
                     color: "primary.main",
                     fontWeight: "bold",
                     textShadow: "2px 2px 4px rgba(0,0,0,0.2)",
-                    fontSize: { xs: "2rem", sm: "2.5rem", md: "3rem" },
+                    fontSize: { xs: "2.5rem", sm: "3.5rem", md: "4rem" },
+                    mb: 4,
+                    width: "100%",
+                    textAlign: "center",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    letterSpacing: "0.05em",
+                    lineHeight: 1.2,
+                    textTransform: "uppercase",
                   }}
                 >
-                  Thử tài lịch sử
+                  THỬ TÀI LỊCH SỬ
                 </Typography>
               </motion.div>
 
@@ -349,21 +357,20 @@ const QuizHistory = () => {
           >
             <Typography
               variant="h3"
-              align="center"
               sx={{
+                textAlign: "center",
+                mb: 2,
                 color: "primary.main",
                 fontWeight: "bold",
-                textShadow: "2px 2px 4px rgba(0,0,0,0.2)",
-                fontSize: { xs: "2rem", sm: "2.5rem", md: "3rem" },
-                mb: 2,
-                width: "100%",
-                textAlign: "center",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
+                textShadow: "2px 2px 2px rgba(0, 0, 0, 0.63)",
+                fontSize: {
+                  xs: "1.5rem",
+                  sm: "2rem",
+                  md: "2.5rem",
+                },
               }}
             >
-              Thử tài lịch sử
+              THỬ TÀI LỊCH SỬ CỦA BẠN NHÉ
             </Typography>
           </motion.div>
 
@@ -380,11 +387,12 @@ const QuizHistory = () => {
             }}
           >
             <Typography
-              variant="body1"
+              variant="h6"
               sx={{
                 color: "text.secondary",
                 lineHeight: 1.8,
                 textAlign: "justify",
+                fontWeight: 600,
               }}
             >
               Câu hỏi này không chỉ yêu cầu người tham gia nhớ về sự kiện lịch
