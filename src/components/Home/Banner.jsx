@@ -8,6 +8,7 @@ const Banner = () => {
         src="./images/BannerVip.gif"
         alt=""
       />
+      <a href=""></a>
     </motion.div>
   );
 

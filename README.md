@@ -1,5 +1,10 @@
 # Website chủ đề "Dấu ấn Lễ kỷ niệm 50 năm thống nhất đất nước"
-# <h2 align="center">🛠 Technologies and Tools 🛠</h2>
+
+# <h2 align="center">Link website:</h2>
+
+## Hoặc
+
+# <h2 align="center"><a href="">Click me</a></h2>
 
 ## Mô tả
 
@@ -12,8 +17,9 @@ Website được xây dựng nhằm kỷ niệm 50 năm thống nhất đất n�
 - 🗺️ **Cuộc đời của lãnh tụ Hồ Chí Minh**: Hiển thị các địa điểm, mốc thời gian quan trọng trong cuộc đời của ngài.
 - 📱 **Giao diện responsive**: Tương thích với mọi thiết bị
 - 🎵 **Âm thanh**: Phát nhạc nền và âm thanh tư liệu
-- 🔍 **Đố vui lịch sử**: Cho phép mọi người test kiến thức lịch sử của mình qua  các câu đố vui.
+- 🔍 **Đố vui lịch sử**: Cho phép mọi người test kiến thức lịch sử của mình qua các câu đố vui.
 - 🖼️ **Để lại lời nhắn**: Để lại lời chúc tốt đẹp
+
 ## Công nghệ sử dụng
 
 - **Frontend Framework**: React.js
@@ -39,6 +45,7 @@ Website được xây dựng nhằm kỷ niệm 50 năm thống nhất đất n�
 ```bash
 git clone https://github.com/KhoaCongNgheSoUTE/tkw25.nhom14.git
 ```
+
 2. Cài đặt dependencies:
 
 ```bash
@@ -62,6 +69,7 @@ npm run build
 # hoặc
 yarn build
 ```
+
 5. Preview phiên bản production:
 
 ```bash
@@ -69,12 +77,17 @@ npm run preview
 # hoặc
 yarn preview
 ```
+
 ### Deploy
+
 Dự án có thể được deploy lên các nền tảng sau:
+
 - Vercel
 - Netlify
 - GitHub Pages
+
 ## Tác giả
+
 - **Họ và tên**: Võ Nguyễn Đại Hiếu
 - **Mã sinh viên**: 23115053122217
 - **Lớp**: 23T2
