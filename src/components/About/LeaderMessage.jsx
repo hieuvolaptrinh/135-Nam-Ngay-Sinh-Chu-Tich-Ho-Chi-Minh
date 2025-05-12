@@ -43,7 +43,7 @@ const LeaderMessage = () => {
             fontSize: "2rem",
           }}
         >
-          THÔNG ĐIỆP
+          THÔNG ĐIỆP HÔM NAY
           <span
             style={{
               content: '""',

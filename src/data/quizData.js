@@ -84,7 +84,7 @@ export const quizQuestions = [
       "Nguyễn Ái Quốc",
       "Cả A và B đều đúng",
     ],
-    correctAnswerIndex: 3,
+    correctAnswerIndex: 1,
     explanation:
       "Chủ tịch Hồ Chí Minh có tên khai sinh là Nguyễn Sinh Cung, sau đổi thành Nguyễn Tất Thành. Trong quá trình hoạt động cách mạng, Người còn sử dụng nhiều bí danh khác như Nguyễn Ái Quốc, Văn Ba, Tống Văn Sơ...",
   },

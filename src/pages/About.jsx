@@ -37,7 +37,7 @@ const About = () => {
                 fontSize: "2rem",
               }}
             >
-              THÔNG ĐIỆP
+              CON NGƯỜI VĨ ĐẠI
               <span
                 style={{
                   content: '""',

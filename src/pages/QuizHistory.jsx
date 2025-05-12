@@ -29,6 +29,7 @@ import {
   Divider,
   createTheme,
   ThemeProvider,
+  Stack,
 } from "@mui/material";
 import {
   Share as ShareIcon,
@@ -134,6 +135,7 @@ const QuizHistory = () => {
   const [timeLeft, setTimeLeft] = useState(30);
   const [timerActive, setTimerActive] = useState(true);
   const [userAnswers, setUserAnswers] = useState([]);
+  const [quizStarted, setQuizStarted] = useState(false);
 
   useEffect(() => {
     let timer;
@@ -215,75 +217,205 @@ const QuizHistory = () => {
     return "#FFCDD2";
   };
 
+  const handleStartQuiz = () => {
+    setQuizStarted(true);
+    setTimerActive(true);
+  };
+
+  if (!quizStarted) {
+    return (
+      <ThemeProvider theme={theme}>
+        <Container
+          className="py-5"
+          sx={{ bgcolor: "background.default", minHeight: "100vh" }}
+        >
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+          >
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center",
+                minHeight: "80vh",
+              }}
+            >
+              {/* Tiêu đề */}
+              <motion.div
+                initial={{ scale: 0.8 }}
+                animate={{ scale: 1 }}
+                transition={{ duration: 0.5 }}
+              >
+                <Typography
+                  variant="h3"
+                  align="center"
+                  sx={{
+                    mb: 4,
+                    color: "primary.main",
+                    fontWeight: "bold",
+                    textShadow: "2px 2px 4px rgba(0,0,0,0.2)",
+                    fontSize: { xs: "2rem", sm: "2.5rem", md: "3rem" },
+                  }}
+                >
+                  Thử tài lịch sử
+                </Typography>
+              </motion.div>
+
+              {/* Nội dung mô tả */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.3 }}
+              >
+                <Paper
+                  elevation={3}
+                  sx={{
+                    p: 4,
+                    maxWidth: 600,
+                    textAlign: "center",
+                    borderRadius: 4,
+                    bgcolor: "background.paper",
+                  }}
+                >
+                  <Typography
+                    variant="body1"
+                    sx={{
+                      mb: 4,
+                      color: "text.secondary",
+                      lineHeight: 1.8,
+                      textAlign: "justify",
+                    }}
+                  >
+                    Chào mừng bạn đến với bài quiz Lịch sử Việt Nam! Hãy thử
+                    thách kiến thức về sự kiện Giải phóng miền Nam 30/4/1975 và
+                    cuộc đời Chủ tịch Hồ Chí Minh qua 10 câu hỏi thú vị.
+                    <br /> Mỗi câu hỏi có 4 lựa chọn, thời gian trả lời là 30
+                    giây. Trả lời đúng để nhận điểm số, trả lời sai không bị trừ
+                    điểm.
+                    <br />
+                    Sau khi hoàn thành, bạn có thể xem giải thích đáp án và chia
+                    sẻ kết quả với bạn bè. Đây là cơ hội để tìm hiểu thêm về
+                    lịch sử dân tộc và những con người đã góp phần xây dựng đất
+                    nước.
+                    <br />
+                    <strong> Sẵn sàng thử sức?</strong> Nhấn{" "}
+                    <strong>"Bắt đầu"</strong> để khởi động ngay!
+                  </Typography>
+
+                  {/* Nút bắt đầu */}
+                  <motion.div
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <Button
+                      variant="contained"
+                      color="primary"
+                      size="large"
+                      onClick={handleStartQuiz}
+                      sx={{
+                        px: 6,
+                        py: 2,
+                        fontSize: "1.2rem",
+                        borderRadius: 8,
+                      }}
+                    >
+                      Bắt đầu
+                    </Button>
+                  </motion.div>
+                </Paper>
+              </motion.div>
+            </Box>
+          </motion.div>
+        </Container>
+      </ThemeProvider>
+    );
+  }
+
   return (
     <ThemeProvider theme={theme}>
       <Container className="py-5" sx={{ bgcolor: "background.default" }}>
-        <Grid container spacing={3}>
-          <Grid item xs={12}>
-            <Box sx={{ display: "flex", justifyContent: "center" }}>
-              <motion.div
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1 }}
-                viewport={{ once: false, amount: 0.5 }}
-              >
-                <Typography
-                  align="center"
-                  sx={{
-                    mb: 6,
-                    fontSize: {
-                      color: "rgb(241, 76, 64)",
-                      xs: "1rem",
-                      sm: "1.5rem",
-                      md: "1.7rem",
-                      lg: "2.25rem",
-                    },
-                    fontWeight: "bold",
-                    textShadow: "2px 2px 2px rgba(0, 0, 0, 0.63)",
-                  }}
-                >
-                  {" "}
-                  Thử tài lịch sử - Dấu ấn 30/4 & Bác Hồ
-                </Typography>
-              </motion.div>
+        <Stack spacing={4}>
+          {/* Tiêu đề */}
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              flexDirection: "column",
+            }}
+          >
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: false, amount: 0.5 }}
+              style={{ width: "100%" }}
+            >
               <Typography
                 variant="h3"
+                align="center"
                 sx={{
-                  mb: 2,
-                  position: "relative",
                   color: "primary.main",
                   fontWeight: "bold",
-                  textShadow: "2px 2px 2px rgba(0, 0, 0, 0.63)",
-                  fontSize: {
-                    xs: "1.5rem",
-                    sm: "2rem",
-                    md: "2.5rem",
-                  },
-                  textAlign: "center", // giữ cho text xuống dòng đẹp
+                  textShadow: "2px 2px 4px rgba(0,0,0,0.2)",
+                  fontSize: { xs: "2rem", sm: "2.5rem", md: "3rem" },
+                  mb: 2,
                 }}
-              ></Typography>
-            </Box>
-          </Grid>
+              >
+                Thử tài lịch sử - Dấu ấn 30/4 & Bác Hồ
+              </Typography>
+            </motion.div>
+          </Box>
 
-          <Grid item xs={12}>
-            <Paper
-              elevation={3}
-              className="p-4 mb-4"
+          {/* Mô tả quiz */}
+          <Paper
+            elevation={3}
+            sx={{
+              p: 4,
+              borderRadius: 4,
+              bgcolor: "background.paper",
+              maxWidth: "800px",
+              mx: "auto",
+              width: "100%",
+            }}
+          >
+            <Typography
+              variant="body1"
               sx={{
-                bgcolor: "background.paper",
-                borderRadius: 3,
-                border: "1px solid rgba(0,0,0,0.1)",
+                color: "text.secondary",
+                lineHeight: 1.8,
+                textAlign: "justify",
               }}
             >
-              <Typography variant="body1" sx={{ color: "text.secondary" }}>
-                Chào mừng bạn đến với bài quiz về lịch sử Việt Nam! Hãy thử
-                thách kiến thức của bạn về sự kiện Giải phóng miền Nam 30/4/1975
-                và cuộc đời Chủ tịch Hồ Chí Minh. Chúc bạn may mắn!
-              </Typography>
-            </Paper>
-          </Grid>
+              Chào mừng bạn đến với bài quiz Lịch sử Việt Nam! Hãy thử thách
+              kiến thức về sự kiện Giải phóng miền Nam 30/4/1975 và cuộc đời Chủ
+              tịch Hồ Chí Minh qua 10 câu hỏi thú vị.
+              <br /> Mỗi câu hỏi có 4 lựa chọn, thời gian trả lời là 30 giây.
+              Trả lời đúng để nhận điểm số, trả lời sai không bị trừ điểm.
+              <br />
+              Sau khi hoàn thành, bạn có thể xem giải thích đáp án và chia sẻ
+              kết quả với bạn bè. Đây là cơ hội để tìm hiểu thêm về lịch sử dân
+              tộc và những con người đã góp phần xây dựng đất nước.
+              <br />
+              <strong> Sẵn sàng thử sức?</strong> Nhấn{" "}
+              <strong>"Bắt đầu"</strong> để khởi động ngay!
+            </Typography>
+          </Paper>
 
-          <Grid item xs={12}>
+          {/* Card câu hỏi */}
+          <Paper
+            elevation={3}
+            sx={{
+              borderRadius: 4,
+              bgcolor: "background.paper",
+              maxWidth: "800px",
+              mx: "auto",
+              width: "100%",
+            }}
+          >
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -410,8 +542,8 @@ const QuizHistory = () => {
                 </CardContent>
               </Card>
             </motion.div>
-          </Grid>
-        </Grid>
+          </Paper>
+        </Stack>
 
         {/* Explanation Dialog */}
         <Dialog
@@ -457,9 +589,13 @@ const QuizHistory = () => {
               sx={{
                 bgcolor: "primary.main",
                 color: "white",
+                textAlign: "center",
+                py: 3,
               }}
             >
-              Kết quả của bạn
+              <Typography variant="h4" sx={{ fontWeight: "bold" }}>
+                Kết quả của bạn
+              </Typography>
             </DialogTitle>
             <DialogContent>
               <motion.div
@@ -468,29 +604,67 @@ const QuizHistory = () => {
                 transition={{ delay: 0.2 }}
               >
                 <Box className="text-center my-4">
-                  <Typography
-                    variant="h4"
-                    gutterBottom
-                    sx={{
-                      color: "primary.main",
-                      fontWeight: 700,
-                    }}
+                  <motion.div
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    transition={{ type: "spring", stiffness: 200, delay: 0.3 }}
                   >
-                    {score}/{quizQuestions.length}
-                  </Typography>
-                  <Typography
-                    variant="h6"
-                    sx={{
-                      color: "text.secondary",
-                      fontWeight: 600,
-                    }}
+                    <Typography
+                      variant="h2"
+                      gutterBottom
+                      sx={{
+                        color: "primary.main",
+                        fontWeight: 700,
+                        fontSize: { xs: "3rem", sm: "4rem" },
+                      }}
+                    >
+                      {score}/{quizQuestions.length}
+                    </Typography>
+                  </motion.div>
+
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.5 }}
                   >
-                    {score === quizQuestions.length
-                      ? "Xuất sắc! Bạn là một chuyên gia lịch sử!"
-                      : score >= quizQuestions.length * 0.7
-                      ? "Rất tốt! Kiến thức lịch sử của bạn rất đáng nể!"
-                      : "Hãy tiếp tục tìm hiểu thêm về lịch sử Việt Nam!"}
-                  </Typography>
+                    <Typography
+                      variant="h5"
+                      sx={{
+                        color: "text.secondary",
+                        fontWeight: 600,
+                        mb: 4,
+                      }}
+                    >
+                      {score === quizQuestions.length
+                        ? "🎉 Xuất sắc! Bạn là một chuyên gia lịch sử!"
+                        : score >= quizQuestions.length * 0.7
+                        ? "👏 Rất tốt! Kiến thức lịch sử của bạn rất đáng nể!"
+                        : "💪 Hãy tiếp tục tìm hiểu thêm về lịch sử Việt Nam!"}
+                    </Typography>
+                  </motion.div>
+
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.7 }}
+                  >
+                    <Box sx={{ mb: 4 }}>
+                      <LinearProgress
+                        variant="determinate"
+                        value={(score / quizQuestions.length) * 100}
+                        sx={{
+                          height: 10,
+                          borderRadius: 5,
+                          bgcolor: "rgba(211, 47, 47, 0.1)",
+                          "& .MuiLinearProgress-bar": {
+                            bgcolor: getProgressColor(
+                              (score / quizQuestions.length) * 100
+                            ),
+                          },
+                        }}
+                      />
+                    </Box>
+                  </motion.div>
                 </Box>
               </motion.div>
 
@@ -500,6 +674,9 @@ const QuizHistory = () => {
                 sx={{
                   color: "text.primary",
                   fontWeight: 600,
+                  borderBottom: "2px solid",
+                  borderColor: "primary.main",
+                  pb: 1,
                 }}
               >
                 Chi tiết các câu trả lời:
@@ -507,7 +684,12 @@ const QuizHistory = () => {
 
               <List>
                 {userAnswers.map((answer, index) => (
-                  <React.Fragment key={index}>
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: index * 0.1 }}
+                  >
                     <Accordion>
                       <AccordionSummary
                         expandIcon={<ExpandMoreIcon />}
@@ -593,26 +775,39 @@ const QuizHistory = () => {
                       </AccordionDetails>
                     </Accordion>
                     <Divider />
-                  </React.Fragment>
+                  </motion.div>
                 ))}
               </List>
             </DialogContent>
-            <DialogActions>
-              <Button
-                onClick={handleShare}
-                startIcon={<ShareIcon />}
-                variant="contained"
-                color="secondary"
+            <DialogActions sx={{ p: 3, justifyContent: "center" }}>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
-                Chia sẻ kết quả
-              </Button>
-              <Button
-                onClick={() => window.location.reload()}
-                variant="outlined"
-                color="primary"
+                <Button
+                  onClick={handleShare}
+                  startIcon={<ShareIcon />}
+                  variant="contained"
+                  color="secondary"
+                  size="large"
+                  sx={{ mr: 2 }}
+                >
+                  Chia sẻ kết quả
+                </Button>
+              </motion.div>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
-                Làm lại
-              </Button>
+                <Button
+                  onClick={() => window.location.reload()}
+                  variant="outlined"
+                  color="primary"
+                  size="large"
+                >
+                  Làm lại
+                </Button>
+              </motion.div>
             </DialogActions>
           </motion.div>
         </Dialog>

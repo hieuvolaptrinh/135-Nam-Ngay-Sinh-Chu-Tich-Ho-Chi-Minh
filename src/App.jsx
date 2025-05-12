@@ -15,6 +15,7 @@ import MainLayout from "./pages/MainLayout";
 import Banner from "./components/Home/Banner";
 
 const theme = createTheme({
+  // để đây cần thì xài
   palette: {
     primary: {
       main: "rgb(67, 150, 233)",
