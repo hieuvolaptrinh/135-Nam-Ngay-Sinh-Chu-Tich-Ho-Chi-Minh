@@ -152,6 +152,7 @@ npm run deploy
 
 <div style="display: block" align="center">
   <h3>🎯 Trang Chủ</h3>
+
 ![alt text]({83B2C2B0-9EDB-486A-8C41-75AAE0AD54FC}.png)
 ![alt text]({EB3E8DD3-6F4C-454E-9808-79AD2112B547}.png)
 
@@ -159,15 +160,18 @@ npm run deploy
  
  ![alt text]({E60FC02B-331B-444D-8F93-AF9AF1F8676C}.png)
   <h3>📅 Timeline</h3>
+
 ![alt text]({3619E791-4517-407A-BC93-787F52A4183E}.png)
 ![alt text]({C9255F21-7706-40C5-9648-38B1CDF54603}.png)
 
   <h3>🎮 Góc Tự Hào</h3>
+
 ![alt text]({ED206985-2F85-4C5B-AE1C-9FF870DAF5FB}.png)
 ![alt text]({6EC0E22D-031E-460F-B5C1-2C9409BB6CA3}.png)
 ![alt text]({AE416173-A4A6-4D74-98F1-6F503180AB68}.png)
 
   <h3>🎮 Đố vui lịch sử</h3>
+  
 ![alt text]({558ECA1C-D81C-4E65-96B2-90D95CF63874}.png)
 ![alt text]({2409924C-FAD5-4AAA-95FE-FA613D7C4F21}.png)
 ![alt text]({B315A643-13FF-4A9D-9E6F-36F7DA9D7C5B}.png)
