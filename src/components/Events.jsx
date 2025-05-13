@@ -130,8 +130,8 @@ const Events = ({
                   }}
                 >
                   <Typography
-                    variant="h5"
-                    component="h2"
+                    variant="h6"
+                    // component="h2"
                     sx={{
                       fontWeight: "bold",
                       mb: 2,
