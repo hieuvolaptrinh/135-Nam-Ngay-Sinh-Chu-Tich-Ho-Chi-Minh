@@ -8,19 +8,19 @@
 
 - [Hướng dẫn cài đặt](#-hướng-dẫn-cài-đặt)
 - [Hướng dẫn Deploy](#-hướng-dẫn-deploy)
+- [Demo](#-demo)
 - [Giới thiệu](#-giới-thiệu)
 - [Mô tả các trang](#-mô-tả-các-trang)
 - [Tính năng](#-tính-năng)
 - [Công nghệ sử dụng](#-công-nghệ-sử-dụng)
 - [Cấu trúc dự án](#-cấu-trúc-dự-án)
-- [Demo](#-demo)
 - [Tác giả](#-tác-giả)
 
 ## 💻 Hướng dẫn cài đặt
 
 ### Yêu cầu hệ thống
 
-- Node.js
+- Node.js (v14.0.0 trở lên)
 - npm hoặc yarn
 
 ### Các bước cài đặt
@@ -147,6 +147,18 @@ import { HashRouter as Router, Routes, Route } from "react-router-dom";
 ```bash
 npm run deploy
 ```
+
+## 📸 Demo
+
+<div style="display: block" align="center">
+  <iframe 
+    src="https://vndhieutrum.github.io/50-nam-giai-phong-135-nam-ngay-sinh-bac-ho/" 
+    width="100%" 
+    height="600px" 
+    style="border: none; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.2);"
+    title="Website Demo"
+  ></iframe>
+</div>
 
 ## 🎯 Giới thiệu
 
