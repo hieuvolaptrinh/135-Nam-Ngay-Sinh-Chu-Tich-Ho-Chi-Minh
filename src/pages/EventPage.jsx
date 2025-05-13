@@ -1,5 +1,5 @@
 import FeaturedEvents from "../components/Event/FeaturedEvents";
-import Events from "../components/Events";
+import Events from "../components/Event/Events";
 
 import { hcmEvents, giaiPhongEvents } from "../data/Events";
 

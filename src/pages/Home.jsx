@@ -4,7 +4,7 @@ import React from "react";
 import Banner from "../components/Home/Banner";
 import FeaturedEvents from "../components/Event/FeaturedEvents";
 import HoChiMinhTimeline from "../components/Home/HoChiMinhTimeLine";
-import Events from "../components/Events";
+import Events from "../components/Event/Events";
 import { giaiPhongEvents, hcmEvents } from "../data/Events";
 
 const Home = () => {

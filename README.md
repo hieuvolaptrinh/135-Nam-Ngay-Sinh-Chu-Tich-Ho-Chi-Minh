@@ -99,11 +99,11 @@ npm install gh-pages --save-dev
 
 ### 6. Cấu hình package.json
 
-![alt text]({637DEC3A-4E94-4872-A7C1-C74EB5DA3722}.png)
+![alt text]({3D217506-0763-4402-ADE5-83295A54B885}.png)
 
 ```json
 {
-  "homepage": "https://[Username github của bạn].github.io/[Tên repository bạn đã tạo trước đó]",
+  "homepage": "https://[Username github của bạn].github.io/[Tên repository bạn đã tạo trước đó]/",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
@@ -124,7 +124,7 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
-  base: "/50-nam-giai-phong-135-nam-ngay-sinh-bac-ho/",
+  base: "/[Tên repository bạn đã tạo trước đó]/",
 });
 ```
 
@@ -265,50 +265,50 @@ Dự án không chỉ là một nền tảng thông tin mà còn là công cụ 
 ## 📁 Cấu trúc dự án
 
 ```
+public/
+├── images/....
+├── videos/...
+├── nhacNen.mp3
+├── quizMute.mp3
+├── UTE.png
 src/
 ├── components/
-│   ├── Header/
-│   │   ├── Navbar.jsx
-│   │   └── LanguageSwitcher.jsx
-│   ├── Timeline/
-│   │   ├── Timeline.jsx
-│   │   └── TimelineItem.jsx
-│   ├── Gallery/
-│   │   ├── ImageSlider.jsx
-│   │   └── VideoPlayer.jsx
-│   ├── Events/
-│   │   ├── EventList.jsx
-│   │   └── EventModal.jsx
-│   ├── Quiz/
-│   │   ├── QuizContainer.jsx
-│   │   └── QuizQuestion.jsx
-│   └── Footer/
-│       └── Footer.jsx
-├── assets/
-│   ├── images/
-│   │   ├── historical/
-│   │   └── events/
-│   ├── videos/
-│   └── audio/
-├── styles/
-│   ├── global.css
-│   └── themes/
-├── utils/
-│   ├── helpers.js
-│   └── translations.js
+│   ├── About/
+│   │   ├── AboutHCM.jsx
+│   │   |── Celebrate.jsx
+│   │   |── HistoricalMessage.jsx
+│   │   └── LeaderMessage.jsx
+│   ├── BackgroundMusic/
+│   │   ├── BackgroundMusic.jsx
+│   ├── Event/
+│   │   ├── EventModal.jsx
+│   │   ├── Events.jsx
+│   │   └── FeaturedEvents.jsx
+│   ├── Historys/
+│   │   └── HistoryDetail.jsx
+│   ├── Home/
+│   │   ├── Banner.jsx
+│   │   └── HoChiMinhTimeLine.jsx
+│   ├── RightSideBar/
+│   │   ├── BacHoQuote.jsx
+│   │   ├── BackToTop.jsx
+│   │   └── UserReflection.jsx
+│   ├── Clock.jsx
+│   ├── Footer.jsx
+│   ├── Header.jsx
+│   └── Navbar.jsx
+├── data/.....lưu trữ dữ liệu ....
+├── page/
+│   ├── About.jsx
+│   ├── EventPage.jsx
+│   ├── Historys.jsx
+│   ├── Home.jsx
+│   ├── MainLayout.jsx
+│   └── QuizHistory.jsx
+├── style/....
 ├── App.jsx
 └── main.jsx
 ```
-
-## 📸 Demo
-
-<div align="center">
-  <img src="PLACEHOLDER-FOR-HOMEPAGE.png" alt="Homepage Demo" style="width: 100%; max-width: 800px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); margin: 20px 0;" />
-  
-  <img src="PLACEHOLDER-FOR-TIMELINE.png" alt="Timeline Demo" style="width: 100%; max-width: 800px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); margin: 20px 0;" />
-  
-  <img src="PLACEHOLDER-FOR-GALLERY.png" alt="Gallery Demo" style="width: 100%; max-width: 800px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); margin: 20px 0;" />
-</div>
 
 ## 👨‍💻 Tác giả
 
