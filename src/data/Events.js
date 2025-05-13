@@ -229,7 +229,7 @@ Chuỗi hoạt động Sắc màu Thành phố Bác là dịp để TP Hồ Chí
 
   {
     id: 3,
-    title: "Triển lãm điện ảnh 'Âm vang đại thắng mùa Xuân 1975'",
+    title: `Triển lãm điện ảnh "Âm vang đại thắng mùa Xuân 1975"`,
     date: "27/04/2025 – 28/04/2025",
     location: "Phố đi bộ Nguyễn Huệ, Quận 1, TP.HCM",
     description:
@@ -259,8 +259,7 @@ Tại Trường Đại học Mở TP. Hồ Chí Minh, 97 Võ Văn Tần, Quận 
     title: `Chương trình nghệ thuật "Mùa xuân thống nhất"`,
     date: "29/04/2025 | 18h00 – 22h00",
     location: "Công viên Sáng Tạo, TP.HCM",
-    description:
-      "Chương trình nghệ thuật đặc biệt 'Mùa xuân thống nhất' là hoạt động chào mừng kỷ niệm 50 năm ngày đất nước thống nhất (30.4.1975 - 30.4.2025).",
+    description: `Chương trình nghệ thuật đặc biệt "Mùa xuân thống nhất" là hoạt động chào mừng kỷ niệm 50 năm ngày đất nước thống nhất (30.4.1975 - 30.4.2025).`,
     details: `
       "Chương trình nghệ thuật lớn với các tiết mục tái hiện hành trình thống nhất đất nước và các thành tựu sau 50 năm. Với sự tham gia của nhiều nghệ sĩ tên tuổi và lãnh đạo cấp cao, đây là sự kiện trọng điểm của chuỗi kỷ niệm."
        <br />[img]./images/GiaiPhong/MuaXuanThongNhat/MXTN1.jpg|Tổng Bí thư Tô Lâm và phu nhân, Thủ tướng Phạm Minh Chính cùng các lãnh đạo Đảng, Nhà nước dự chương trình[/img]<br />
