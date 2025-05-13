@@ -151,13 +151,25 @@ npm run deploy
 ## 📸 Demo
 
 <div style="display: block" align="center">
-  <iframe 
-    src="https://vndhieutrum.github.io/50-nam-giai-phong-135-nam-ngay-sinh-bac-ho/" 
-    width="100%" 
-    height="600px" 
-    style="border: none; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.2);"
-    title="Website Demo"
-  ></iframe>
+  <h3>🎯 Trang Chủ</h3>
+![alt text]({83B2C2B0-9EDB-486A-8C41-75AAE0AD54FC}.png)
+![alt text]({EB3E8DD3-6F4C-454E-9808-79AD2112B547}.png)
+![alt text]({3619E791-4517-407A-BC93-787F52A4183E}.png)
+  
+  <h3>📅 Timeline</h3>
+  <img src="[Đường dẫn đến ảnh chụp màn hình timeline]" alt="Timeline Demo" style="width: 100%; max-width: 800px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); margin: 20px 0;" />
+  
+  <h3>🎮 Đố vui lịch sử</h3>
+  <img src="[Đường dẫn đến ảnh chụp màn hình quiz]" alt="Quiz Demo" style="width: 100%; max-width: 800px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); margin: 20px 0;" />
+
+  <div style="margin-top: 30px; padding: 20px; background-color: #f8f9fa; border-radius: 10px;">
+    <h3>🔗 Truy cập website</h3>
+    <p>
+      <a href="https://vndhieutrum.github.io/50-nam-giai-phong-135-nam-ngay-sinh-bac-ho/" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">
+        👉 Click để xem website trực tiếp
+      </a>
+    </p>
+  </div>
 </div>
 
 ## 🎯 Giới thiệu
@@ -292,34 +304,34 @@ src/
 │   │   └── LeaderMessage.jsx
 │   ├── BackgroundMusic/
 │   │   ├── BackgroundMusic.jsx
-│   ├── Event/
-│   │   ├── EventModal.jsx
-│   │   ├── Events.jsx
-│   │   └── FeaturedEvents.jsx
-│   ├── Historys/
-│   │   └── HistoryDetail.jsx
-│   ├── Home/
-│   │   ├── Banner.jsx
-│   │   └── HoChiMinhTimeLine.jsx
-│   ├── RightSideBar/
-│   │   ├── BacHoQuote.jsx
-│   │   ├── BackToTop.jsx
-│   │   └── UserReflection.jsx
-│   ├── Clock.jsx
-│   ├── Footer.jsx
-│   ├── Header.jsx
-│   └── Navbar.jsx
-├── data/.....lưu trữ dữ liệu ....
-├── page/
-│   ├── About.jsx
-│   ├── EventPage.jsx
-│   ├── Historys.jsx
-│   ├── Home.jsx
-│   ├── MainLayout.jsx
-│   └── QuizHistory.jsx
-├── style/....
-├── App.jsx
-└── main.jsx
+│   │   ├── Event/
+│   │   │   ├── EventModal.jsx
+│   │   │   ├── Events.jsx
+│   │   │   └── FeaturedEvents.jsx
+│   │   ├── Historys/
+│   │   │   └── HistoryDetail.jsx
+│   │   ├── Home/
+│   │   │   ├── Banner.jsx
+│   │   │   └── HoChiMinhTimeLine.jsx
+│   │   ├── RightSideBar/
+│   │   │   ├── BacHoQuote.jsx
+│   │   │   ├── BackToTop.jsx
+│   │   │   └── UserReflection.jsx
+│   │   ├── Clock.jsx
+│   │   ├── Footer.jsx
+│   │   ├── Header.jsx
+│   │   └── Navbar.jsx
+│   ├── data/.....lưu trữ dữ liệu ....
+│   ├── page/
+│   │   ├── About.jsx
+│   │   ├── EventPage.jsx
+│   │   ├── Historys.jsx
+│   │   ├── Home.jsx
+│   │   ├── MainLayout.jsx
+│   │   └── QuizHistory.jsx
+│   ├── style/....
+│   ├── App.jsx
+│   └── main.jsx
 ```
 
 ## 👨‍💻 Tác giả

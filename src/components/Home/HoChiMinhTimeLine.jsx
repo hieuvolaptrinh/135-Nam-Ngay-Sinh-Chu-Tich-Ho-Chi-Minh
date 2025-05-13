@@ -28,7 +28,7 @@ const HoChiMinhTimeline = () => {
             textShadow: "2px 2px 2px rgba(0, 0, 0, 0.63)",
           }}
         >
-          Con Đường Giải Phóng Dân Tộc Của Chủ Tịch Hồ Chí Minh
+          CON ĐƯỜNG GIẢI PHÓNG ĐAN TỘC CỦA CHỦ TỊCH HỒ CHÍ MINH
         </Typography>
       </motion.div>
       <div className="position-relative">
