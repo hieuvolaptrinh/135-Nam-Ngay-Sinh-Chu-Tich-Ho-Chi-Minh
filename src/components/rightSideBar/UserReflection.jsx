@@ -120,7 +120,7 @@ const UserReflection = () => {
             variant="subtitle1"
             gutterBottom
             sx={{
-              color: theme.palette.primary.main,
+              color: "rgb(253, 0, 0)",
               fontWeight: "medium",
             }}
           >
