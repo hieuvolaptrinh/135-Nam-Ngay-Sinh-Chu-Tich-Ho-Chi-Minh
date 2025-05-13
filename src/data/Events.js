@@ -35,7 +35,7 @@ export const hcmEvents = [
     id: 2, // oke 50% --> có thể bỏ
     title: "Sinh hoạt chính trị kỷ niệm 135 năm Ngày sinh Chủ tịch Hồ Chí Minh",
     date: "Ngày 11/5/2025",
-    location: "phường Thanh Sơn, TP. Uông Bí, tỉnh Quảng Ninh",
+    location: "Phường Thanh Sơn, TP. Uông Bí, tỉnh Quảng Ninh",
     description:
       "Đoàn TNCS Hồ Chí Minh phường Thanh Sơn tổ chức sinh hoạt chính trị với chuyên đề  “Nhớ về Bác – lòng ta trong sáng hơn”, hướng tới kỷ niệm 135 năm Ngày sinh Chủ tịch Hồ Chí Minh (19/5/1890 - 19/5/2025).",
     details: `
