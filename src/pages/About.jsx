@@ -24,7 +24,7 @@ const About = () => {
         transition={{ duration: 0.8 }}
       >
         <Row>
-          <Col xs={12} sm={6} md={6} className="text-center mb-4">
+          <Col xs={12} sm={12} md={12} lg={6} className="text-center mb-4">
             <h2
               className="text-center mb-5"
               initial="initial"
@@ -54,7 +54,7 @@ const About = () => {
             </h2>
             <AboutHCM />
           </Col>
-          <Col xs={12} sm={6} md={6} className="text-center mb-4">
+          <Col xs={12} sm={12} md={12} lg={6} className="text-center mb-4">
             {" "}
             <LeaderMessage />
           </Col>

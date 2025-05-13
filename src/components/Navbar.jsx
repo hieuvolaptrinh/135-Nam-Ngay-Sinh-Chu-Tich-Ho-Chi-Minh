@@ -18,10 +18,10 @@ import { useState } from "react";
 
 const menuItems = [
   { text: "Trang Chủ", path: "/", icon: <HomeIcon /> },
-  { text: "Con đường độc lập", path: "/history", icon: <HistoryIcon /> },
-  { text: "Góc tự hào", path: "/about", icon: <EmojiEventsIcon /> },
+  { text: "Con Đường Độc Lập", path: "/history", icon: <HistoryIcon /> },
+  { text: "Góc Tự Hào", path: "/about", icon: <EmojiEventsIcon /> },
   { text: "Hoạt Động Kỷ Niệm", path: "/events", icon: <EventIcon /> },
-  { text: "Đố vui lịch sử", path: "/quiz-history", icon: <QuizTwoToneIcon /> },
+  { text: "Đố Vui Lịch Sử", path: "/quiz-history", icon: <QuizTwoToneIcon /> },
 ];
 
 const Navbar = () => {

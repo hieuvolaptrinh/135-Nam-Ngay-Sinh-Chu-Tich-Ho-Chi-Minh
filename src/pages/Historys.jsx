@@ -49,7 +49,7 @@ const History = () => {
             textShadow: "2px 2px 2px rgba(0, 0, 0, 0.63)",
           }}
         >
-          DẤU ẤN LỊCH SỬ
+          CON ĐƯỜNG ĐỘC LẬP
         </Typography>
         <Box>
           <AboutHCM />

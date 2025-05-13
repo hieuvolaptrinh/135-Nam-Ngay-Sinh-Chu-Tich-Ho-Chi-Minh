@@ -154,13 +154,20 @@ npm run deploy
   <h3>🎯 Trang Chủ</h3>
 ![alt text]({83B2C2B0-9EDB-486A-8C41-75AAE0AD54FC}.png)
 ![alt text]({EB3E8DD3-6F4C-454E-9808-79AD2112B547}.png)
-![alt text]({3619E791-4517-407A-BC93-787F52A4183E}.png)
-  
+
+ <h3>🎮 Con Đường Độc Lập</h3>
+ 
+ ![alt text]({E60FC02B-331B-444D-8F93-AF9AF1F8676C}.png)
   <h3>📅 Timeline</h3>
-  <img src="[Đường dẫn đến ảnh chụp màn hình timeline]" alt="Timeline Demo" style="width: 100%; max-width: 800px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); margin: 20px 0;" />
-  
+![alt text]({3619E791-4517-407A-BC93-787F52A4183E}.png)
+![alt text]({C9255F21-7706-40C5-9648-38B1CDF54603}.png)
+
+  <h3>🎮 Góc Tự Hào</h3>
+![alt text]({ED206985-2F85-4C5B-AE1C-9FF870DAF5FB}.png)
   <h3>🎮 Đố vui lịch sử</h3>
   <img src="[Đường dẫn đến ảnh chụp màn hình quiz]" alt="Quiz Demo" style="width: 100%; max-width: 800px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); margin: 20px 0;" />
+
+
 
   <div style="margin-top: 30px; padding: 20px; background-color: #f8f9fa; border-radius: 10px;">
     <h3>🔗 Truy cập website</h3>
