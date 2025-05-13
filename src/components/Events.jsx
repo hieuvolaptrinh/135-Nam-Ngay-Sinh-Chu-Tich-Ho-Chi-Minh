@@ -64,7 +64,7 @@ const Events = ({
     <Container sx={{ py: 5 }}>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
+        whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
         <Typography
@@ -92,7 +92,7 @@ const Events = ({
             <motion.div
               key={event.id}
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
             >
               <Card
