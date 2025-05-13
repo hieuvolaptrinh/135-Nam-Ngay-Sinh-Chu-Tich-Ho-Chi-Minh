@@ -117,17 +117,28 @@ const History = () => {
                               >
                                 <FaRegCalendarAlt
                                   size={30}
-                                  style={{ marginRight: 8 }}
+                                  style={{
+                                    marginRight: 8,
+                                    color: "rgb(241, 76, 64)",
+                                  }}
                                 />
                                 {subEvent.date}
                               </Typography>
                               <blockquote className="blockquote">
-                                <FaQuoteLeft className="text-primary" />
+                                <FaQuoteLeft
+                                  style={{ color: "rgb(235, 116, 116)" }}
+                                />
                                 <p className="mb-0">{subEvent.quote}</p>
                               </blockquote>
                               <Button
                                 variant="contained"
                                 onClick={() => handleMarkerClick(subEvent)}
+                                sx={{
+                                  backgroundColor: "rgb(235, 116, 116)",
+                                  "&:hover": {
+                                    backgroundColor: "#e74c3c",
+                                  },
+                                }}
                               >
                                 Xem chi tiết
                               </Button>
@@ -167,17 +178,28 @@ const History = () => {
                             >
                               <FaRegCalendarAlt
                                 size={30}
-                                style={{ marginRight: 8 }}
+                                style={{
+                                  marginRight: 8,
+                                  color: "rgb(241, 76, 64)",
+                                }}
                               />
                               {event.events[0].date}
                             </Typography>
                             <blockquote className="blockquote">
-                              <FaQuoteLeft className="text-primary" />
+                              <FaQuoteLeft
+                                style={{ color: "rgb(235, 116, 116)" }}
+                              />
                               <p className="mb-0">{event.events[0].quote}</p>
                             </blockquote>
                             <Button
                               variant="contained"
                               onClick={() => handleMarkerClick(event.events[0])}
+                              sx={{
+                                backgroundColor: "rgb(235, 116, 116)",
+                                "&:hover": {
+                                  backgroundColor: "#e74c3c",
+                                },
+                              }}
                             >
                               Xem chi tiết
                             </Button>

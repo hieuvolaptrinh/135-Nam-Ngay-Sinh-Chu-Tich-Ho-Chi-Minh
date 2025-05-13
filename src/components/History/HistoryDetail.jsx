@@ -31,13 +31,12 @@ const HistoryDetail = ({ show, onHide, selectedEvent }) => {
         sx={{
           display: "flex",
           alignItems: "center",
-          background:
-            "linear-gradient(135deg,rgb(235, 116, 116),rgb(248, 220, 78))",
+          background: "rgb(235, 116, 116)",
         }}
       >
         <Typography
           variant="h5"
-          sx={{ flexGrow: 1, textAlign: "justify", fontWeight: "bold" }}
+          sx={{ flexGrow: 1, textAlign: "center", fontWeight: "bold" }}
         >
           {selectedEvent?.title}
         </Typography>
@@ -49,7 +48,10 @@ const HistoryDetail = ({ show, onHide, selectedEvent }) => {
             color="text.secondary"
             sx={{ alignItems: "center", mb: 2 }}
           >
-            <FaRegCalendarAlt size={30} style={{ marginRight: 8 }} />
+            <FaRegCalendarAlt
+              size={30}
+              style={{ marginRight: 8, color: "rgb(241, 76, 64)" }}
+            />
             {selectedEvent?.date} {""}
             {selectedEvent?.description}
           </Typography>
@@ -91,7 +93,12 @@ const HistoryDetail = ({ show, onHide, selectedEvent }) => {
             variant="h5"
             sx={{ fontStyle: "italic", textAlign: "justify" }}
           >
-            <FaQuoteLeft style={{ color: "primary.main", marginRight: 8 }} />
+            <FaQuoteLeft
+              style={{
+                marginRight: 8,
+                color: "rgb(241, 76, 64)",
+              }}
+            />
             {selectedEvent?.quote}
           </Typography>
         </Box>
