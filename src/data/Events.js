@@ -140,6 +140,8 @@ Dự Lễ kỷ niệm có các đồng chí: Tổng Bí thư Tô Lâm; nguyên T
 
 Cùng dự Lễ kỷ niệm có các Ủy viên Bộ Chính trị, nguyên Ủy viên Bộ Chính trị; Bí thư Trung ương Đảng, nguyên Bí thư Trung ương Đảng; Ủy viên Trung ương Đảng, nguyên Ủy viên Trung ương Đảng; các đồng chí: Phó Chủ tịch nước, nguyên Phó Chủ tịch nước, Phó Thủ tướng Chính phủ, nguyên Phó Thủ tướng Chính phủ, Phó Chủ tịch Quốc hội, nguyên Phó Chủ tịch Quốc hội, thành viên Ban Chỉ đạo Trung ương kỷ niệm các ngày lễ lớn và sự kiện lịch sử quan trọng trong năm 2025; lãnh đạo các ban, bộ, ngành, đoàn thể Trung ương và Thành phố Hồ Chí Minh, lãnh đạo một số tỉnh, thành phố trực thuộc Trung ương; lão thành cách mạng, các Mẹ Việt Nam anh hùng, Anh hùng Lực lượng vũ trang nhân dân, Anh hùng Lao động, các tướng lĩnh trong lực lượng vũ trang nhân dân; đại diện các chiến sĩ, cựu chiến binh, cựu công an nhân dân, cựu thanh niên xung phong, cựu dân công hỏa tuyến, các lực lượng tham gia Chiến dịch Hồ Chí Minh lịch sử; đại diện các gia đình thương binh, liệt sĩ, gia đình có công với nước.
 <br />[img]./images/GiaiPhong/DieuBinh/DB2.jpg|Tổng Bí thư Tô Lâm thay mặt lãnh đạo Đảng, Nhà nước trao tặng danh hiệu “Anh hùng Lao động” cho Đảng bộ, Chính quyền và nhân dân Thành phố Hồ Chí Minh.[/img]<br />
+
+<br /><br />
 Đến dự Lễ kỷ niệm có các đoàn khách quốc tế cấp cao: Đoàn đại biểu cấp cao Đảng,
  Nhà nước Cộng hòa Dân chủ Nhân dân Lào do đồng chí Thongloun Sisoulith, Tổng Bí thư Đảng Nhân dân Cách mạng Lào, 
  Chủ tịch nước Cộng hòa Dân chủ Nhân dân Lào làm Trưởng đoàn; Đoàn đại biểu cấp cao của Vương quốc Campuchia do ngài
@@ -149,8 +151,9 @@ Cùng dự Lễ kỷ niệm có các Ủy viên Bộ Chính trị, nguyên Ủy 
    chí Bùi Kim Giai, Bộ trưởng Bộ các vấn đề quân nhân xuất ngũ làm Trưởng đoàn; các Bộ trưởng, Thứ trưởng Bộ Ngoại giao, Bộ Quốc phòng các nước, các chính đảng,
     các tổ chức quốc tế, Đại sứ, Trưởng cơ quan đại diện, tùy viên quốc phòng của các nước tại Việt Nam và đông đảo bạn bè quốc tế từng ủng hộ Việt Nam trong sự 
     nghiệp đấu tranh, giải phóng dân tộc và xây dựng đất nước. 
+    <br /><br />
     Mở đầu Lễ kỷ niệm là chương trình nghệ thuật chào mừng được dàn dựng công phu với chủ đề: “Rạng rỡ non sông Việt Nam” do Ban Tổ chức Kỷ niệm các ngày lễ lớn Thành phố Hồ Chí Minh chủ trì, phối hợp cùng Bộ Văn hóa, Thể thao và Du lịch, Bộ Quốc phòng, Bộ Công an thực hiện.
-Chương trình có màn biểu diễn trống hội với chủ đề: “Bản hùng ca toàn thắng”, do 1.000 diễn viên là học viên thuộc Đoàn Nghệ thuật trống hội Học viện Cảnh sát nhân dân - Bộ Công an trình diễn; màn xếp hình nghệ thuật với chủ đề: “Đất nước trọn niềm vui” do các nghệ sĩ, chiến sĩ Quân đội nhân dân Việt Nam biểu diễn; cùng nhiều tiết mục nghệ thuật tái hiện quá trình đấu tranh giành độc lập, xây dựng và phát triển đất nước hào hùng của dân tộc.<br /><br />
+Chương trình có màn biểu diễn trống hội với chủ đề: “Bản hùng ca toàn thắng”, do 1.000 diễn viên là học viên thuộc Đoàn Nghệ thuật trống hội Học viện Cảnh sát nhân dân - Bộ Công an trình diễn; màn xếp hình nghệ thuật với chủ đề: “Đất nước trọn niềm vui” do các nghệ sĩ, chiến sĩ Quân đội nhân dân Việt Nam biểu diễn; cùng nhiều tiết mục nghệ thuật tái hiện quá trình đấu tranh giành độc lập, xây dựng và phát triển đất nước hào hùng của dân tộc.
 Lễ kỷ niệm bắt đầu bằng nghi lễ chào cờ trong tiếng rền vang của 21 loạt đại bác do đội pháo lễ thực hiện tại bến Bạch Đằng, Quận 1, Thành phố Hồ Chí Minh.
 
 Tổng Bí thư Tô Lâm đọc diễn văn Kỷ niệm 50 năm Ngày Giải phóng miền Nam, thống nhất đất nước.
@@ -160,11 +163,10 @@ Tiếp theo là phát biểu của đại diện cựu chiến binh, của đạ
 Chương trình diễu binh, diễu hành do Bộ Quốc phòng chủ trì, bao gồm phần trình diễn của máy bay trực thăng và tiêm kích chiến đấu; chương trình diễu binh của 4 khối Nghi trượng, 36 khối diễu binh của Quân đội và Công an, 12 khối diễu hành và khối diễu binh của quân đội Trung Quốc, Lào và Campuchia. Đặc biệt, có 350 đại biểu là các Anh hùng Lực lượng vũ trang nhân dân, Anh hùng Lao động, nhân chứng lịch sử tiêu biểu sẽ tham gia trong lễ diễu hành trên xe ô tô buýt 2 tầng.
 
 Nhân dịp này, nhằm ghi nhận thành tích đặc biệt xuất sắc của Đảng bộ, chính quyền và nhân dân Thành phố Hồ Chí Minh, góp phần vào sự nghiệp xây dựng chủ nghĩa xã hội và bảo vệ Tổ quốc, Đảng, Nhà nước đã quyết định phong tặng danh hiệu Anh hùng Lao động tới Đảng bộ, chính quyền và nhân dân Thành phố Hồ Chí Minh.
-<br /><br /> 
+<br /> [img]./images/GiaiPhong/DieuBinh/DB3.jpg|Chính thức vào 8 giờ 5 phút, Thượng tướng Nguyễn Văn Nghĩa, Phó Tổng tham mưu trưởng Quân đội nhân dân Việt Nam điều hành chương trình diễu binh, diễu hành kỷ niệm 50 năm "Ngày Giải phóng miền nam, thống nhất đất nước".[/img] <br /> 
 Chương trình được truyền hình trực tiếp trên VTV1 - Đài Truyền hình Việt Nam, Đài Truyền hình Thành phố Hồ Chí Minh và các đài phát thanh truyền hình địa phương. Thành phố Hồ Chí Minh đã lắp đặt 20 màn hình LED lớn trên các tuyến đường phố trung tâm, phục vụ người dân và du khách, phát trực tiếp các hoạt động của lễ kỷ niệm.
 Khi tiếng Quốc ca vang lên thiêng liêng giữa bầu trời xanh ngát phương Nam, 21 loạt đại bác từ bến Bạch Đằng rền vang như lời tuyên ngôn khẳng định sức mạnh và ý chí bất khuất của dân tộc Việt Nam. Sau bài diễn văn đầy xúc động và khí phách của Tổng Bí thư Tô Lâm, phần diễu binh – diễu hành long trọng được khởi đầu lúc 8 giờ 5 phút, dưới sự điều hành trực tiếp của Thượng tướng Nguyễn Văn Nghĩa – Phó Tổng tham mưu trưởng Quân đội nhân dân Việt Nam.
 
-<br/ > [img]./images/GiaiPhong/DieuBinh/DB3.jpg|Chính thức vào 8 giờ 5 phút, Thượng tướng Nguyễn Văn Nghĩa, Phó Tổng tham mưu trưởng Quân đội nhân dân Việt Nam điều hành chương trình diễu binh, diễu hành kỷ niệm 50 năm "Ngày Giải phóng miền nam, thống nhất đất nước".[/img] <br />
 Bầu trời rực rỡ thêm phần hùng vĩ với màn trình diễn hoành tráng của các phi đội trực thăng và tiêm kích chiến đấu, mở đầu cho đại lễ của khí thế và sức mạnh. Tiếp đến, các khối diễu binh lần lượt bước qua lễ đài theo đội hình nghiêm trang, thể hiện bản lĩnh, kỷ luật và uy phong của các lực lượng vũ trang nhân dân.
 
 Dẫn đầu là khối Nghi trượng và Quân kỳ Quyết thắng – biểu tượng thiêng liêng cho hồn thiêng sông núi. Theo sau là các khối sĩ quan Lục quân, Hải quân, Không quân, Biên phòng, Cảnh sát biển, đặc công, pháo binh, phòng không, tăng thiết giáp, công binh, thông tin, hóa học, tác chiến điện tử, quân y, hậu cần…
