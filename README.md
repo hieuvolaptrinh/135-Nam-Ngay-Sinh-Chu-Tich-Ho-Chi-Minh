@@ -171,14 +171,13 @@ npm run deploy
 ![alt text]({AE416173-A4A6-4D74-98F1-6F503180AB68}.png)
 
   <h3>🎮 Đố vui lịch sử</h3>
-  
+
 ![alt text]({558ECA1C-D81C-4E65-96B2-90D95CF63874}.png)
 ![alt text]({2409924C-FAD5-4AAA-95FE-FA613D7C4F21}.png)
 ![alt text]({B315A643-13FF-4A9D-9E6F-36F7DA9D7C5B}.png)
 ![alt text]({9C74B1C5-8FA7-43C0-8F09-9CB91861F066}.png)
 ![alt text]({D78646E9-76EC-4DB3-81B0-67A2560063C3}.png)
 
-  <img src="[Đường dẫn đến ảnh chụp màn hình quiz]" alt="Quiz Demo" style="width: 100%; max-width: 800px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); margin: 20px 0;" />
 
   <div style="margin-top: 30px; padding: 20px; background-color: #f8f9fa; border-radius: 10px;">
     <h3>🔗 Truy cập website</h3>
