@@ -81,68 +81,92 @@ const History = () => {
                     {event.events.length == 2 ? (
                       <Row>
                         {event.events.map((subEvent, index) => (
-                          <Col md={12} lg={6} key={`${event.year}-${index}`}>
-                            <Box>
-                              <div className="mb-2">
-                                <CardMedia
-                                  component="img"
-                                  image={subEvent.images[0]}
-                                  alt={subEvent.title}
-                                  sx={{
-                                    width: "100%",
-
-                                    height: {
-                                      xs: 400,
-                                      sm: 300,
-                                      md: 200,
-                                      lg: 400,
-                                    },
-                                    objectFit: "cover",
-                                    objectPosition: "center",
-                                    borderRadius: 2,
-                                  }}
-                                />
-                              </div>
-                              <Typography
-                                variant="h4"
-                                sx={{ fontWeight: "bold" }}
-                              >
-                                {subEvent.title}
-                              </Typography>
-                              <Typography
-                                variant="h6"
+                          <Col
+                            md={12}
+                            lg={6}
+                            key={`${event.year}-${index}`}
+                            className="mb-3"
+                          >
+                            <Card
+                              sx={{
+                                border: "1px solid #e0e0e0",
+                                borderRadius: 3,
+                                boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
+                                overflow: "hidden",
+                                mb: 3,
+                                height: "100%",
+                                display: "flex",
+                                flexDirection: "column",
+                              }}
+                            >
+                              <CardMedia
+                                component="img"
+                                image={subEvent.images[0]}
+                                alt={subEvent.title}
                                 sx={{
-                                  my: 2,
-                                }}
-                              >
-                                <FaRegCalendarAlt
-                                  size={30}
-                                  style={{
-                                    marginRight: 8,
-                                    color: "rgb(241, 76, 64)",
-                                  }}
-                                />
-                                {subEvent.date}
-                              </Typography>
-                              <blockquote className="blockquote">
-                                <FaQuoteLeft
-                                  style={{ color: "rgb(235, 116, 116)" }}
-                                />
-                                <p className="mb-0">{subEvent.quote}</p>
-                              </blockquote>
-                              <Button
-                                variant="contained"
-                                onClick={() => handleMarkerClick(subEvent)}
-                                sx={{
-                                  backgroundColor: "rgb(235, 116, 116)",
-                                  "&:hover": {
-                                    backgroundColor: "#e74c3c",
+                                  width: "100%",
+                                  height: {
+                                    xs: 400,
+                                    sm: 300,
+                                    md: 200,
+                                    lg: 300,
                                   },
+                                  objectFit: "cover",
+                                  objectPosition: "center",
                                 }}
-                              >
-                                Xem chi tiết
-                              </Button>
-                            </Box>
+                              />
+                              <Box sx={{ p: 2, flexGrow: 1 }}>
+                                <Typography
+                                  variant="h5"
+                                  sx={{ fontWeight: "bold", mb: 1 }}
+                                >
+                                  {subEvent.title}
+                                </Typography>
+                                <Typography
+                                  variant="subtitle1"
+                                  sx={{ mb: 2, color: "text.secondary" }}
+                                >
+                                  <FaRegCalendarAlt
+                                    size={20}
+                                    style={{
+                                      marginRight: 8,
+                                      color: "rgb(241, 76, 64)",
+                                    }}
+                                  />
+                                  {subEvent.date}
+                                </Typography>
+                                <blockquote
+                                  className="blockquote"
+                                  style={{ margin: "0 0 16px 0" }}
+                                >
+                                  <FaQuoteLeft
+                                    style={{
+                                      color: "rgb(235, 116, 116)",
+                                      marginRight: 8,
+                                    }}
+                                  />
+                                  <Typography
+                                    variant="body2"
+                                    component="p"
+                                    sx={{ display: "inline" }}
+                                  >
+                                    {subEvent.quote}
+                                  </Typography>
+                                </blockquote>
+                                <Button
+                                  variant="contained"
+                                  onClick={() => handleMarkerClick(subEvent)}
+                                  sx={{
+                                    backgroundColor: "rgb(235, 116, 116)",
+                                    "&:hover": {
+                                      backgroundColor: "#e74c3c",
+                                    },
+                                  }}
+                                >
+                                  Xem chi tiết
+                                </Button>
+                              </Box>
+                            </Card>
                           </Col>
                         ))}
                       </Row>

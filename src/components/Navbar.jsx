@@ -18,9 +18,10 @@ import { useState } from "react";
 
 const menuItems = [
   { text: "Trang Chủ", path: "/", icon: <HomeIcon /> },
-  { text: "Con Đường Độc Lập", path: "/history", icon: <HistoryIcon /> },
   { text: "Góc Tự Hào", path: "/about", icon: <EmojiEventsIcon /> },
   { text: "Hoạt Động Kỷ Niệm", path: "/events", icon: <EventIcon /> },
+
+  { text: "Con Đường Độc Lập", path: "/history", icon: <HistoryIcon /> },
   { text: "Đố Vui Lịch Sử", path: "/quiz-history", icon: <QuizTwoToneIcon /> },
 ];
 

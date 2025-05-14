@@ -177,7 +177,7 @@ const Events = ({
                     sx={{
                       display: "flex",
                       alignItems: "center",
-                      mb: 2,
+                      mb: 1,
                     }}
                   >
                     <Box sx={{ height: 60 }}>
@@ -204,8 +204,9 @@ const Events = ({
                     </Box>
                   </Box>
                   <Typography
+                    variant="body2"
                     sx={{
-                      mb: 2,
+                      mb: 1,
                       display: "-webkit-box",
                       WebkitLineClamp: 2,
                       WebkitBoxOrient: "vertical",
