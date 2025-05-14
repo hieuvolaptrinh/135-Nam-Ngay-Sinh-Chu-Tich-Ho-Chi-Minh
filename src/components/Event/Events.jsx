@@ -134,7 +134,7 @@ const Events = ({
                     // component="h2"
                     sx={{
                       fontWeight: "bold",
-                      mb: 2,
+                      mb: 1,
                       minHeight: "96px",
                       display: "-webkit-box",
                       WebkitLineClamp: 3,

@@ -37,25 +37,48 @@ const PlayOverlay = styled(Box)(() => ({
 
 const BackgroundMusic = () => {
   const [isPlaying, setIsPlaying] = useState(false);
-  const [isMuted, setIsMuted] = useState(false);
-  const [showPlayButton, setShowPlayButton] = useState(true);
+  const [isMuted, setIsMuted] = useState(true);
+  const [showPlayButton, setShowPlayButton] = useState(false);
   const [audioError, setAudioError] = useState(false);
   const audioRef = useRef(null);
+  const autoplayAttempted = useRef(false);
 
   useEffect(() => {
     // Khởi tạo audio element
     const audio = new Audio();
-    audio.src = "./nhacNen.mp3";
+    audio.src = "/nhacNen.mp3";
     audio.volume = 0.3;
     audio.loop = true;
     audio.preload = "auto";
+    audio.muted = true;
     audioRef.current = audio;
 
-    // Load trạng thái từ localStorage
-    const savedMuted = localStorage.getItem("musicMuted");
-    if (savedMuted !== null) {
-      setIsMuted(savedMuted === "true");
-      audio.muted = savedMuted === "true";
+    // Tự động phát khi component được mount
+    const playPromise = audio.play();
+
+    if (playPromise !== undefined) {
+      playPromise
+        .then(() => {
+          setIsPlaying(true);
+          // Sau khi phát thành công, kiểm tra trạng thái muted trong localStorage
+          const savedMuted = localStorage.getItem("musicMuted");
+          if (savedMuted !== null) {
+            const shouldBeMuted = savedMuted === "true";
+            setIsMuted(shouldBeMuted);
+            audio.muted = shouldBeMuted;
+          } else {
+            // Nếu không có trạng thái lưu trữ, sau 2 giây bật âm thanh lên
+            setTimeout(() => {
+              audio.muted = false;
+              setIsMuted(false);
+              localStorage.setItem("musicMuted", "false");
+            }, 2000);
+          }
+        })
+        .catch((error) => {
+          console.log("Autoplay prevented by browser:", error);
+          setShowPlayButton(true);
+        });
     }
 
     return () => {
@@ -109,10 +132,44 @@ const BackgroundMusic = () => {
   // Add method to window object for external access
   useEffect(() => {
     window.pauseBackgroundMusic = pauseBackgroundMusic;
+
+    // Thêm event listener cho sự kiện visibilitychange để dừng/phát nhạc khi chuyển tab
+    const handleVisibilityChange = () => {
+      if (document.hidden) {
+        if (audioRef.current && isPlaying) {
+          audioRef.current.pause();
+        }
+      } else {
+        if (audioRef.current && isPlaying && !showPlayButton) {
+          audioRef.current
+            .play()
+            .catch((err) => console.log("Cannot resume playback:", err));
+        }
+      }
+    };
+
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+
+    // Add event listener for user interaction to trigger autoplay in case it failed initially
+    const handleUserInteraction = () => {
+      if (!isPlaying && showPlayButton) {
+        startPlaying();
+      }
+      // Remove event listeners after first interaction
+      document.removeEventListener("click", handleUserInteraction);
+      document.removeEventListener("touchstart", handleUserInteraction);
+    };
+
+    document.addEventListener("click", handleUserInteraction);
+    document.addEventListener("touchstart", handleUserInteraction);
+
     return () => {
       delete window.pauseBackgroundMusic;
+      document.removeEventListener("click", handleUserInteraction);
+      document.removeEventListener("touchstart", handleUserInteraction);
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
     };
-  }, []);
+  }, [isPlaying, showPlayButton]);
 
   // Kiểm tra xem có đang ở trang quiz không
   const isQuizPage = window.location.pathname.includes("/quiz-history");
