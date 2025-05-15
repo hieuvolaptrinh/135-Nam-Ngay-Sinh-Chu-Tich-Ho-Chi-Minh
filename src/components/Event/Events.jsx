@@ -42,6 +42,12 @@ const Events = ({
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
+    cssEase: "linear",
+    swipeToSlide: true,
+    draggable: true,
+    pauseOnHover: true,
+    pauseOnFocus: true,
+    waitForAnimate: false,
     responsive: [
       {
         breakpoint: 1024,
@@ -93,7 +99,18 @@ const Events = ({
               key={event.id}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
+              viewport={{ once: true }}
+              transition={{
+                duration: 0.8,
+                delay: index * 0.2,
+                type: "spring",
+                stiffness: 100,
+                damping: 10,
+              }}
+              whileHover={{
+                scale: 1.02,
+                transition: { duration: 0.2 },
+              }}
             >
               <Card
                 sx={{
@@ -104,9 +121,10 @@ const Events = ({
                   boxShadow: "0 4px 20px rgba(0,0,0,0.1)",
                   borderRadius: "12px",
                   overflow: "hidden",
-                  transition: "transform 0.3s ease-in-out",
+                  transition: "all 0.3s ease-in-out",
                   "&:hover": {
                     transform: "translateY(-5px)",
+                    boxShadow: "0 8px 30px rgba(0,0,0,0.2)",
                   },
                 }}
               >
