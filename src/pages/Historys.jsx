@@ -64,7 +64,18 @@ const History = () => {
               key={event.year}
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
+              viewport={{ once: false, amount: 0.3 }}
+              transition={{
+                duration: 0.8,
+                delay: index * 0.2,
+                type: "spring",
+                stiffness: 100,
+                damping: 10,
+              }}
+              style={{
+                visibility: "visible",
+                display: "block",
+              }}
             >
               <Box sx={{ mb: 4 }}>
                 <Typography
