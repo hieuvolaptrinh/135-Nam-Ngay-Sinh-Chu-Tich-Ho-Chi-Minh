@@ -137,6 +137,50 @@ const QuizHistory = () => {
   const [userAnswers, setUserAnswers] = useState([]);
   const [quizStarted, setQuizStarted] = useState(false);
   const quizAudioRef = useRef(null);
+  const previousMusicState = useRef(null);
+
+  useEffect(() => {
+    // Lưu trạng thái nhạc nền trước khi vào quiz
+    if (window.pauseBackgroundMusic) {
+      previousMusicState.current = localStorage.getItem("musicMuted");
+      // Dừng nhạc nền khi vào trang quiz
+      window.pauseBackgroundMusic();
+    }
+
+    // Khởi tạo audio cho quiz
+    const quizAudio = new Audio();
+    quizAudio.src = "./quizMute.mp3";
+    quizAudio.volume = 1;
+    quizAudio.loop = true;
+    quizAudioRef.current = quizAudio;
+
+    // Thêm event listener để tắt nhạc nền khi bật nhạc quiz
+    const handleQuizAudioPlay = () => {
+      if (window.pauseBackgroundMusic) {
+        window.pauseBackgroundMusic();
+      }
+    };
+
+    quizAudio.addEventListener("play", handleQuizAudioPlay);
+
+    return () => {
+      if (quizAudioRef.current) {
+        quizAudioRef.current.pause();
+        quizAudioRef.current.removeEventListener("play", handleQuizAudioPlay);
+        quizAudioRef.current = null;
+      }
+      // Khôi phục trạng thái nhạc nền khi rời khỏi quiz
+      if (previousMusicState.current !== null) {
+        localStorage.setItem("musicMuted", previousMusicState.current);
+        // Thêm một chút delay để đảm bảo component BackgroundMusic đã được mount lại
+        setTimeout(() => {
+          if (window.startBackgroundMusic) {
+            window.startBackgroundMusic();
+          }
+        }, 100);
+      }
+    };
+  }, []);
 
   useEffect(() => {
     let timer;
@@ -149,27 +193,6 @@ const QuizHistory = () => {
     }
     return () => clearInterval(timer);
   }, [timeLeft, timerActive]);
-
-  useEffect(() => {
-    // Dừng nhạc nền khi vào trang quiz
-    if (window.pauseBackgroundMusic) {
-      window.pauseBackgroundMusic();
-    }
-
-    // Khởi tạo audio cho quiz
-    const quizAudio = new Audio();
-    quizAudio.src = "./quizMute.mp3";
-    quizAudio.volume = 1;
-    quizAudio.loop = true;
-    quizAudioRef.current = quizAudio;
-
-    return () => {
-      if (quizAudioRef.current) {
-        quizAudioRef.current.pause();
-        quizAudioRef.current = null;
-      }
-    };
-  }, []);
 
   const handleAnswerSelect = (event) => {
     setSelectedAnswer(parseInt(event.target.value));

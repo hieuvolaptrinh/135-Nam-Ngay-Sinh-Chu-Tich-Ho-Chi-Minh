@@ -69,10 +69,24 @@ const HoChiMinhTimeline = () => {
               }}
             >
               <motion.div
-                className="border-start border-danger border-4 p-3 p-md-4 bg-white rounded shadow-sm"
+                style={{
+                  borderLeft: "10px solid #dc3545",
+                  padding: "1rem",
+                  backgroundColor: "#ffffff",
+                  borderRadius: "0.25rem",
+                  boxShadow:
+                    "-6px -2px 4px rgba(0, 0, 0, 0.2), " +
+                    "0px 4px 8px rgba(0, 0, 0, 0.15), " +
+                    "0px 8px 16px rgba(0, 0, 0, 0.1), " +
+                    "0px 16px 32px rgba(0, 0, 0, 0.05)",
+                }}
                 whileHover={{
                   scale: 1.02,
-                  boxShadow: "0 4px 16px rgba(0, 0, 0, 0.2)",
+                  boxShadow:
+                    "0px 2px 6px rgba(0, 0, 0, 0.25), " +
+                    "0px 6px 12px rgba(0, 0, 0, 0.2), " +
+                    "0px 12px 24px rgba(0, 0, 0, 0.15), " +
+                    "0px 24px 48px rgba(0, 0, 0, 0.1)",
                 }}
                 transition={{ duration: 0.3 }}
               >

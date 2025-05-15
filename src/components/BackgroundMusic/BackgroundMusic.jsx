@@ -34,7 +34,6 @@ const PlayOverlay = styled(Box)(() => ({
     backgroundColor: "rgba(255, 255, 255, 1)",
   },
 }));
-
 const BackgroundMusic = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(true);
@@ -47,6 +46,7 @@ const BackgroundMusic = () => {
     // Khởi tạo audio element
     const audio = new Audio();
     audio.src = "/nhacNen.mp3";
+    // audio.src = "/50-nam-giai-phong-135-nam-ngay-sinh-bac-ho/nhacNen.mp3"; // sửa chỗ này để ko lỗi deploy
     audio.volume = 0.3;
     audio.loop = true;
     audio.preload = "auto";
@@ -129,9 +129,25 @@ const BackgroundMusic = () => {
     }
   };
 
+  // Expose method to start background music
+  const startBackgroundMusic = () => {
+    if (audioRef.current) {
+      const savedMuted = localStorage.getItem("musicMuted");
+      if (savedMuted === "false") {
+        audioRef.current.muted = false;
+        setIsMuted(false);
+        audioRef.current.play().catch((error) => {
+          console.log("Error resuming background music:", error);
+          setShowPlayButton(true);
+        });
+      }
+    }
+  };
+
   // Add method to window object for external access
   useEffect(() => {
     window.pauseBackgroundMusic = pauseBackgroundMusic;
+    window.startBackgroundMusic = startBackgroundMusic;
 
     // Thêm event listener cho sự kiện visibilitychange để dừng/phát nhạc khi chuyển tab
     const handleVisibilityChange = () => {
@@ -165,6 +181,7 @@ const BackgroundMusic = () => {
 
     return () => {
       delete window.pauseBackgroundMusic;
+      delete window.startBackgroundMusic;
       document.removeEventListener("click", handleUserInteraction);
       document.removeEventListener("touchstart", handleUserInteraction);
       document.removeEventListener("visibilitychange", handleVisibilityChange);
