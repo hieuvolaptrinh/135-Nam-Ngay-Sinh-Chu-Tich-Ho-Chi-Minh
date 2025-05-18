@@ -154,7 +154,8 @@ const HistoricalMessage = () => {
                       fontWeight: "bold",
                     }}
                   >
-                    50 NĂM GIẢI PHÓNG MIỀN NAM THỐNG NHẤT ĐẤT NƯỚC (30/4/1975 – 30/4/2025)
+                    50 NĂM GIẢI PHÓNG MIỀN NAM THỐNG NHẤT ĐẤT NƯỚC (30/4/1975 –
+                    30/4/2025)
                   </Card.Title>
                 </motion.div>
                 <motion.div variants={cardTextVariants}>

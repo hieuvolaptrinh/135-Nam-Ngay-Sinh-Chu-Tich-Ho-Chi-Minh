@@ -18,7 +18,6 @@ import {
   Paper,
   Box,
   Container,
-  Grid,
   IconButton,
   Accordion,
   AccordionSummary,
@@ -140,21 +139,21 @@ const QuizHistory = () => {
   const previousMusicState = useRef(null);
 
   useEffect(() => {
-    // Lưu trạng thái nhạc nền trước khi vào quiz
+    // lưu trạng thái nhạc nền trước khi vào quiz
     if (window.pauseBackgroundMusic) {
       previousMusicState.current = localStorage.getItem("musicMuted");
-      // Dừng nhạc nền khi vào trang quiz
+      // dừng nhạc nền khi vào trang quiz
       window.pauseBackgroundMusic();
     }
 
-    // Khởi tạo audio cho quiz
+    // khởi tạo audio cho quiz
     const quizAudio = new Audio();
     quizAudio.src = "./quizMute.mp3";
     quizAudio.volume = 1;
     quizAudio.loop = true;
     quizAudioRef.current = quizAudio;
 
-    // Thêm event listener để tắt nhạc nền khi bật nhạc quiz
+    // tắt nhạc nền khi bật nhạc quiz
     const handleQuizAudioPlay = () => {
       if (window.pauseBackgroundMusic) {
         window.pauseBackgroundMusic();
@@ -169,10 +168,10 @@ const QuizHistory = () => {
         quizAudioRef.current.removeEventListener("play", handleQuizAudioPlay);
         quizAudioRef.current = null;
       }
-      // Khôi phục trạng thái nhạc nền khi rời khỏi quiz
+      // bật nhạc nền khi out
       if (previousMusicState.current !== null) {
         localStorage.setItem("musicMuted", previousMusicState.current);
-        // Thêm một chút delay để đảm bảo component BackgroundMusic đã được mount lại
+        //  delay
         setTimeout(() => {
           if (window.startBackgroundMusic) {
             window.startBackgroundMusic();
@@ -205,7 +204,7 @@ const QuizHistory = () => {
       setScore(score + 1);
     }
 
-    // Save user's answer
+    // lưu answer
     setUserAnswers([
       ...userAnswers,
       {
@@ -215,7 +214,7 @@ const QuizHistory = () => {
       },
     ]);
 
-    // Show explanation dialog
+    // show giải thích
     setCurrentExplanation({
       isCorrect,
       explanation: quizQuestions[currentQuestion].explanation,
@@ -270,7 +269,7 @@ const QuizHistory = () => {
   };
 
   const handleStartQuiz = () => {
-    // Phát nhạc quiz
+    // phát nhạc quiz
     if (quizAudioRef.current) {
       quizAudioRef.current
         .play()
