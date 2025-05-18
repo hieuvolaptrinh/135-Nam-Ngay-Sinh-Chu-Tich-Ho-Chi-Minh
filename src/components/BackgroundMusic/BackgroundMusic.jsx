@@ -34,6 +34,7 @@ const PlayOverlay = styled(Box)(() => ({
     backgroundColor: "rgba(255, 255, 255, 1)",
   },
 }));
+
 const BackgroundMusic = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(true);
@@ -43,7 +44,7 @@ const BackgroundMusic = () => {
   const autoplayAttempted = useRef(false);
 
   useEffect(() => {
-    // Khởi tạo audio element
+    // khởi tạo audio element
     const audio = new Audio();
     audio.src = "/nhacNen.mp3";
     // audio.src = "/50-nam-giai-phong-135-nam-ngay-sinh-bac-ho/nhacNen.mp3"; // sửa chỗ này để ko lỗi deploy
@@ -53,21 +54,21 @@ const BackgroundMusic = () => {
     audio.muted = true;
     audioRef.current = audio;
 
-    // Tự động phát khi component được mount
+    // tự động phát khi component được mount
     const playPromise = audio.play();
 
     if (playPromise !== undefined) {
       playPromise
         .then(() => {
           setIsPlaying(true);
-          // Sau khi phát thành công, kiểm tra trạng thái muted trong localStorage
+          // sau khi phát thành công, kiểm tra trạng thái muted trong localStorage
           const savedMuted = localStorage.getItem("musicMuted");
           if (savedMuted !== null) {
             const shouldBeMuted = savedMuted === "true";
             setIsMuted(shouldBeMuted);
             audio.muted = shouldBeMuted;
           } else {
-            // Nếu không có trạng thái lưu trữ, sau 2 giây bật âm thanh lên
+            // nếu không có trạng thái lưu trữ, sau 2 giây bật âm thanh lên
             setTimeout(() => {
               audio.muted = false;
               setIsMuted(false);
@@ -76,7 +77,10 @@ const BackgroundMusic = () => {
           }
         })
         .catch((error) => {
-          console.log("Autoplay prevented by browser:", error);
+          console.log(
+            "không thể tự động phát nhạc do trình duyệt chặn:",
+            error
+          );
           setShowPlayButton(true);
         });
     }
@@ -89,9 +93,10 @@ const BackgroundMusic = () => {
     };
   }, []);
 
+  // hàm bắt đầu phát nhạc khi người dùng click vào nút play
   const startPlaying = async () => {
     if (audioError) {
-      console.error("Cannot play audio due to loading error");
+      console.error("không thể phát nhạc do lỗi tải file");
       return;
     }
 
@@ -106,11 +111,12 @@ const BackgroundMusic = () => {
         setShowPlayButton(false);
       }
     } catch (error) {
-      console.error("Play failed:", error);
+      console.error("phát nhạc thất bại:", error);
       setAudioError(true);
     }
   };
 
+  // hàm bật/tắt âm thanh
   const handleToggle = () => {
     if (audioRef.current) {
       const newMutedState = !isMuted;
@@ -120,7 +126,7 @@ const BackgroundMusic = () => {
     }
   };
 
-  // Expose method to pause background music
+  // hàm dừng nhạc nền để các component khác có thể gọi
   const pauseBackgroundMusic = () => {
     if (audioRef.current) {
       audioRef.current.pause();
@@ -129,7 +135,7 @@ const BackgroundMusic = () => {
     }
   };
 
-  // Expose method to start background music
+  // hàm bật nhạc nền để các component khác có thể gọi
   const startBackgroundMusic = () => {
     if (audioRef.current) {
       const savedMuted = localStorage.getItem("musicMuted");
@@ -137,19 +143,19 @@ const BackgroundMusic = () => {
         audioRef.current.muted = false;
         setIsMuted(false);
         audioRef.current.play().catch((error) => {
-          console.log("Error resuming background music:", error);
+          console.log("lỗi khi tiếp tục phát nhạc nền:", error);
           setShowPlayButton(true);
         });
       }
     }
   };
 
-  // Add method to window object for external access
+  // thêm các hàm điều khiển nhạc vào window object để có thể gọi từ bên ngoài
   useEffect(() => {
     window.pauseBackgroundMusic = pauseBackgroundMusic;
     window.startBackgroundMusic = startBackgroundMusic;
 
-    // Thêm event listener cho sự kiện visibilitychange để dừng/phát nhạc khi chuyển tab
+    // thêm event listener để dừng/phát nhạc khi chuyển tab
     const handleVisibilityChange = () => {
       if (document.hidden) {
         if (audioRef.current && isPlaying) {
@@ -159,19 +165,19 @@ const BackgroundMusic = () => {
         if (audioRef.current && isPlaying && !showPlayButton) {
           audioRef.current
             .play()
-            .catch((err) => console.log("Cannot resume playback:", err));
+            .catch((err) => console.log("không thể tiếp tục phát nhạc:", err));
         }
       }
     };
 
     document.addEventListener("visibilitychange", handleVisibilityChange);
 
-    // Add event listener for user interaction to trigger autoplay in case it failed initially
+    // thêm event listener để bắt sự kiện người dùng tương tác để phát nhạc
     const handleUserInteraction = () => {
       if (!isPlaying && showPlayButton) {
         startPlaying();
       }
-      // Remove event listeners after first interaction
+      // xóa event listener sau khi đã xử lý
       document.removeEventListener("click", handleUserInteraction);
       document.removeEventListener("touchstart", handleUserInteraction);
     };
@@ -188,10 +194,23 @@ const BackgroundMusic = () => {
     };
   }, [isPlaying, showPlayButton]);
 
-  // Kiểm tra xem có đang ở trang quiz không
+  // kiểm tra xem có đang ở trang quiz không
   const isQuizPage = window.location.pathname.includes("/quiz-history");
 
-  if (audioError || isQuizPage) {
+  // chỉ ẩn âm thanh nền khi ở trang quiz, không ẩn icon
+  useEffect(() => {
+    if (isQuizPage && audioRef.current) {
+      audioRef.current.pause();
+      setIsPlaying(false);
+    } else if (!isQuizPage && audioRef.current && !showPlayButton) {
+      audioRef.current.play().catch((error) => {
+        console.log("lỗi khi tiếp tục phát nhạc nền:", error);
+        setShowPlayButton(true);
+      });
+    }
+  }, [isQuizPage, showPlayButton]);
+
+  if (audioError) {
     return null;
   }
 
@@ -206,13 +225,13 @@ const BackgroundMusic = () => {
   }
 
   return (
-    <Tooltip title={isMuted ? "Bật âm thanh" : "Tắt âm thanh"}>
-      <StyledIconButton
-        onClick={handleToggle}
-        color="primary"
-        aria-label="toggle music"
-      >
-        {isMuted ? <FaVolumeMute size={24} /> : <FaVolumeUp size={24} />}
+    <Tooltip title={isMuted ? "Bật nhạc nền" : "Tắt nhạc nền"}>
+      <StyledIconButton onClick={handleToggle} size="large">
+        {isMuted ? (
+          <FaVolumeMute size={24} color="#1976d2" />
+        ) : (
+          <FaVolumeUp size={24} color="#1976d2" />
+        )}
       </StyledIconButton>
     </Tooltip>
   );

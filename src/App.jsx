@@ -14,6 +14,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import MainLayout from "./pages/MainLayout";
 import Banner from "./components/Home/Banner";
 import BackgroundMusic from "./components/BackgroundMusic/BackgroundMusic";
+
 const theme = createTheme({
   // để đây cần thì xài
   palette: {
