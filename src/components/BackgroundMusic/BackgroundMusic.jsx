@@ -44,7 +44,6 @@ const BackgroundMusic = () => {
   const autoplayAttempted = useRef(false);
 
   useEffect(() => {
-    // khởi tạo audio element
     const audio = new Audio();
     audio.src = "/nhacNen.mp3";
     // audio.src = "/50-nam-giai-phong-135-nam-ngay-sinh-bac-ho/nhacNen.mp3"; // sửa chỗ này để ko lỗi deploy
@@ -105,7 +104,6 @@ const BackgroundMusic = () => {
         audioRef.current.muted = false;
         setIsMuted(false);
         localStorage.setItem("musicMuted", "false");
-
         await audioRef.current.play();
         setIsPlaying(true);
         setShowPlayButton(false);
@@ -116,7 +114,6 @@ const BackgroundMusic = () => {
     }
   };
 
-  // hàm bật/tắt âm thanh
   const handleToggle = () => {
     if (audioRef.current) {
       const newMutedState = !isMuted;
@@ -126,7 +123,7 @@ const BackgroundMusic = () => {
     }
   };
 
-  // hàm dừng nhạc nền để các component khác có thể gọi
+  // hàm dừng nhạc nền
   const pauseBackgroundMusic = () => {
     if (audioRef.current) {
       audioRef.current.pause();
@@ -172,7 +169,6 @@ const BackgroundMusic = () => {
 
     document.addEventListener("visibilitychange", handleVisibilityChange);
 
-    // thêm event listener để bắt sự kiện người dùng tương tác để phát nhạc
     const handleUserInteraction = () => {
       if (!isPlaying && showPlayButton) {
         startPlaying();
@@ -197,7 +193,7 @@ const BackgroundMusic = () => {
   // kiểm tra xem có đang ở trang quiz không
   const isQuizPage = window.location.pathname.includes("/quiz-history");
 
-  // chỉ ẩn âm thanh nền khi ở trang quiz, không ẩn icon
+  // chỉ ẩn âm thanh nền khi ở trang quiz
   useEffect(() => {
     if (isQuizPage && audioRef.current) {
       audioRef.current.pause();

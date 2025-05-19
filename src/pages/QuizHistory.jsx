@@ -42,14 +42,12 @@ const QuizHistory = () => {
       window.pauseBackgroundMusic();
     }
 
-    // khởi tạo audio cho quiz
     const quizAudio = new Audio();
     quizAudio.src = "./quizMute.mp3";
     quizAudio.volume = 1;
     quizAudio.loop = true;
     quizAudioRef.current = quizAudio;
 
-    // tắt nhạc nền khi bật nhạc quiz
     const handleQuizAudioPlay = () => {
       if (window.pauseBackgroundMusic) {
         window.pauseBackgroundMusic();
@@ -197,7 +195,7 @@ const QuizHistory = () => {
             THỬ TÀI LỊCH SỬ CỦA BẠN NHÉ
           </Typography>
 
-          {/* Mô tả quiz */}
+          {/* mô tả quiz */}
           <Paper
             elevation={3}
             sx={{
@@ -249,7 +247,7 @@ const QuizHistory = () => {
           </Paper>
         </Stack>
 
-        {/* Explanation Dialog */}
+        {/* giải thích Dialog */}
         <ExplanationDialog
           open={showExplanation}
           onClose={handleCloseExplanation}
@@ -257,7 +255,7 @@ const QuizHistory = () => {
           explanation={currentExplanation.explanation}
         />
 
-        {/* Results Dialog */}
+        {/* đáp án Dialog */}
         <QuizResult
           open={showResult}
           onClose={handleRestartQuiz}

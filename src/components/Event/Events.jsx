@@ -92,7 +92,7 @@ const Events = ({
         </Typography>
       </motion.div>
 
-      <Box sx={{ mt: 4 }}>
+      <Box sx={{ my: 4 }}>
         <Slider {...settings}>
           {events.map((event, index) => (
             <motion.div
@@ -115,6 +115,7 @@ const Events = ({
               <Card
                 sx={{
                   mx: 1,
+                  my: 2,
                   height: "100%",
                   display: "flex",
                   flexDirection: "column",
@@ -135,8 +136,6 @@ const Events = ({
                   sx={{
                     height: "200px",
                     objectFit: "cover",
-                    borderTopLeftRadius: "12px",
-                    borderTopRightRadius: "12px",
                   }}
                 />
                 <CardContent

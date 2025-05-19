@@ -11,15 +11,10 @@ import CloseIcon from "@mui/icons-material/Close";
 import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 
-const EventModal = ({
-  open,
-  onClose,
-  event,
-  themeColor = "rgb(235, 116, 116)",
-}) => {
+const EventModal = ({ open, onClose, event, themeColor }) => {
   if (!event) return null;
 
-  // Function to extract YouTube video ID from URL
+  //  extract YouTube
   const getYouTubeId = (url) => {
     if (!url) return null;
     const regExp =
@@ -32,20 +27,15 @@ const EventModal = ({
   const renderContent = (content) => {
     if (!content) return null;
 
-    // Split content by <br /> tags
     const paragraphs = content.split("<br />");
 
     return paragraphs.map((paragraph, index) => {
-      // Check if paragraph contains an image tag
       const hasImage = paragraph.includes("[img]");
 
       if (hasImage) {
-        // Split paragraph by image tag
         const parts = paragraph.split("[img]");
         const imageContent = parts[1].split("[/img]")[0];
         const text = parts[0] + (parts[1].split("[/img]")[1] || "");
-
-        // Split image content to get URL and caption
         const [imageUrl, caption] = imageContent.split("|");
 
         return (

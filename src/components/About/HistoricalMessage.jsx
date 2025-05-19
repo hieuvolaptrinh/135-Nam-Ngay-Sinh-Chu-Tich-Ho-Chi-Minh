@@ -11,7 +11,7 @@ const HistoricalMessage = () => {
     threshold: 0.1,
   });
 
-  // Hiệu ứng cho tiêu đề Card khi hover
+
   const cardTitleVariants = {
     initial: { color: "#343a40" },
     hover: {
@@ -20,7 +20,6 @@ const HistoricalMessage = () => {
     },
   };
 
-  // Hiệu ứng cho văn bản Card khi hover
   const cardTextVariants = {
     initial: { color: "#6c757d" },
     hover: {
