@@ -45,8 +45,8 @@ const BackgroundMusic = () => {
 
   useEffect(() => {
     const audio = new Audio();
-    audio.src = "/nhacNen.mp3";
-    // audio.src = "/50-nam-giai-phong-135-nam-ngay-sinh-bac-ho/nhacNen.mp3"; // sửa chỗ này để ko lỗi deploy
+    // audio.src = "/nhacNen.mp3";
+    audio.src = "/135-Nam-Ngay-Sinh-Chu-Tich-Ho-Chi-Minh/nhacNen.mp3"; // sửa chỗ này để ko lỗi deploy
     audio.volume = 0.3;
     audio.loop = true;
     audio.preload = "auto";
